@@ -504,7 +504,7 @@ mark {
   /* Black text instead of muted */
   text-align: justify;
   /* Justify text */
-  line-height: 1.2;
+  line-height: 1.5;
   font-size: 0.9rem;
   /* Slightly smaller font for less height */
 }
