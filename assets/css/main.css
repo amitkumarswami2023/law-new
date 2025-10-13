@@ -814,3 +814,254 @@ mark {
   object-fit: cover;
   margin-bottom: -50px;
 }
+
+/* About Page */
+/* Dean Image */
+.dean-img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+/* Dean Message */
+.dean-message {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Dean Name & Designation */
+.dean-name {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #062e4f;
+}
+.dean-designation {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Button */
+.btn-dean {
+  background-color: #062e4f;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  border-radius: 5px;
+  padding: 8px 20px;
+  transition: background-color 0.3s;
+  text-decoration: none;
+}
+
+.btn-dean:hover {
+  background-color: #044165;
+  color: #fff;
+}
+
+/* distinguished-professors */
+/* Professors Block Styling */
+.professors-block {
+  background-color: #f2f2f2; /* Custom light gray */
+  border-radius: 20px;
+  padding: 50px 30px;
+}
+
+#distinguished-professors .section-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #000;
+}
+
+.prof-img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.prof-name {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #062e4f;
+  text-align: left;
+}
+
+.prof-about {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #444;
+  text-align: justify;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 767px) {
+  .prof-img {
+    max-width: 150px;
+  }
+}
+
+/* Section Title */
+#professors-title {
+  color: #000;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+/* Accordion Header */
+.accordion-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #000;
+  font-size: 26px;
+}
+
+/* Remove default accordion borders */
+.accordion-item {
+  border: none;
+}
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+/* Custom Accordion Button */
+.accordion-button-custom {
+  background-color: #062e4f;
+  border: none;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.accordion-button-custom i {
+  color: #fff;
+  font-size: 16px;
+}
+
+/* Faculty Card */
+.faculty-img {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.faculty-name {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #062e4f;
+  margin-bottom: 0.2rem;
+}
+.faculty-designation {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: #555;
+}
+
+/* News & Events Section */
+/* News & Events Section */
+.news-events-section {
+  background-color: #f9f9f9;
+}
+
+.ne-section-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  color: #1a1a1a;
+}
+
+.ne-card {
+  background: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ne-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.ne-card-img-wrapper {
+  position: relative;
+}
+
+.ne-card-img {
+  width: 100%;
+  height: 150px;
+  display: block;
+}
+
+.ne-card-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 5px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #ff5e57;
+  border-radius: 5px;
+}
+
+.ne-card-body {
+  background-color: #f2f2f2; /* light custom gray */
+  padding: 15px 20px;
+}
+
+.ne-card-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.ne-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ne-card-date {
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  color: #062e4f; /* calendar icon color */
+}
+
+.ne-card-date i {
+  color: #062e4f;
+}
+
+.ne-read-more {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  background-color: #1a73e8;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ne-read-more:hover {
+  background-color: #155ab6;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .col-6.col-md-3 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 576px) {
+  .col-6.col-md-3 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
