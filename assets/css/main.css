@@ -7,8 +7,6 @@ body {
   display: block;
 }
 /* main menu */
-/* ---------- Navbar Styling Enhancements ---------- */
-
 /* Common link styling */
 /* Global Typography */
 
@@ -1229,12 +1227,14 @@ mark {
 .footer-links h5 {
   font-weight: 600;
   margin-bottom: 12px;
+  margin-left: 40px;
 }
 
 .footer-links ul li {
   margin-bottom: 6px;
   font-size: 14px;
   cursor: pointer;
+  margin-left: 40px;
 }
 
 .footer-links ul li:hover {
