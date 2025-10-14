@@ -1169,6 +1169,10 @@ mark {
   font-family: "Poppins", sans-serif;
 }
 
+.main-header .header-logo img {
+  max-height: 80px !important;
+}
+
 /* Buttons */
 .btn-primary {
   background-color: #0060aa;
