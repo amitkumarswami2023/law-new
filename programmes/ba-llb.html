@@ -4,168 +4,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blogs | SGT University</title>
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/css/main.css" rel="stylesheet">
+    <title>Law Porgrammes</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="../assets/css/main.css" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="../assets/vendor/swiper/swiper-bundle.min.css" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <!-- Google Fonts - Poppins -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+    <!-- Swiper CSS -->
 </head>
 
 <body>
     <div class="container">
         <header class="main-header py-3 px-2 rounded-bottom shadow-sm">
-            <div class="d-flex align-items-center justify-content-between px-4 py-3 position-relative">
+            <div class="d-flex align-items-center justify-content-between px-4 py-4">
 
-                <!-- Left empty on large screens -->
-                <div class="flex-fill d-none d-md-block"></div>
+                <!-- Buttons: visible on md and above -->
+                <div class="d-none d-md-flex align-items-center gap-2">
+                    <button class="btn btn-primary">Apply Now</button>
+                    <button class="btn btn-secondary">Contact Us</button>
+                </div>
 
-                <!-- Centered logo (desktop) -->
+                <!-- Logo -->
                 <div
                     class="header-logo text-center flex-grow-1 position-absolute start-50 translate-middle-x d-none d-md-block">
                     <img src="/assets/img/sgt-logo.png" alt="University Logo" class="img-fluid"
                         style="max-height:100px;">
                 </div>
 
-                <!-- Logo (mobile) -->
-                <div class="d-flex align-items-center d-md-none">
-                    <img src="/assets/img/sgt-logo.png" alt="University Logo" class="img-fluid"
-                        style="max-height:70px;">
-                </div>
-
-                <!-- Right side (buttons + hamburger for large screens) -->
-                <div class="d-none d-md-flex align-items-center gap-2">
-                    <!-- Dropdown -->
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Law Courses
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="#">LLB (Hons.)</a></li>
-                            <li><a class="dropdown-item" href="#">BA LLB</a></li>
-                            <li><a class="dropdown-item" href="#">BBA LLB</a></li>
-                            <li><a class="dropdown-item" href="#">LLM</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- Apply Now -->
-                    <button class="btn btn-primary">Apply Now</button>
-
-                    <!-- Hamburger -->
-                    <button
-                        class="hamburger-btn d-flex flex-column justify-content-center gap-1 p-0 border-0 bg-transparent"
-                        aria-label="Menu">
-                        <span class="hamburger-line rounded"></span>
-                        <span class="hamburger-line rounded"></span>
-                        <span class="hamburger-line rounded"></span>
-                    </button>
-                </div>
-
-                <!-- Hamburger only on mobile -->
+                <!-- Logo on mobile -->
                 <div class="d-flex d-md-none align-items-center">
+                    <img src="/assets/img/sgt-logo.png" alt="University Logo" class="img-fluid"
+                        style="max-height:80px;">
+                </div>
+
+
+
+                <!-- Hamburger -->
+                <div class="d-flex align-items-center">
                     <button
                         class="hamburger-btn d-flex flex-column justify-content-center gap-1 p-0 border-0 bg-transparent"
                         aria-label="Menu">
-                        <span class="hamburger-line rounded"></span>
-                        <span class="hamburger-line rounded"></span>
-                        <span class="hamburger-line rounded"></span>
+                        <span class="hamburger-line bg-white rounded"></span>
+                        <span class="hamburger-line bg-white rounded"></span>
+                        <span class="hamburger-line bg-white rounded"></span>
                     </button>
                 </div>
+
             </div>
         </header>
     </div>
-
     <!-- Menu Below Header -->
     <nav id="main-menu" class="main-menu my-2">
         <ul class="menu-items">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="programmes.html">Programmes</a></li>
-            <li><a href="our-team.html">Our Team</a></li>
-            <li><a href="legal-luminaries.html">Legal Luminaries at FOL</a></li>
-            <li><a href="news-events.html">News & Events</a></li>
-            <li><a href="blogs.html" class="active">Blogs</a></li>
-            <li><a href="erp.html">ERP</a></li>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/programmes.html" class="active">Programmes</a></li>
+            <li><a href="/our-team.html">Our Team</a></li>
+            <li><a href="/legal-luminaries.html">Legal Luminaries at FOL</a></li>
+            <li><a href="/news-events.html">News & Events</a></li>
+            <li><a href="/blogs.html">Blogs</a></li>
+            <li><a href="/erp.html">ERP</a></li>
         </ul>
     </nav>
 
-    <!-- Blogs Section -->
-    <section class="law-blogs-section">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="fw-bold">Blogs</h2>
-            </div>
+    <div class="container" style="width: 100%; height: auto; border-radius: 30px; overflow: hidden; display: block;">
+        <img src="../assets/img/program/Banner_1.png" alt="Full Width Rounded Image" id="heroImage">
+    </div>
 
-            <div class="row g-4">
-                <!-- Blog Card 1 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="law-blog-card h-100">
-                        <img src="https://picsum.photos/600/400?random=1" class="law-blog-img" alt="Blog Image 1">
-                        <div class="law-blog-body">
-                            <h5 class="law-blog-title">Exploring Legal Education at SGT University</h5>
-                            <p class="law-blog-text">
-                                Discover how SGT University’s Faculty of Law fosters critical thinking,
-                                advocacy skills, and a global legal perspective...
-                            </p>
-                            <div class="law-blog-footer">
-                                <div class="law-blog-date">
-                                    <i class="bi bi-calendar-date me-1"></i> Oct 5, 2025
-                                </div>
-                                <button class="law-read-more">
-                                    Read More <i class="bi bi-arrow-right-short ms-1"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Blog Card 2 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="law-blog-card h-100">
-                        <img src="https://picsum.photos/600/400?random=2" class="law-blog-img" alt="Blog Image 2">
-                        <div class="law-blog-body">
-                            <h4 class="law-blog-title">The Future of Law: Technology & Innovation</h4>
-                            <p class="law-blog-text">
-                                Legal tech and AI are transforming how we practice law. Learn how SGTU
-                                prepares students for this evolving landscape...
-                            </p>
-                            <div class="law-blog-footer">
-                                <div class="law-blog-date">
-                                    <i class="bi bi-calendar-date me-1"></i> Sep 25, 2025
-                                </div>
-                                <button class="law-read-more">
-                                    Read More <i class="bi bi-arrow-right-short ms-1"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Blog Card 3 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="law-blog-card h-100">
-                        <img src="https://picsum.photos/600/400?random=3" class="law-blog-img" alt="Blog Image 3">
-                        <div class="law-blog-body">
-                            <h5 class="law-blog-title">Student Life at SGT University</h5>
-                            <p class="law-blog-text">
-                                From moot courts to cultural fests, discover what makes student life at
-                                SGT University dynamic and enriching...
-                            </p>
-                            <div class="law-blog-footer">
-                                <div class="law-blog-date">
-                                    <i class="bi bi-calendar-date me-1"></i> Aug 30, 2025
-                                </div>
-                                <button class="law-read-more">
-                                    Read More <i class="bi bi-arrow-right-short ms-1"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div class="container">
+        <img src="/assets/img/home/Building.png" alt="Blog Image" class="img-fluid d-block image-wrapper">
+    </div>
+
+
 
 
     <!-- Footer Section -->
@@ -435,7 +353,13 @@
     </div>
 
 
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <script src="/assets/js/main.js"></script>
+
 </body>
 
 </html>

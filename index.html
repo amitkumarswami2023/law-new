@@ -13,46 +13,76 @@
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css" />
     <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- Google Fonts - Poppins -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <!-- Swiper CSS -->
+    <style>
+
+    </style>
 </head>
 
 <body>
     <div class="container">
         <header class="main-header py-3 px-2 rounded-bottom shadow-sm">
-            <div class="d-flex align-items-center justify-content-between px-4 py-4">
+            <div class="d-flex align-items-center justify-content-between px-4 py-3 position-relative">
 
-                <!-- Buttons: visible on md and above -->
-                <div class="d-none d-md-flex align-items-center gap-2">
-                    <button class="btn btn-primary">Apply Now</button>
-                    <button class="btn btn-secondary">Contact Us</button>
-                </div>
+                <!-- Left empty on large screens -->
+                <div class="flex-fill d-none d-md-block"></div>
 
-                <!-- Logo -->
+                <!-- Centered logo (desktop) -->
                 <div
                     class="header-logo text-center flex-grow-1 position-absolute start-50 translate-middle-x d-none d-md-block">
-                    <img src="assets/img/sgt-logo.png" alt="University Logo" class="img-fluid">
+                    <img src="/assets/img/sgt-logo.png" alt="University Logo" class="img-fluid"
+                        style="max-height:100px;">
                 </div>
 
-                <!-- Logo on mobile -->
-                <div class="d-flex d-md-none align-items-center">
-                    <img src="assets/img/sgt-logo.png" alt="University Logo" class="img-fluid" style="max-height:80px;">
+                <!-- Logo (mobile) -->
+                <div class="d-flex align-items-center d-md-none">
+                    <img src="/assets/img/sgt-logo.png" alt="University Logo" class="img-fluid"
+                        style="max-height:70px;">
                 </div>
 
-                <!-- Hamburger -->
-                <div class="d-flex align-items-center">
+                <!-- Right side (buttons + hamburger for large screens) -->
+                <div class="d-none d-md-flex align-items-center gap-2">
+                    <!-- Dropdown -->
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Law Courses
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#">LLB (Hons.)</a></li>
+                            <li><a class="dropdown-item" href="#">BA LLB</a></li>
+                            <li><a class="dropdown-item" href="#">BBA LLB</a></li>
+                            <li><a class="dropdown-item" href="#">LLM</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Apply Now -->
+                    <button class="btn btn-primary">Apply Now</button>
+
+                    <!-- Hamburger -->
                     <button
                         class="hamburger-btn d-flex flex-column justify-content-center gap-1 p-0 border-0 bg-transparent"
                         aria-label="Menu">
-                        <span class="hamburger-line bg-white rounded"></span>
-                        <span class="hamburger-line bg-white rounded"></span>
-                        <span class="hamburger-line bg-white rounded"></span>
+                        <span class="hamburger-line rounded"></span>
+                        <span class="hamburger-line rounded"></span>
+                        <span class="hamburger-line rounded"></span>
                     </button>
                 </div>
 
+                <!-- Hamburger only on mobile -->
+                <div class="d-flex d-md-none align-items-center">
+                    <button
+                        class="hamburger-btn d-flex flex-column justify-content-center gap-1 p-0 border-0 bg-transparent"
+                        aria-label="Menu">
+                        <span class="hamburger-line rounded"></span>
+                        <span class="hamburger-line rounded"></span>
+                        <span class="hamburger-line rounded"></span>
+                    </button>
+                </div>
             </div>
         </header>
     </div>
@@ -70,13 +100,13 @@
     </nav>
 
     <div class="container image-section">
-        <img src="assets/img/hero-img.png" alt="Full Width Rounded Image" id="heroImage">
+        <img src="assets/img/home/school-law-banner.png" alt="Full Width Rounded Image" id="heroImage">
     </div>
 
     <!-- Content Section -->
     <div class="container content-section my-3">
         <div class="text-center mb-2">
-            <h2 class="mb-2">Faculty of Law</h2>
+            <h2 class="mb-2">About the school</h2>
         </div>
         <div class="row align-items-center">
             <!-- Left Image (30%) -->
@@ -159,78 +189,6 @@
         </div>
     </div>
 
-
-    <!-- Boxed Accreditation Section -->
-    <div class="container my-5">
-        <div class="bg-custom rounded-4 p-5 shadow-sm">
-            <div class="text-center mb-5">
-                <h2 class="mb-3 title" style="color: #fff;">Our Accreditations</h2>
-                <p style="color: #fff;">We are proud to be recognized and accredited by national and international
-                    organizations.</p>
-            </div>
-
-            <!-- Logo Grid -->
-            <div class="row g-4 justify-content-center">
-
-                <!-- Row 1 -->
-                <div class="col-6 col-md-2">
-                    <div class="logo-box d-flex align-items-center justify-content-center">
-                        <img src="assets/img/home/Logo1.png" alt="Logo 1" class="img-fluid">
-                    </div>
-                </div>
-                <div class="col-6 col-md-2">
-                    <div class="logo-box d-flex align-items-center justify-content-center">
-                        <img src="assets/img/home/Logo2.png" alt="Logo 2" class="img-fluid">
-                    </div>
-                </div>
-                <div class="col-6 col-md-2">
-                    <div class="logo-box d-flex align-items-center justify-content-center">
-                        <img src="assets/img/home/Logo3.png" alt="Logo 3" class="img-fluid">
-                    </div>
-                </div>
-                <div class="col-6 col-md-2">
-                    <div class="logo-box d-flex align-items-center justify-content-center">
-                        <img src="assets/img/home/Logo4.png" alt="Logo 4" class="img-fluid">
-                    </div>
-                </div>
-
-
-                <!-- Row 2 -->
-                <div class="col-6 col-md-2">
-                    <div class="logo-box d-flex align-items-center justify-content-center">
-                        <img src="assets/img/home/Logo5.png" alt="Logo 5" class="img-fluid">
-                    </div>
-                </div>
-                <div class="col-6 col-md-2">
-                    <div class="logo-box d-flex align-items-center justify-content-center">
-                        <img src="assets/img/home/Logo6.png" alt="Logo 6" class="img-fluid">
-                    </div>
-                </div>
-                <div class="col-6 col-md-2">
-                    <div class="logo-box d-flex align-items-center justify-content-center">
-                        <img src="assets/img/home/Logo7.png" alt="Logo 7" class="img-fluid">
-                    </div>
-                </div>
-                <div class="col-6 col-md-2">
-                    <div class="logo-box d-flex align-items-center justify-content-center">
-                        <img src="assets/img/home/Logo8.png" alt="Logo 8" class="img-fluid">
-                    </div>
-                </div>
-                <div class="col-6 col-md-2">
-                    <div class="logo-box d-flex align-items-center justify-content-center">
-                        <img src="assets/img/home/Logo9.png" alt="Logo 9" class="img-fluid">
-                    </div>
-                </div>
-                <div class="col-6 col-md-2">
-                    <div class="logo-box d-flex align-items-center justify-content-center">
-                        <img src="assets/img/home/Logo10.png" alt="Logo 10" class="img-fluid">
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
     <!-- Vision / Mission Section -->
     <div class="container my-5 vision-mission-section">
         <!-- Section Heading -->
@@ -239,10 +197,7 @@
         </div>
 
         <div class="row align-items-center">
-            <!-- Left Image -->
-            <div class="col-12 col-md-4">
-                <img src="assets/img/home/vision.png" alt="Vision Image" class="img-fluid rounded vision-img">
-            </div>
+
 
             <!-- Right Text -->
             <div class="col-12 col-md-8 mt-3 mt-md-0">
@@ -264,12 +219,76 @@
                     leadership, and holistic development.
                 </p>
             </div>
+
+            <!-- Left Image -->
+            <div class="col-12 col-md-4">
+                <img src="assets/img/home/vision.png" alt="Vision Image" class="img-fluid rounded vision-img">
+            </div>
         </div>
     </div>
 
+
+    <!-- Boxed Accreditation Section -->
+    <div class="container my-5">
+        <div class="bg-custom rounded-5 p-5 shadow-sm position-relative">
+            <div class="text-center mb-5">
+                <h2 class="mb-3 title text-white">Our Accreditations</h2>
+                <p class="text-white">
+                    We are proud to be recognized and accredited by national and international organizations.
+                </p>
+            </div>
+
+            <div class="d-flex align-items-center justify-content-center gap-3 flex-wrap flex-md-nowrap">
+                <!-- Fixed Logo -->
+                <div class="fixed-logo me-3 text-center">
+                    <img src="assets/img/home/naac.png" alt="Fixed Logo" class="img-fluid" />
+                </div>
+
+                <!-- Swiper Slider -->
+                <div class="swiper accreditation-slider w-100">
+                    <div class="swiper-wrapper align-items-center">
+                        <div class="swiper-slide d-flex justify-content-center align-items-center">
+                            <img src="assets/img/home/Logo1.png" alt="Logo 2" class="img-fluid" />
+                        </div>
+                        <div class="swiper-slide d-flex justify-content-center align-items-center">
+                            <img src="assets/img/home/Logo2.png" alt="Logo 2" class="img-fluid" />
+                        </div>
+                        <div class="swiper-slide d-flex justify-content-center align-items-center">
+                            <img src="assets/img/home/Logo3.png" alt="Logo 3" class="img-fluid" />
+                        </div>
+                        <div class="swiper-slide d-flex justify-content-center align-items-center">
+                            <img src="assets/img/home/Logo4.png" alt="Logo 4" class="img-fluid" />
+                        </div>
+                        <div class="swiper-slide d-flex justify-content-center align-items-center">
+                            <img src="assets/img/home/Logo5.png" alt="Logo 5" class="img-fluid" />
+                        </div>
+                        <div class="swiper-slide d-flex justify-content-center align-items-center">
+                            <img src="assets/img/home/Logo6.png" alt="Logo 6" class="img-fluid" />
+                        </div>
+                        <div class="swiper-slide d-flex justify-content-center align-items-center">
+                            <img src="assets/img/home/Logo7.png" alt="Logo 7" class="img-fluid" />
+                        </div>
+                        <div class="swiper-slide d-flex justify-content-center align-items-center">
+                            <img src="assets/img/home/Logo8.png" alt="Logo 8" class="img-fluid" />
+                        </div>
+                        <div class="swiper-slide d-flex justify-content-center align-items-center">
+                            <img src="assets/img/home/Logo9.png" alt="Logo 9" class="img-fluid" />
+                        </div>
+                        <div class="swiper-slide d-flex justify-content-center align-items-center">
+                            <img src="assets/img/home/Logo10.png" alt="Logo 10" class="img-fluid" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
     <!-- Our Programs Section -->
     <div class="container my-3">
-        <div class="programs-section p-5 rounded">
+        <div class="programs-section p-5 rounded-5">
             <!-- Section Heading -->
             <div class="text-center mb-4">
                 <h2 class="section-title">Our Programs</h2>
@@ -328,6 +347,13 @@
                     </div>
                 </div>
             </div>
+            <!-- Centered Buttons -->
+            <div class="text-center mt-4">
+                <a href="apply.html" class="btn btn-lg btn-primary me-3 px-4 py-2">Apply Now</a>
+                <a href="assets/docs/brochure.pdf" class="btn btn-outline-secondary" target="_blank">
+                    <i class="bi bi-file-earmark-pdf-fill me-2"></i>Brochure
+                </a>
+            </div>
         </div>
     </div>
 
@@ -372,108 +398,114 @@
 
     <!-- Industrial Advisory Board Section -->
     <div class="container my-3">
-        <div class="industrial-board-section p-5 rounded">
+        <div class="industrial-board-section p-5 rounded-5">
             <div class="text-center mb-4">
                 <h2 class="section-title">Industrial Advisory Board</h2>
             </div>
 
-            <div class="row g-3">
-                <!-- Member 1 -->
-                <div class="col-6 col-sm-4 col-md-2 text-center">
-                    <img src="assets/img/home/Kumar Mukesh.png" alt="Member 1" class="img-fluid advisory-img mb-2">
-                    <h5 class="member-name">Mr. Kumar Mukesh</h5>
-                    <p class="member-designation">Hon. Secretary of Bar Council of Delhi</p>
+            <!-- Swiper -->
+            <div class="swiper industrial-swiper">
+                <div class="swiper-wrapper">
+                    <!-- Member 1 -->
+                    <div class="swiper-slide text-center">
+                        <img src="assets/img/home/Kumar Mukesh.png" alt="Member 1" class="img-fluid advisory-img mb-2">
+                        <h5 class="member-name">Mr. Kumar Mukesh</h5>
+                        <p class="member-designation">Hon. Secretary of Bar Council of Delhi</p>
+                    </div>
+
+                    <!-- Member 2 -->
+                    <div class="swiper-slide text-center">
+                        <img src="assets/img/home/Sudhir Mishra.png" alt="Member 2" class="img-fluid advisory-img mb-2">
+                        <h5 class="member-name">Mr. Sudhir Mishra</h5>
+                        <p class="member-designation">Founder & Managing Partner, Trust Legal & Door Tenant, No5
+                            Barristers
+                            Chambers, UK</p>
+                    </div>
+
+                    <!-- Member 3 -->
+                    <div class="swiper-slide text-center">
+                        <img src="assets/img/home/Rahul Gupta.png" alt="Member 3" class="img-fluid advisory-img mb-2">
+                        <h5 class="member-name">Mr. Rahul Gupta</h5>
+                        <p class="member-designation">Founder at Rahul Gupta & Associates (Advocates & Legal Advisors)
+                        </p>
+                    </div>
+
+                    <!-- Member 4 -->
+                    <div class="swiper-slide text-center">
+                        <img src="assets/img/home/Rani Patel.png" alt="Member 4" class="img-fluid advisory-img mb-2">
+                        <h5 class="member-name">Ms. Rani Patel</h5>
+                        <p class="member-designation">President and Founder of Aarohan</p>
+                    </div>
+
+                    <!-- Member 5 -->
+                    <div class="swiper-slide text-center">
+                        <img src="assets/img/home/Gauhar Mirza.png" alt="Member 5" class="img-fluid advisory-img mb-2">
+                        <h5 class="member-name">Mr. Gauhar Mirza</h5>
+                        <p class="member-designation">Saraf and Partners</p>
+                    </div>
+
+                    <!-- Member 6 -->
+                    <div class="swiper-slide text-center">
+                        <img src="assets/img/home/Sachin Kapoor.png" alt="Member 6" class="img-fluid advisory-img mb-2">
+                        <h5 class="member-name">Mr. Sachin Kapoor</h5>
+                        <p class="member-designation">Co Founder of Trumsy</p>
+                    </div>
+
+                    <!-- Member 7 -->
+                    <div class="swiper-slide text-center">
+                        <img src="assets/img/home/Annshu Davar.png" alt="Member 7" class="img-fluid advisory-img mb-2">
+                        <h5 class="member-name">Ms. Annshu Davar</h5>
+                        <p class="member-designation">Advocate, Supreme Court of India</p>
+                    </div>
+
+                    <!-- Member 8 -->
+                    <div class="swiper-slide text-center">
+                        <img src="assets/img/home/Anuj Kumar.png" alt="Member 8" class="img-fluid advisory-img mb-2">
+                        <h5 class="member-name">Mr. Anuj Kumar</h5>
+                        <p class="member-designation">Founder of Legal Desire, Media Editor in Chief of the Fashion Law
+                            Journal</p>
+                    </div>
+
+                    <!-- Member 9 -->
+                    <div class="swiper-slide text-center">
+                        <img src="assets/img/home/Manuj Bhardwaj.png" alt="Member 9"
+                            class="img-fluid advisory-img mb-2">
+                        <h5 class="member-name">Mr. Manuj Bhardwaj</h5>
+                        <p class="member-designation">International Lawyer</p>
+                    </div>
+
+                    <!-- Member 10 -->
+                    <div class="swiper-slide text-center">
+                        <img src="assets/img/home/Abhishek Gupta.png" alt="Member 10"
+                            class="img-fluid advisory-img mb-2">
+                        <h5 class="member-name">Mr. Abhishek Gupta</h5>
+                        <p class="member-designation">S.G.& Associates, (Ex Luthra & Luthra Law Offices)</p>
+                    </div>
+
+                    <!-- Member 11 -->
+                    <div class="swiper-slide text-center">
+                        <img src="assets/img/home/Smrithi Francis Earayil.png" alt="Member 11"
+                            class="img-fluid advisory-img mb-2">
+                        <h5 class="member-name">Ms. Smrithi Francis Earayil</h5>
+                        <p class="member-designation">Advocacy Practitioner, Scotland UK</p>
+                    </div>
+
+                    <!-- Member 12 -->
+                    <div class="swiper-slide text-center">
+                        <img src="assets/img/home/Abhinav Mishra.png" alt="Member 12"
+                            class="img-fluid advisory-img mb-2">
+                        <h5 class="member-name">Mr. Abhinav Mishra</h5>
+                        <p class="member-designation">Panel Counsel, Government of India</p>
+                    </div>
                 </div>
 
-                <!-- Member 2 -->
-                <div class="col-6 col-sm-4 col-md-2 text-center">
-                    <img src="assets/img/home/Sudhir Mishra.png" alt="Member 2" class="img-fluid advisory-img mb-2">
-                    <h5 class="member-name">Mr. Sudhir Mishra</h5>
-                    <p class="member-designation">Founder & Managing Partner
-                        Trust Legal & Door Tenant,
-                        No5 Barristers Chambers, UK</p>
-                </div>
-
-                <!-- Member 3 -->
-                <div class="col-6 col-sm-4 col-md-2 text-center">
-                    <img src="assets/img/home/Rahul Gupta.png" alt="Member 3" class="img-fluid advisory-img mb-2">
-                    <h5 class="member-name">Mr. Rahul Gupta</h5>
-                    <p class="member-designation">Founder at Rahul Gupta
-                        & Associates
-                        (Advocates & Legal Advisors)</p>
-                </div>
-
-                <!-- Member 4 -->
-                <div class="col-6 col-sm-4 col-md-2 text-center">
-                    <img src="assets/img/home/Rani Patel.png" alt="Member 4" class="img-fluid advisory-img mb-2">
-                    <h5 class="member-name">Ms. Rani Patel</h5>
-                    <p class="member-designation">President and
-                        Founder of Aarohan</p>
-                </div>
-
-                <!-- Member 5 -->
-                <div class="col-6 col-sm-4 col-md-2 text-center">
-                    <img src="assets/img/home/Gauhar Mirza.png" alt="Member 5" class="img-fluid advisory-img mb-2">
-                    <h5 class="member-name">Mr. Gauhar Mirza</h5>
-                    <p class="member-designation">Saraf and Partners</p>
-                </div>
-
-                <!-- Member 6 -->
-                <div class="col-6 col-sm-4 col-md-2 text-center">
-                    <img src="assets/img/home/Sachin Kapoor.png" alt="Member 6" class="img-fluid advisory-img mb-2">
-                    <h5 class="member-name">Mr. Sachin Kapoor</h5>
-                    <p class="member-designation">Co Founder of Trumsy</p>
-                </div>
-
-                <!-- Member 7 -->
-                <div class="col-6 col-sm-4 col-md-2 text-center">
-                    <img src="assets/img/home/Annshu Davar.png" alt="Member 7" class="img-fluid advisory-img mb-2">
-                    <h5 class="member-name">Ms. Annshu Davar</h5>
-                    <p class="member-designation">Advocate, Supreme
-                        Court of India</p>
-                </div>
-
-                <!-- Member 8 -->
-                <div class="col-6 col-sm-4 col-md-2 text-center">
-                    <img src="assets/img/home/Anuj Kumar.png" alt="Member 8" class="img-fluid advisory-img mb-2">
-                    <h5 class="member-name">Mr. Anuj Kumar</h5>
-                    <p class="member-designation">Founder of Legal Desire
-                        Media Editor in Chief of the Fashion Law Journal</p>
-                </div>
-
-                <!-- Member 9 -->
-                <div class="col-6 col-sm-4 col-md-2 text-center">
-                    <img src="assets/img/home/Manuj Bhardwaj.png" alt="Member 9" class="img-fluid advisory-img mb-2">
-                    <h5 class="member-name">Mr. Manuj Bhardwaj</h5>
-                    <p class="member-designation">International Lawyer</p>
-                </div>
-
-                <!-- Member 10 -->
-                <div class="col-6 col-sm-4 col-md-2 text-center">
-                    <img src="assets/img/home/Abhishek Gupta.png" alt="Member 10" class="img-fluid advisory-img mb-2">
-                    <h5 class="member-name">Mr. Abhishek Gupta</h5>
-                    <p class="member-designation">S.G.& Associates, (Ex Luthra & Luthra Law Offices)</p>
-                </div>
-
-                <!-- Member 11 -->
-                <div class="col-6 col-sm-4 col-md-2 text-center">
-                    <img src="assets/img/home/Smrithi Francis Earayil.png" alt="Member 11"
-                        class="img-fluid advisory-img mb-2">
-                    <h5 class="member-name">Ms. Smrithi Francis Earayil</h5>
-                    <p class="member-designation">Advocacy Practitioner,
-                        Scotland UK</p>
-                </div>
-
-                <!-- Member 12 -->
-                <div class="col-6 col-sm-4 col-md-2 text-center">
-                    <img src="assets/img/home/Abhinav Mishra.png" alt="Member 12" class="img-fluid advisory-img mb-2">
-                    <h5 class="member-name">Mr. Abhinav Mishra</h5>
-                    <p class="member-designation">Panel Counsel,
-                        Government of India</p>
-                </div>
+                <!-- Navigation buttons -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
         </div>
     </div>
+
 
     <!-- Cells / Societies / Centres Section -->
     <div class="container my-8">
@@ -634,6 +666,139 @@
             </div>
         </div>
     </div>
+
+    <!-- Alumni Testimonials Section -->
+    <div class="container my-5">
+        <div class="alumni-testimonials-section p-5 rounded">
+            <div class="text-center mb-4">
+                <h2 class="section-title">Alumni Testimonials</h2>
+            </div>
+
+            <!-- Swiper -->
+            <div class="swiper alumni-swiper">
+                <div class="swiper-wrapper">
+                    <!-- Testimonial 1 -->
+                    <div class="swiper-slide">
+                        <div class="testimonial-card p-5 rounded shadow-sm">
+                            <p class="testimonial-text">"As an institution, the Faculty of Law at SGT
+                                Universityconstantly motivates studentsto take up
+                                challenges and inspires excellence in curricular, co-curricular andextracurricular
+                                activities. The
+                                institution keeps improving education standards tomatch student needs in this
+                                competitive world.
+                                With a well-equipped library andfriendly, approachable faculty, students have the
+                                support system
+                                to enhance skillsinside and outside the classroom"</p>
+                            <h5 class="alumni-name mt-3">Nishant Yadav, BBA LL.B</h5>
+                            <p class="alumni-designation">LL.B (Hons.) Graduate, 2018</p>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="swiper-slide">
+                        <div class="testimonial-card p-5 rounded shadow-sm">
+                            <p class="testimonial-text">"As an institution, the Faculty of Law at SGT
+                                Universityconstantly motivates studentsto take up
+                                challenges and inspires excellence in curricular, co-curricular andextracurricular
+                                activities. The
+                                institution keeps improving education standards tomatch student needs in this
+                                competitive world.
+                                With a well-equipped library andfriendly, approachable faculty, students have the
+                                support system
+                                to enhance skillsinside and outside the classroom"</p>
+                            <h5 class="alumni-name mt-3">Nishant Yadav, BBA LL.B</h5>
+                            <p class="alumni-designation">LL.B (Hons.) Graduate, 2018</p>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="swiper-slide">
+                        <div class="testimonial-card p-5 rounded shadow-sm">
+                            <p class="testimonial-text">"As an institution, the Faculty of Law at SGT
+                                Universityconstantly motivates studentsto take up
+                                challenges and inspires excellence in curricular, co-curricular andextracurricular
+                                activities. The
+                                institution keeps improving education standards tomatch student needs in this
+                                competitive world.
+                                With a well-equipped library andfriendly, approachable faculty, students have the
+                                support system
+                                to enhance skillsinside and outside the classroom"</p>
+                            <h5 class="alumni-name mt-3">Nishant Yadav, BBA LL.B</h5>
+                            <p class="alumni-designation">LL.B (Hons.) Graduate, 2018</p>
+                        </div>
+                    </div>
+
+                    <!-- Add more testimonials here -->
+                </div>
+
+                <!-- Navigation buttons -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+
+                <!-- Pagination (optional) -->
+                <div class="swiper-pagination mt-3"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Connect. Engage. Grow. Section -->
+    <div class="container">
+        <section class="connect-section py-5 rounded-5">
+            <div class="container">
+                <!-- Heading -->
+                <div class="text-center mb-4">
+                    <h2 class="section-title">Connect. Engage. Grow.</h2>
+                </div>
+
+                <!-- Form -->
+                <form class="row g-3 align-items-center">
+                    <div class="col-md-2">
+                        <label for="name" class="form-label visually-hidden">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Name">
+                    </div>
+                    <div class="col-md-2">
+                        <label for="email" class="form-label visually-hidden">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Email">
+                    </div>
+                    <div class="col-md-2">
+                        <label for="mobile" class="form-label visually-hidden">Mobile No.</label>
+                        <input type="tel" class="form-control" id="mobile" placeholder="Mobile No.">
+                    </div>
+                    <div class="col-md-2">
+                        <label for="course" class="form-label visually-hidden">Course</label>
+                        <select class="form-select" id="course">
+                            <option selected disabled>Select Course</option>
+                            <option>BA. LL.B (Hons.)</option>
+                            <option>BBA. LL.B (Hons.)</option>
+                            <option>LL.B (Hons.)</option>
+                            <option>LL.M</option>
+                            <option>Ph.D. in Law</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <button type="submit" class="btn btn-primary w-100">Submit</button>
+                    </div>
+                </form>
+
+                <!-- Contact & Social Row -->
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mt-4">
+                    <!-- Phone Numbers -->
+                    <p class="mb-2 mb-md-0 contact-numbers text-center text-md-start">
+                        1800 102 5661 &nbsp; 93117 62952, &nbsp; 74280 85474
+                    </p>
+
+                    <!-- Social Icons -->
+                    <div class="social-icons text-center text-md-end">
+                        <a href="#" class="me-3 text-dark"><i class="bi bi-facebook fs-4"></i></a>
+                        <a href="#" class="me-3 text-dark"><i class="bi bi-instagram fs-4"></i></a>
+                        <a href="#" class="text-dark"><i class="bi bi-linkedin fs-4"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
 
     <div class="container">
         <img src="assets/img/home/Building.png" alt="Blog Image" class="img-fluid d-block image-wrapper">
@@ -970,6 +1135,62 @@
                 },
             },
         });
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const swiper = new Swiper(".accreditation-slider", {
+                slidesPerView: 5,
+                spaceBetween: 20,
+                loop: true,
+                autoplay: {
+                    delay: 1500,
+                    disableOnInteraction: false,
+                },
+                breakpoints: {
+                    1200: { slidesPerView: 5 },
+                    992: { slidesPerView: 4 },
+                    768: { slidesPerView: 3 },
+                    576: { slidesPerView: 2 },
+                    0: { slidesPerView: 1 },
+                },
+            });
+        });
+
+        const industrialSwiper = new Swiper('.industrial-swiper', {
+            slidesPerView: 2,
+            spaceBetween: 20,
+            loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                576: { slidesPerView: 3 },
+                768: { slidesPerView: 4 },
+                992: { slidesPerView: 5 },
+            },
+        });
+
+        const alumniSwiper = new Swiper('.alumni-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: false, // disable dots
+        });
+
+
+
     </script>
 
 </body>

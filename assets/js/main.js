@@ -99,3 +99,22 @@ const recruitersSwiper = new Swiper(".recruiters-swiper", {
 //     },
 //   },
 // });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const swiper = new Swiper(".accreditation-slider", {
+    slidesPerView: 5,
+    spaceBetween: 20,
+    loop: true,
+    autoplay: {
+      delay: 1500,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      1200: { slidesPerView: 5 },
+      992: { slidesPerView: 4 },
+      768: { slidesPerView: 3 },
+      576: { slidesPerView: 2 },
+      0: { slidesPerView: 1 },
+    },
+  });
+});

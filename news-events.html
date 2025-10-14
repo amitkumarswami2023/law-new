@@ -16,37 +16,63 @@
 <body>
     <div class="container">
         <header class="main-header py-3 px-2 rounded-bottom shadow-sm">
-            <div class="d-flex align-items-center justify-content-between px-4 py-4">
+            <div class="d-flex align-items-center justify-content-between px-4 py-3 position-relative">
 
-                <!-- Buttons: visible on md and above -->
-                <div class="d-none d-md-flex align-items-center gap-2">
-                    <button class="btn btn-primary">Apply Now</button>
-                    <button class="btn btn-secondary">Contact Us</button>
-                </div>
+                <!-- Left empty on large screens -->
+                <div class="flex-fill d-none d-md-block"></div>
 
-                <!-- Logo -->
+                <!-- Centered logo (desktop) -->
                 <div
                     class="header-logo text-center flex-grow-1 position-absolute start-50 translate-middle-x d-none d-md-block">
-                    <img src="assets/img/sgt-logo.png" alt="University Logo" class="img-fluid"
+                    <img src="/assets/img/sgt-logo.png" alt="University Logo" class="img-fluid"
                         style="max-height:100px;">
                 </div>
 
-                <!-- Logo on mobile -->
-                <div class="d-flex d-md-none align-items-center">
-                    <img src="assets/img/sgt-logo.png" alt="University Logo" class="img-fluid" style="max-height:80px;">
+                <!-- Logo (mobile) -->
+                <div class="d-flex align-items-center d-md-none">
+                    <img src="/assets/img/sgt-logo.png" alt="University Logo" class="img-fluid"
+                        style="max-height:70px;">
                 </div>
 
-                <!-- Hamburger -->
-                <div class="d-flex align-items-center">
+                <!-- Right side (buttons + hamburger for large screens) -->
+                <div class="d-none d-md-flex align-items-center gap-2">
+                    <!-- Dropdown -->
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Law Courses
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#">LLB (Hons.)</a></li>
+                            <li><a class="dropdown-item" href="#">BA LLB</a></li>
+                            <li><a class="dropdown-item" href="#">BBA LLB</a></li>
+                            <li><a class="dropdown-item" href="#">LLM</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Apply Now -->
+                    <button class="btn btn-primary">Apply Now</button>
+
+                    <!-- Hamburger -->
                     <button
                         class="hamburger-btn d-flex flex-column justify-content-center gap-1 p-0 border-0 bg-transparent"
                         aria-label="Menu">
-                        <span class="hamburger-line bg-white rounded"></span>
-                        <span class="hamburger-line bg-white rounded"></span>
-                        <span class="hamburger-line bg-white rounded"></span>
+                        <span class="hamburger-line rounded"></span>
+                        <span class="hamburger-line rounded"></span>
+                        <span class="hamburger-line rounded"></span>
                     </button>
                 </div>
 
+                <!-- Hamburger only on mobile -->
+                <div class="d-flex d-md-none align-items-center">
+                    <button
+                        class="hamburger-btn d-flex flex-column justify-content-center gap-1 p-0 border-0 bg-transparent"
+                        aria-label="Menu">
+                        <span class="hamburger-line rounded"></span>
+                        <span class="hamburger-line rounded"></span>
+                        <span class="hamburger-line rounded"></span>
+                    </button>
+                </div>
             </div>
         </header>
     </div>

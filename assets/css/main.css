@@ -16,7 +16,7 @@ h2 {
   font-style: italic;
   font-weight: 500; /* Medium */
   font-size: 36px;
-  line-height: 1.2;
+  line-height: 1.4;
   color: #000; /* optional */
   margin-bottom: 20px;
 }
@@ -714,7 +714,7 @@ mark {
   width: 100%;
   height: 200px;
   object-fit: cover;
-  border-radius: 10px; /* optional slightly rounded corners */
+  border-radius: 10px;
 }
 
 .industrial-board-section .member-name {
@@ -726,6 +726,14 @@ mark {
 .industrial-board-section .member-designation {
   color: #fff;
   margin-bottom: 0;
+  font-size: 0.9rem;
+  line-height: 1.2;
+}
+
+/* Swiper navigation buttons */
+.industrial-board-section .swiper-button-next,
+.industrial-board-section .swiper-button-prev {
+  color: #fff;
 }
 
 /* cells section */
@@ -1169,6 +1177,7 @@ mark {
   font-family: "Poppins", sans-serif;
 }
 
+/* Logo */
 .main-header .header-logo img {
   max-height: 80px !important;
 }
@@ -1199,7 +1208,17 @@ mark {
   background-color: #f2f2f2;
 }
 
+/* Dropdown Menu */
+.dropdown-menu {
+  font-size: 14px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
 /* Hamburger */
+.hamburger-btn {
+  cursor: pointer;
+}
 .hamburger-line {
   width: 25px;
   height: 3px;
@@ -1207,11 +1226,14 @@ mark {
   border-radius: 2px;
 }
 
-/* Responsive tweaks for mobile logo alignment */
+/* Mobile adjustments */
 @media (max-width: 767.98px) {
-  .header-logo {
-    flex-grow: 0;
-    text-align: left;
+  .main-header {
+    border-radius: 0 0 30px 30px;
+  }
+
+  .header-logo img {
+    max-height: 70px !important;
   }
 }
 
@@ -1375,4 +1397,135 @@ mark {
 #footerAccordion ul.list-styled li {
   padding: 0.25rem 0;
   font-size: 14px;
+}
+
+/* .accreditation-slider */
+
+.accreditation-slider {
+  width: 100%;
+  min-height: 100px; /* ensures visibility */
+}
+
+.accreditation-slider .swiper-slide {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg-custom {
+  background-color: #062e4f;
+}
+
+.fixed-logo img {
+  max-height: 150px;
+}
+
+.accreditation-slider .swiper-slide img {
+  max-height: 100px;
+  filter: brightness(1) invert(0);
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  z-index: 56;
+}
+
+.accreditation-slider .swiper-slide img:hover {
+  opacity: 1;
+}
+
+/* Make it responsive */
+@media (max-width: 768px) {
+  .fixed-logo {
+    display: none;
+  }
+}
+
+/* Alumni slider */
+/* Alumni Testimonials Section */
+.alumni-testimonials-section {
+  background-color: #fff;
+  border-radius: 40px;
+}
+
+.alumni-testimonials-section .section-title {
+  color: #000;
+}
+
+.alumni-testimonials-section .testimonial-card {
+  display: block; /* ensures block display */
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.alumni-testimonials-section .testimonial-text {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #000;
+}
+
+.alumni-testimonials-section .alumni-name {
+  color: #000;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.alumni-testimonials-section .alumni-designation {
+  color: #555;
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+/* Swiper navigation buttons */
+.alumni-testimonials-section .swiper-button-next,
+.alumni-testimonials-section .swiper-button-prev {
+  color: #062e4f;
+}
+
+/* Swiper pagination bullets */
+.alumni-testimonials-section .swiper-pagination-bullet {
+  background-color: #062e4f;
+  opacity: 0.7;
+}
+.alumni-testimonials-section .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+/* Connect Section */
+.connect-section {
+  background-color: #f5f5f5; /* light gray */
+  display: block;
+}
+
+.connect-section .section-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #000;
+}
+
+.connect-section .form-control,
+.connect-section .form-select {
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+}
+
+.connect-section .btn {
+  border-radius: 10px;
+  padding: 0.55rem 1rem;
+}
+
+.connect-section .contact-numbers {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #062e4f;
+}
+
+.connect-section .social-icons a {
+  transition: 0.3s;
+}
+
+.connect-section .social-icons a:hover {
+  color: #6204f; /* accent color on hover */
 }
