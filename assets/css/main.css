@@ -1330,26 +1330,45 @@ mark {
   transition: 0.3s;
 }
 
-/* Accordion buttons */
-.accordion-button {
-  background-color: #062e4f;
-  color: #fff;
-  font-weight: 600;
+/* Footer Accordion - Mobile */
+#footerAccordion .accordion-item {
+  border: none; /* remove border */
+  background-color: #062e4f; /* match footer bg */
+}
+
+#footerAccordion .accordion-button {
+  background-color: #062e4f; /* match footer bg */
+  color: #ffffff; /* white text */
   padding: 0.75rem 1rem;
+  font-weight: 500;
+  border: none; /* remove default bootstrap borders */
+  box-shadow: none;
 }
 
-.accordion-button:not(.collapsed) {
-  background-color: #062e4f;
-  color: #fff;
+#footerAccordion .accordion-button::after {
+  filter: invert(1); /* make the default Bootstrap chevron white */
 }
 
-.accordion-body ul li {
-  padding: 6px 0;
+#footerAccordion .accordion-button:not(.collapsed) {
+  background-color: #062e4f; /* keep same bg when open */
+  color: #ffffff;
+}
+
+#footerAccordion .accordion-collapse {
+  background-color: #062e4f; /* keep collapse body same as header */
+}
+
+#footerAccordion .accordion-body {
+  padding: 0.5rem 1rem;
+  color: #ffffff; /* white text in body */
+}
+
+#footerAccordion ul.list-styled {
+  padding-left: 25px;
+  margin-bottom: 0;
+}
+
+#footerAccordion ul.list-styled li {
+  padding: 0.25rem 0;
   font-size: 14px;
-  cursor: pointer;
-}
-
-.accordion-body ul li:hover {
-  color: #062e4f;
-  transition: 0.3s;
 }
