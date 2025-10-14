@@ -1508,18 +1508,21 @@ mark {
 .connect-section .form-select {
   border-radius: 10px;
   padding: 0.5rem 1rem;
+  border: 1px solid #000;
+  background-color: #f5f5f5;
 }
 
 .connect-section .btn {
   border-radius: 10px;
   padding: 0.55rem 1rem;
+  background-color: #062e4f;
 }
 
 .connect-section .contact-numbers {
   font-family: "Poppins", sans-serif;
-  font-size: 1.1rem;
+  font-size: 1.8rem;
   font-weight: 400;
-  color: #062e4f;
+  color: #000;
 }
 
 .connect-section .social-icons a {
@@ -1527,5 +1530,5 @@ mark {
 }
 
 .connect-section .social-icons a:hover {
-  color: #6204f; /* accent color on hover */
+  color: #062e4f; /* accent color on hover */
 }
