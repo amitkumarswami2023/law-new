@@ -1329,3 +1329,27 @@ mark {
   color: #0060aa;
   transition: 0.3s;
 }
+
+/* Accordion buttons */
+.accordion-button {
+  background-color: #062e4f;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #062e4f;
+  color: #fff;
+}
+
+.accordion-body ul li {
+  padding: 6px 0;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.accordion-body ul li:hover {
+  color: #062e4f;
+  transition: 0.3s;
+}

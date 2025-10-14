@@ -23,7 +23,7 @@
 <body>
     <div class="container">
         <header class="main-header py-3 px-2 rounded-bottom shadow-sm">
-            <div class="d-flex align-items-center justify-content-between px-4">
+            <div class="d-flex align-items-center justify-content-between px-4 py-2">
 
                 <!-- Buttons: visible on md and above -->
                 <div class="d-none d-md-flex align-items-center gap-2">
@@ -32,9 +32,9 @@
                 </div>
 
                 <!-- Logo -->
-                <div class="header-logo text-center flex-grow-1">
+                <div class="header-logo text-center flex-grow-1 position-absolute start-50 translate-middle-x">
                     <img src="assets/img/law-header.png" alt="University Logo" class="img-fluid"
-                        style="max-height:80px;">
+                        style="max-height:100px;">
                 </div>
 
                 <!-- Hamburger -->
@@ -127,7 +127,7 @@
 
             <!-- Top Links Section -->
             <div class="container p-4">
-                <div class="row footer-links">
+                <div class="row footer-links d-none d-lg-flex">
 
                     <!-- Row 1: 4 columns -->
                     <div class="col-lg-3 col-md-6 mb-4">
@@ -213,11 +213,38 @@
                             <li>Blogs</li>
                         </ul>
                     </div>
-
-
-
-
                 </div>
+
+                <!-- Mobile Accordion -->
+                <div class="accordion d-lg-none" id="footerAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingAdmissions">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseAdmissions" aria-expanded="false"
+                                aria-controls="collapseAdmissions">
+                                Admissions
+                            </button>
+                        </h2>
+                        <div id="collapseAdmissions" class="accordion-collapse collapse"
+                            aria-labelledby="headingAdmissions" data-bs-parent="#footerAccordion">
+                            <div class="accordion-body p-2">
+                                <ul class="list-styled mb-2">
+                                    <li>Admission 2025-26</li>
+                                    <li>How To Apply</li>
+                                    <li>List of Courses</li>
+                                    <li>Scholarship</li>
+                                    <li>Brochure</li>
+                                    <li>RTI</li>
+                                    <li>FAQ</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
             </div>
 
             <!-- Middle Contact Section (Full Width) -->
@@ -241,7 +268,7 @@
             </div>
 
             <!-- Bottom Most Searched Section -->
-            <div class="footer-most-searched py-3 mt-3">
+            <!-- <div class="footer-most-searched py-3 mt-3">
                 <div class="container text-center">
                     <p class="font-weight-bold mb-2">Most Searched Colleges at SGT University</p>
                     <ul class="list-inline mb-0">
@@ -263,7 +290,7 @@
                         <li class="list-inline-item">Best College for Behavioural Sciences Allied Health Science</li>
                     </ul>
                 </div>
-            </div>
+            </div> -->
 
         </footer>
 
