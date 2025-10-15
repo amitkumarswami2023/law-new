@@ -668,6 +668,12 @@ mark {
   transform: translateX(3px);
 }
 
+.programs-section .btn-outline-secondary {
+  background-color: #fff !important;
+  color: #0060aa !important;
+  font-weight: bold;
+}
+
 /* Academic Advisory Board Section */
 .academic-board-section {
   padding: 3rem 0;
@@ -680,7 +686,7 @@ mark {
 /* Rectangular images (full) */
 .advisory-img {
   width: 100%;
-  height: 100px; /* fixed height for all images */
+  height: 350px !important; /* fixed height for all images */
   object-fit: cover; /* maintain aspect ratio and cover the box */
   border-radius: 10px; /* optional slightly rounded corners */
 }
@@ -691,12 +697,17 @@ mark {
   margin-bottom: 0.25rem;
   font-size: 18px;
   font-style: italic;
+  text-align: left;
+  font-weight: bold;
 }
 
 .member-designation {
-  color: #555;
+  color: #000;
   margin-bottom: 0;
   font-style: italic;
+  text-align: left;
+  font-size: 13px;
+  font-weight: bold;
 }
 
 /* industrial-board-section */
@@ -710,9 +721,9 @@ mark {
   color: #fff;
 }
 
-.industrial-board-section .advisory-img {
-  width: 100%;
-  height: 200px;
+.industrial-board-section .industrial-img {
+  width: 160px;
+  height: 180px;
   object-fit: cover;
   border-radius: 10px;
 }
@@ -721,19 +732,32 @@ mark {
   color: #fff;
   font-weight: normal;
   margin-bottom: 0.25rem;
+  text-align: center;
 }
 
 .industrial-board-section .member-designation {
   color: #fff;
   margin-bottom: 0;
-  font-size: 0.9rem;
-  line-height: 1.2;
+  font-size: 0.8rem;
+  line-height: 1.3;
+  text-align: center;
 }
 
 /* Swiper navigation buttons */
 .industrial-board-section .swiper-button-next,
 .industrial-board-section .swiper-button-prev {
-  color: #fff;
+  background: none; /* remove background */
+  color: #fff; /* arrow color white */
+  width: auto; /* let arrow size adjust */
+  height: auto;
+}
+
+/* Remove default content (Swiper adds default arrow icon via ::after) */
+.industrial-board-section .swiper-button-next::after,
+.industrial-board-section .swiper-button-prev::after {
+  font-size: 24px; /* arrow size */
+  color: #fff; /* arrow color */
+  text-shadow: none; /* remove shadow */
 }
 
 /* cells section */
@@ -1197,7 +1221,7 @@ mark {
 
 .btn-secondary {
   background-color: #fff;
-  color: #000;
+  color: #062e4f;
   border: 1px solid #ddd;
   border-radius: 6px;
   padding: 8px 18px;
@@ -1206,6 +1230,7 @@ mark {
 }
 .btn-secondary:hover {
   background-color: #f2f2f2;
+  color: #062e4f;
 }
 
 /* Dropdown Menu */
@@ -1417,8 +1442,8 @@ mark {
   background-color: #062e4f;
 }
 
-.fixed-logo img {
-  max-height: 150px;
+.fixed-logo1 img {
+  max-height: 180px;
 }
 
 .accreditation-slider .swiper-slide img {
@@ -1564,4 +1589,93 @@ mark {
   .connect-section .social-icons {
     margin-top: 10px;
   }
+}
+
+/* Programmes Inner Page */
+/* Full Image Banner Section */
+.programmes-banner {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 30px;
+}
+
+.programmes-banner img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border-radius: 30px;
+}
+
+/* Optional: Add a subtle shadow or border for style */
+.programmes-banner img {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Course Info Section */
+#course-info p {
+  font-size: 16px;
+  color: #000;
+  text-align: justify;
+}
+.method-box h5 {
+  font-style: italic;
+}
+.method-box li {
+  font-size: 16px;
+  color: #000;
+}
+.method-box p {
+  font-size: 14px;
+  color: #000;
+}
+/* Gray Boxes */
+.course-info-section .method-box {
+  background-color: #e9ecef;
+  transition: all 0.3s ease;
+}
+
+.course-info-section .method-box:hover {
+  background-color: #dee2e6;
+  transform: translateY(-2px);
+}
+
+/* Ensure Equal Height Columns */
+.course-info-section .row > div {
+  display: flex;
+}
+
+/* Make Image Responsive & Styled */
+.course-info-section img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+/* Course Highlights Table */
+.table-bordered.border-bottom-only td {
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-bottom: 1px solid #f5f5f5; /* default bottom border */
+}
+
+.table-bordered.border-bottom-only th {
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-bottom: none !important;
+}
+
+.table-bordered.border-bottom-only th {
+  border-bottom: 2px solid #062e4f !important; /* thicker for heading */
+}
+
+.table-bordered.border-bottom-only td {
+  border-bottom: 1px solid #dee2e6 !important;
+}
+
+.table {
+  background-color: #fff;
 }

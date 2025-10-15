@@ -23,40 +23,63 @@
 <body>
     <div class="container">
         <header class="main-header py-3 px-2 rounded-bottom shadow-sm">
-            <div class="d-flex align-items-center justify-content-between px-4 py-4">
+            <div class="d-flex align-items-center justify-content-between px-4 py-3 position-relative">
 
-                <!-- Buttons: visible on md and above -->
-                <div class="d-none d-md-flex align-items-center gap-2">
-                    <button class="btn btn-primary">Apply Now</button>
-                    <button class="btn btn-secondary">Contact Us</button>
-                </div>
+                <!-- Left empty on large screens -->
+                <div class="flex-fill d-none d-md-block"></div>
 
-                <!-- Logo -->
+                <!-- Centered logo (desktop) -->
                 <div
                     class="header-logo text-center flex-grow-1 position-absolute start-50 translate-middle-x d-none d-md-block">
                     <img src="/assets/img/sgt-logo.png" alt="University Logo" class="img-fluid"
                         style="max-height:100px;">
                 </div>
 
-                <!-- Logo on mobile -->
-                <div class="d-flex d-md-none align-items-center">
+                <!-- Logo (mobile) -->
+                <div class="d-flex align-items-center d-md-none">
                     <img src="/assets/img/sgt-logo.png" alt="University Logo" class="img-fluid"
-                        style="max-height:80px;">
+                        style="max-height:70px;">
                 </div>
 
+                <!-- Right side (buttons + hamburger for large screens) -->
+                <div class="d-none d-md-flex align-items-center gap-2">
+                    <!-- Dropdown -->
+                    <div class="dropdown">
+                        <button class="btn  dropdown-toggle btn-primary" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Law Courses
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#">LLB (Hons.)</a></li>
+                            <li><a class="dropdown-item" href="#">BA LLB</a></li>
+                            <li><a class="dropdown-item" href="#">BBA LLB</a></li>
+                            <li><a class="dropdown-item" href="#">LLM</a></li>
+                        </ul>
+                    </div>
 
+                    <!-- Apply Now -->
+                    <button class="btn btn-secondary">Apply Now</button>
 
-                <!-- Hamburger -->
-                <div class="d-flex align-items-center">
+                    <!-- Hamburger -->
                     <button
                         class="hamburger-btn d-flex flex-column justify-content-center gap-1 p-0 border-0 bg-transparent"
                         aria-label="Menu">
-                        <span class="hamburger-line bg-white rounded"></span>
-                        <span class="hamburger-line bg-white rounded"></span>
-                        <span class="hamburger-line bg-white rounded"></span>
+                        <span class="hamburger-line rounded"></span>
+                        <span class="hamburger-line rounded"></span>
+                        <span class="hamburger-line rounded"></span>
                     </button>
                 </div>
 
+                <!-- Hamburger only on mobile -->
+                <div class="d-flex d-md-none align-items-center">
+                    <button
+                        class="hamburger-btn d-flex flex-column justify-content-center gap-1 p-0 border-0 bg-transparent"
+                        aria-label="Menu">
+                        <span class="hamburger-line rounded"></span>
+                        <span class="hamburger-line rounded"></span>
+                        <span class="hamburger-line rounded"></span>
+                    </button>
+                </div>
             </div>
         </header>
     </div>
@@ -73,15 +96,200 @@
         </ul>
     </nav>
 
-    <div class="container" style="width: 100%; height: auto; border-radius: 30px; overflow: hidden; display: block;">
-        <img src="../assets/img/program/Banner_1.png" alt="Full Width Rounded Image" id="heroImage">
-    </div>
 
 
 
-    <div class="container">
-        <img src="/assets/img/home/Building.png" alt="Blog Image" class="img-fluid d-block image-wrapper">
-    </div>
+
+    <!-- Full Image Banner Section -->
+    <section id="programmes-banner" class="programmes-banner">
+        <div class="container px-0">
+            <img src="../assets/img/program/Banner_1.png" alt="Programmes Banner" class="img-fluid rounded-5 w-100">
+        </div>
+    </section>
+
+    <!-- Course Info Section -->
+    <section id="course-info" class="course-info-section py-5">
+        <div class="container">
+            <div class="row g-4 align-items-stretch">
+
+                <!-- Left Column -->
+                <div class="col-md-4 d-flex flex-column">
+                    <div class="p-4 rounded-4 flex-grow-1 d-flex flex-column justify-content-between">
+                        <div>
+                            <h2 class="mb-3">BA LLB</h2>
+                            <p>
+                                The five-year integrated B.A., LL.B. (Hons.) The
+                                program stands as our flagship offering, providing
+                                comprehensive training across both legal and non
+                                legal disciplines. As pioneers of this integrated
+                                program in India, Faculty of Law,SGT University
+                                designed this curriculum to establish a robust
+                                foundation that empowers students to pursue either
+                                professional careers or advanced academic
+                                endeavors.
+                            </p>
+                            <p>
+                                Admission to this prestigious program is determined
+                                solely through merit. This rigorous selection process
+                                ensures we maintain the highest academic
+                                standards.
+                            </p>
+                            <p>This innovative program structure seamlessly blends
+                                legal expertise with broad-based liberal education,
+                                creating well-rounded legal professionals equipped
+                                to address contemporary challenges.</p>
+                        </div>
+                        <div class="mt-4">
+                            <img src="../assets/img/program/Img1.png" alt="BA LLB Program"
+                                class="img-fluid rounded-4 w-100 object-fit-cover" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="col-md-8 d-flex flex-column">
+                    <div class="p-4 bg-white rounded-4 flex-grow-1">
+                        <h3 class="mb-4">Teaching Methodology</h3>
+
+                        <!-- Gray Boxes -->
+                        <div class="method-box p-5 mb-3 rounded-4">
+                            <h5 class="mb-2">Innovative Learning Approach</h5>
+                            <p class="mb-2">
+                                Our law degree program employs diverse teaching methods designed to foster
+                                multi-disciplinary
+                                inquiry and practical problem-solving skills. The curriculum integrates traditional
+                                lectures with
+                                interactive discussions, case studies, moot courts, and project work.
+                            </p>
+                            <p class="mb-2">
+                                A distinctive feature of our methodology is collaborative teaching, where multiple
+                                faculty members
+                                jointly conduct courses and engage with students simultaneously. This approach
+                                particularly
+                                enhances the multi-disciplinary analysis of socio-legal issues
+                            </p>
+                        </div>
+
+                        <div class="method-box p-5 mb-3 rounded-4">
+                            <h5 class="mb-2">Interactive Learning Environment</h5>
+                            <p class="mb-2">
+                                We maintain a highly interactive classroom environment, supported by comprehensive
+                                course
+                                materials distributed at the beginning of each semester. These materials include:
+                            </p>
+                            <ul>
+                                <li>Detailed course outlines</li>
+                                <li>Structured teaching plans</li>
+                                <li>Extensive reading lists</li>
+                                <li>Study materials comprising case studies</li>
+                                <li>Notable judicial decisions</li>
+                                <li>Scholarly articles</li>
+                                <li>Research reports</li>
+                            </ul>
+                            <p class="mb-2">
+                                Students are expected to prepare using these materials, enabling active participation in
+                                classroom
+                                discussions
+                            </p>
+                        </div>
+
+                        <div class="method-box p-5 rounded-4">
+                            <h5 class="mb-2">Assessment and Development</h5>
+                            <p class="mb-2">
+                                Our program emphasizes continuous evaluation and skill development through:
+                            </p>
+                            <ul>
+                                <li>Research projects combining literature review and field investigations</li>
+                                <li>Activities designed to enhance</li>
+                                <li>Research proficiency</li>
+                                <li>Analytical capabilities</li>
+                                <li>Communication skills</li>
+                            </ul>
+                            <p class="mb-2">
+                                This comprehensive approach ensures students develop both theoretical knowledge and
+                                practical
+                                expertise necessary for legal practice
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- BA LLB: Course Highlights Section -->
+    <section id="course-highlights" class="py-5">
+        <div class="container">
+            <h2 class="mb-4" style="color: #062e4f; text-align: left;">BA LLB: Course Highlights</h2>
+
+            <div class="table-responsive">
+                <table class="table table-bordered border-bottom-only bg-white">
+                    <thead>
+                        <tr>
+                            <th style="color: #062e4f;">Particulars</th>
+                            <th style="color: #062e4f;">Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>BA LLB Full Form</td>
+                            <td>Bachelor of Arts, Bachelor of Law</td>
+                        </tr>
+                        <tr>
+                            <td>BA LLB Course Level</td>
+                            <td>Graduation</td>
+                        </tr>
+                        <tr>
+                            <td>BA LLB Course Duration</td>
+                            <td>5 years, 10 Semesters</td>
+                        </tr>
+                        <tr>
+                            <td>BA LLB Examination Type</td>
+                            <td>Semester</td>
+                        </tr>
+                        <tr>
+                            <td>BA LLB Eligibility</td>
+                            <td>10+2 with 60% marks in aggregate with English as one of the subjects.</td>
+                        </tr>
+                        <tr>
+                            <td>BA LLB Course Fees</td>
+                            <td>INR 1,60,000 (Per Annum)</td>
+                        </tr>
+                        <tr>
+                            <td>BA LLB Subjects</td>
+                            <td>Administrative Law, Business Law, Advocacy Skill, Criminology, Corporate Law, etc.</td>
+                        </tr>
+                        <tr>
+                            <td>Top job profiles for BA LLB graduates include</td>
+                            <td>Advocate, Corporate Lawyer, Legal Advisor, Legal Consultant, Legal Analyst, Law Officer,
+                                Legal Executive, Judicial Services Officer, Civil Services Officer, etc.</td>
+                        </tr>
+                        <tr>
+                            <td>Top recruiters for BA LLB graduates include</td>
+                            <td>Corporate houses, multinational corporations, banks, insurance companies, LPOs, NGOs,
+                                government institutions, etc.</td>
+                        </tr>
+                        <tr>
+                            <td>Additional highlights</td>
+                            <td>
+                                Blended Learning and Clinical Legal Education<br>
+                                Moot Court Competitions and Workshops<br>
+                                Regular Guest Lectures and Industry Interactions<br>
+                                Internship Opportunities with Judicial Officers, Advocates, and Organizations like NHRC,
+                                CCI, DALSA, NALSA<br>
+                                Access to Online Legal Portals like SCC Online<br>
+                                Various Research Centres and Cells for Specialised Areas of Law
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+
+
 
 
 
