@@ -1507,6 +1507,7 @@ mark {
 .alumni-testimonials-section .swiper-button-prev {
   color: #062e4f;
 }
+/* Next Button */
 
 /* Swiper pagination bullets */
 .alumni-testimonials-section .swiper-pagination-bullet {
@@ -1678,4 +1679,92 @@ mark {
 
 .table {
   background-color: #fff;
+}
+
+/* Sticky Social Media Sidebar */
+/* ✅ Prevent horizontal scroll sitewide */
+html,
+body {
+  overflow-x: hidden !important;
+  width: 100%;
+}
+
+/* Sticky Social Media Sidebar */
+.social-sidebar {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 2px; /* keeps it inside viewport */
+}
+
+.social-sidebar ul {
+  padding: 0;
+  margin: 0;
+}
+
+.social-sidebar ul li {
+  list-style: none;
+  margin: 6px 0;
+}
+
+.social-sidebar ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: #062e4f;
+  color: #fff;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  box-shadow: none;
+}
+
+/* Hover colors */
+.social-sidebar a.facebook:hover {
+  background-color: #1877f2;
+}
+.social-sidebar a.instagram:hover {
+  background-color: #e4405f;
+}
+.social-sidebar a.linkedin:hover {
+  background-color: #0077b5;
+}
+.social-sidebar a.whatsapp:hover {
+  background-color: #25d366;
+}
+
+/* ✅ Mobile-friendly layout */
+@media (max-width: 768px) {
+  .social-sidebar {
+    top: auto;
+    bottom: 10px;
+    right: 10px;
+    transform: none;
+    flex-direction: row;
+    justify-content: center;
+    background: transparent;
+  }
+
+  .social-sidebar ul {
+    display: flex;
+    gap: 8px;
+  }
+
+  .social-sidebar ul li {
+    margin: 0;
+  }
+
+  .social-sidebar ul li a {
+    width: 38px;
+    height: 38px;
+    font-size: 18px;
+  }
 }
