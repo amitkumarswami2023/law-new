@@ -48,15 +48,15 @@
                 <div class="d-none d-md-flex align-items-center gap-2">
                     <!-- Dropdown -->
                     <div class="dropdown">
-                        <button class="btn  dropdown-toggle btn-primary" type="button" data-bs-toggle="dropdown"
+                        <button class="btn dropdown-toggle btn-primary" type="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             Law Courses
                         </button>
                         <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="programmes/ba-llb.html">LLB (Hons.)</a></li>
-                            <li><a class="dropdown-item" href="programmes/ba-llb.html">BA LLB</a></li>
-                            <li><a class="dropdown-item" href="programmes/ba-llb.html">BBA LLB</a></li>
-                            <li><a class="dropdown-item" href="programmes/ba-llb.html">LLM</a></li>
+                            <li><a class="dropdown-item" href="#">LLB (Hons.)</a></li>
+                            <li><a class="dropdown-item" href="#">BA LLB</a></li>
+                            <li><a class="dropdown-item" href="#">BBA LLB</a></li>
+                            <li><a class="dropdown-item" href="#">LLM</a></li>
                         </ul>
                     </div>
 
@@ -86,6 +86,65 @@
             </div>
         </header>
     </div>
+
+    <!-- Fullscreen Sliding Menu -->
+    <div id="fullscreen-menu" class="fullscreen-menu">
+        <button class="close-menu">&times;</button>
+        <nav class="menu-content">
+            <ul class="menu-list list-unstyled">
+                <li class="has-submenu">
+                    <a href="#">About <span class="arrow">&rsaquo;</span></a>
+                    <ul class="submenu list-unstyled">
+                        <li><a href="#">History</a></li>
+                        <li><a href="#">Mission & Vision</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <a href="#">Academics <span class="arrow">&rsaquo;</span></a>
+                    <ul class="submenu list-unstyled">
+                        <li><a href="#">Undergraduate</a></li>
+                        <li><a href="#">Postgraduate</a></li>
+                        <li><a href="#">Online Programs</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Admissions</a></li>
+                <li class="has-submenu">
+                    <a href="#">Research <span class="arrow">&rsaquo;</span></a>
+                    <ul class="submenu list-unstyled">
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">Publications</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <a href="#">Life at SGT <span class="arrow">&rsaquo;</span></a>
+                    <ul class="submenu list-unstyled">
+                        <li><a href="#">Campus Life</a></li>
+                        <li><a href="#">Events</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">IQAC</a></li>
+                <li><a href="#">NIRF</a></li>
+            </ul>
+        </nav>
+    </div>
+
+
+
+    <!-- Fullscreen Sliding Menu -->
+    <div id="fullscreen-menu" class="fullscreen-menu">
+        <div class="menu-content text-center">
+            <button class="close-menu btn btn-light mb-4">&times;</button>
+            <ul class="list-unstyled">
+                <li><a href="#" class="d-block py-2">Home</a></li>
+                <li><a href="#" class="d-block py-2">About Us</a></li>
+                <li><a href="#" class="d-block py-2">Courses</a></li>
+                <li><a href="#" class="d-block py-2">Admissions</a></li>
+                <li><a href="#" class="d-block py-2">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+
     <!-- Menu Below Header -->
     <nav id="main-menu" class="main-menu my-2">
         <ul class="menu-items">
@@ -1125,6 +1184,38 @@
 
     </div>
 
+    <!-- Side Quick Links -->
+    <!-- Side Quick Links -->
+    <!-- <div id="side-quick-links">
+        <ul>
+            <li class="quick-link phone">
+                <a href="tel:+911204570000">
+                    <i class="fa fa-phone"></i>
+                    <span class="slide-text">+91-120-4570000</span>
+                </a>
+            </li>
+
+            <li class="quick-link social">
+                <a href="javascript:void(0);">
+                    <i class="fa fa-share-alt"></i>
+                    <span class="slide-text">
+                        <a href="https://www.facebook.com/ShardaUniversity/" target="_blank"><i
+                                class="fa fa-facebook"></i></a>
+                        <a href="https://twitter.com/sharda_uni" target="_blank"><i class="fa fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/school/sharda-university/" target="_blank"><i
+                                class="fa fa-linkedin"></i></a>
+                        <a href="https://www.youtube.com/channel/UC8yE0HOsSQZwOJTgQQUn3DQ" target="_blank"><i
+                                class="fa fa-youtube-play"></i></a>
+                        <a href="https://www.instagram.com/sharda_university/" target="_blank"><i
+                                class="fa fa-instagram"></i></a>
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </div> -->
+
+
+
     <!-- Sticky Social Media Sidebar -->
     <div class="social-sidebar">
         <ul class="list-unstyled mb-0">
@@ -1284,9 +1375,49 @@
             pagination: false, // disable dots
         });
 
+        document.addEventListener("DOMContentLoaded", function () {
+            const hamburgerBtns = document.querySelectorAll('.hamburger-btn');
+            const fullscreenMenu = document.getElementById('fullscreen-menu');
+            const closeBtn = document.querySelector('.close-menu');
+
+            // Open fullscreen menu
+            hamburgerBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    fullscreenMenu.classList.add('show');
+                });
+            });
+
+            // Close fullscreen menu
+            closeBtn.addEventListener('click', () => {
+                fullscreenMenu.classList.remove('show');
+            });
+
+            fullscreenMenu.addEventListener('click', (e) => {
+                if (e.target === fullscreenMenu) {
+                    fullscreenMenu.classList.remove('show');
+                }
+            });
+
+            // Click to open submenu
+            const menuItems = document.querySelectorAll('.menu-list .has-submenu > a');
+            menuItems.forEach(item => {
+                item.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const submenu = this.nextElementSibling;
+                    // Close other open submenus
+                    document.querySelectorAll('.submenu').forEach(sm => {
+                        if (sm !== submenu) sm.style.display = 'none';
+                    });
+                    // Toggle clicked submenu
+                    submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+                });
+            });
+        });
 
 
     </script>
+
+
 
 </body>
 
