@@ -1003,7 +1003,7 @@ mark {
 .faculty-img {
   width: 100%;
   max-width: 200px;
-  border-radius: 10px;
+  border-radius: 50%;
   object-fit: cover;
 }
 .faculty-name {
@@ -1011,6 +1011,7 @@ mark {
   font-weight: 600;
   color: #062e4f;
   margin-bottom: 0.2rem;
+  margin-top: 1.2rem;
 }
 .faculty-designation {
   font-family: "Poppins", sans-serif;
@@ -1151,26 +1152,31 @@ mark {
 /* Grid Layout */
 .legal-luminaries .ll-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(180px, 1fr)
+  ); /* keeps small cards */
+  gap: 30px; /* increased gap between cards */
 }
 
 /* Card Style */
 .legal-luminaries .ll-card {
   display: block;
-  border-radius: 48px;
-  overflow: hidden;
-  box-shadow: 0 6px 18px rgba(6, 46, 79, 0.06);
-  background: transparent;
+  border-radius: 30px; /* card itself */
+  overflow: visible; /* allow footer text to show */
+  box-shadow: 0 4px 12px rgba(6, 46, 79, 0.06);
+  background: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 20px; /* remove padding if needed */
 }
 
 /* Image Section */
 .legal-luminaries .ll-card-media {
   width: 100%;
-  aspect-ratio: 3 / 3;
+  aspect-ratio: 1 / 1;
   overflow: hidden;
   background: #f2f2f2;
-  border-radius: 48px;
+  border-radius: 50px 50px 0 0; /* top corners curved only */
 }
 
 .legal-luminaries .ll-card-media img {
@@ -1178,49 +1184,52 @@ mark {
   height: 100%;
   object-fit: cover;
   display: block;
+  border-radius: 30px 30px 0 0; /* match container */
 }
 
 /* Footer */
-.legal-luminaries .ll-card-footer {
-  background: #0060aa;
-  color: #fff;
-  padding: 14px 12px;
-  text-align: left;
-}
-
+.legal-luminaries .ll-card-footer,
 .legal-luminaries .ll-card-footer1 {
   background: #062e4f;
   color: #fff;
-  padding: 14px 12px;
+  padding: 10px 12px; /* enough padding so text doesn't get cut */
   text-align: left;
+  border-radius: 0 0 30px 30px; /* curve bottom corners of footer */
 }
 
+/* Name & Designation */
 .legal-luminaries .ll-name {
-  font-size: 21px;
+  font-size: 16px;
   font-weight: 600;
   line-height: 1.2;
 }
 
 .legal-luminaries .ll-designation {
-  font-size: 15px;
-  margin-top: 6px;
+  font-size: 13px;
+  margin-top: 4px;
   opacity: 1;
 }
 
-/* Responsive */
+/* Responsive Adjustments */
 @media (max-width: 991px) {
   .legal-luminaries .ll-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
   }
 }
 
 @media (max-width: 575px) {
   .legal-luminaries .ll-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
 
-  .legal-luminaries .ll-title {
-    font-size: 22px;
+  .legal-luminaries .ll-name {
+    font-size: 14px;
+  }
+
+  .legal-luminaries .ll-designation {
+    font-size: 12px;
   }
 }
 
