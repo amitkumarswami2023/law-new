@@ -866,15 +866,23 @@ mark {
   text-shadow: none; /* remove shadow */
 }
 
-/* before height img */
-.image-wrapper {
-  width: 100%;
-  height: auto;
+/* Container for image */
+.image-container {
+  position: relative;
+  z-index: 1;
   display: block;
-  object-fit: cover;
-  margin-bottom: -50px;
 }
 
+/* Image itself */
+.image-wrapper {
+  width: 100%;
+  display: block;
+  border-radius: 0px;
+  margin-top: 50px;
+  position: relative; /* allows overlap */
+  z-index: 2;
+  margin-bottom: -180px; /* overlap amount; adjust as needed */
+}
 /* About Page */
 /* Dean Image */
 .dean-img {
@@ -1304,6 +1312,7 @@ mark {
 /* footer */
 /* General Footer Styling */
 .site-footer {
+  z-index: 3;
   background-color: #062e4f;
   /* Top and bottom sections */
   color: #fff;
