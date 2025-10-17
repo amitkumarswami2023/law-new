@@ -338,7 +338,6 @@ p {
   margin-right: 10px;
   color: #fff;
   font-size: 20px;
-  /* For double arrow icon, use a custom icon or stacked fontawesome if needed */
 }
 
 .program-footer span {
@@ -1899,7 +1898,7 @@ body {
 .hamburger-line {
   width: 30px;
   height: 3px;
-  background-color: #000;
+  background-color: #fff;
   transition: all 0.3s;
 }
 
@@ -1967,11 +1966,12 @@ body {
 .submenu {
   display: none;
   position: absolute;
-  top: 0;
+  top: 14px;
+  left: 20px;
   left: 100%;
-  width: 250px; /* submenu width */
+  width: 300px; /* submenu width */
   background-color: #062e4f;
-  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
 }
 
 .submenu li {
