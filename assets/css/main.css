@@ -648,29 +648,51 @@ mark {
 
 /* ---------- Card Styling ---------- */
 .program-card {
-  background-color: #fff; /* White card */
-  color: #000; /* Black text */
   border-radius: 15px;
   overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s;
-  min-height: 100%; /* Ensures equal height in flex */
-}
-
-.program-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .program-card .card-title {
-  font-weight: 600;
-  margin-bottom: 0.75rem;
   color: #062e4f;
-  font-size: 26px;
+  font-size: 22px !important;
+  font-weight: bold;
 }
 
-.program-card .program-list li {
-  margin-bottom: 0.35rem;
-  font-size: 0.95rem;
+/* Remove underline and color change on links */
+.program-list a {
+  text-decoration: none !important;
+  color: inherit !important;
+  display: block;
+}
+
+.program-list li {
+  font-weight: 600; /* bold */
+  color: #000;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.program-list li i {
+  color: #062e4f; /* icon color */
+  margin-right: 8px;
+  font-size: 1rem;
+}
+
+.program-list li:hover {
+  color: #062e4f; /* hover text color */
+}
+
+.btn-arrow .arrow-icon {
+  width: 45px;
+  height: 45px;
+  transition: transform 0.3s ease;
+}
+
+.btn-arrow:hover .arrow-icon {
+  transform: translateX(5px);
 }
 
 /* ---------- Card Image ---------- */
@@ -682,11 +704,11 @@ mark {
 
 /* ---------- Arrow Button ---------- */
 .program-card .btn-arrow {
-  background-color: #062e4f; /* Blue background */
-  color: #fff; /* White icon */
+  background-color: #fff; /* Blue background */
+  color: #000; /* White icon */
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -805,17 +827,33 @@ mark {
 }
 
 .bg-cell {
-  background-color: #062e4f;
+  background-color: #005faa;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
 
-.btn-cell-arrow {
-  background-color: #fff;
-  color: #062e4f;
+/* ---------- Arrow Button ---------- */
+.cell-card .btn-arrow {
+  background-color: #005faa; /* Blue background */
+  color: #fff; /* White icon */
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.cell-card .btn-arrow:hover {
+  transform: translateX(3px);
+}
+/* .btn-cell-arrow {
+  background-color: #005faa;
+  color: #fff;
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -824,7 +862,7 @@ mark {
 .btn-cell-arrow:hover {
   background-color: #0f3066;
   color: #fff;
-}
+} */
 
 /* company logos */
 .company-logos-section {
@@ -1524,17 +1562,23 @@ mark {
 }
 
 .alumni-testimonials-section .testimonial-card {
-  display: block; /* ensures block display */
+  display: block;
   background-color: #fff;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   text-align: center;
+  max-width: 900px; /* limit card width */
+  margin: 0 auto; /* center the card inside slide */
 }
 
 .alumni-testimonials-section .testimonial-text {
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.7;
   color: #000;
+  max-width: 700px; /* limit text width */
+  margin: 0 auto 1.5rem auto; /* center and add bottom space */
+  word-wrap: break-word;
+  text-align: justify;
 }
 
 .alumni-testimonials-section .alumni-name {
