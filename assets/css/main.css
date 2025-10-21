@@ -1543,6 +1543,23 @@ mark {
   opacity: 1;
 }
 
+/* Swiper navigation buttons */
+.accreditation-slider .swiper-button-next,
+.accreditation-slider .swiper-button-prev {
+  background: none; /* remove background */
+  color: #fff; /* arrow color white */
+  width: auto; /* let arrow size adjust */
+  height: auto;
+}
+
+/* Remove default content (Swiper adds default arrow icon via ::after) */
+.accreditation-slider .swiper-button-next::after,
+.accreditation-slider .swiper-button-prev::after {
+  font-size: 24px; /* arrow size */
+  color: #fff; /* arrow color */
+  text-shadow: none; /* remove shadow */
+}
+
 /* Make it responsive */
 @media (max-width: 768px) {
   .fixed-logo {

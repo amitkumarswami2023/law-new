@@ -293,7 +293,6 @@
         </div>
     </div>
 
-
     <!-- Boxed Accreditation Section -->
     <div class="container my-5">
         <div class="bg-custom rounded-5 p-5 shadow-sm position-relative">
@@ -344,6 +343,9 @@
                             <img src="assets/img/home/Logo10.png" alt="Logo 10" class="img-fluid" />
                         </div>
                     </div>
+                    <!-- Navigation buttons -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                 </div>
             </div>
         </div>
@@ -1352,6 +1354,10 @@
                 autoplay: {
                     delay: 1500,
                     disableOnInteraction: false,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
                 },
                 breakpoints: {
                     1200: { slidesPerView: 5 },
