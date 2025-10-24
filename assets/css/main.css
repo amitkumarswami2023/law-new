@@ -1963,7 +1963,6 @@ body {
   transition: all 0.3s;
 }
 
-/* Fullscreen Menu */
 .fullscreen-menu {
   position: fixed;
   top: -100%;
@@ -1972,67 +1971,63 @@ body {
   height: 100%;
   background-color: #062e4f;
   z-index: 1200;
+  padding: 2rem;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
-  padding: 2rem 4rem;
-  transition: top 0.5s ease-in-out;
-  overflow-y: auto;
+  transition: top 0.5s ease;
 }
 
 .fullscreen-menu.show {
   top: 0;
 }
 
-/* Close button */
 .fullscreen-menu .close-menu {
   align-self: flex-end;
   font-size: 2.5rem;
   color: #fff;
-  background: transparent;
   border: none;
+  background: transparent;
   cursor: pointer;
 }
 
-/* Menu content */
-.menu-content {
-  margin-top: 2rem;
-  width: 300px; /* menu width */
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
-
 .menu-list > li {
-  position: relative;
   border-bottom: 1px solid #fff;
+  position: relative;
 }
 
 .menu-list a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
   color: #fff;
-  font-size: 1.5rem;
   text-decoration: none;
+  padding: 1rem;
+  font-size: 1.5rem;
 }
 
 .menu-list a:hover {
   color: #f0a500;
 }
 
-/* Arrow for submenu */
 .arrow {
   font-size: 1.5rem;
 }
 
-/* Submenu */
 .submenu {
   display: none;
-  position: absolute;
-  top: 14px;
-  left: 20px;
-  left: 100%;
-  width: 300px; /* submenu width */
+  position: relative;
+  width: 100%;
   background-color: #062e4f;
-  border-bottom: 1px solid #fff;
+}
+
+.submenu.open {
+  display: block;
 }
 
 .submenu li {
@@ -2040,11 +2035,54 @@ body {
 }
 
 .submenu a {
-  font-size: 1.2rem;
   padding: 0.8rem 1rem;
+  font-size: 1.2rem;
   color: #fff;
 }
-
 .submenu a:hover {
   color: #f0a500;
+}
+
+.faculty-submenu {
+  width: 100%;
+}
+.faculty-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.25rem 1rem;
+  padding: 0.5rem 0;
+}
+.faculty-grid ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.faculty-grid li {
+  border-bottom: 1px solid #fff;
+}
+.faculty-grid a {
+  display: block;
+  padding: 0.6rem 0.5rem;
+  color: #fff;
+  text-decoration: none;
+}
+.faculty-grid a:hover {
+  color: #f0a500;
+}
+
+/* Desktop nested submenus */
+@media (min-width: 768px) {
+  .menu-content {
+    width: 400px;
+  }
+  .submenu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 300px;
+  }
+  .faculty-submenu {
+    width: 600px;
+    left: 100%;
+  }
 }
