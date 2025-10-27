@@ -2165,6 +2165,6 @@ body {
     transition: all 0.3s ease;
     }
     .social .social-icons a:hover {
-    background: #062e4f;
-    color: #fff;
+    background: #fff;
+    color: #062e4f;
     }
