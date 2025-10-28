@@ -1198,9 +1198,9 @@ mark {
 .legal-luminaries .ll-grid {
   display: grid;
   grid-template-columns: repeat(
-    auto-fit,
-    minmax(180px, 1fr)
-  ); /* keeps small cards */
+    3,
+    1fr
+  ); /* exactly 3 per row */ /* keeps small cards */
   gap: 30px; /* increased gap between cards */
 }
 
@@ -1255,20 +1255,21 @@ mark {
   opacity: 1;
 }
 
-/* Responsive Adjustments */
 @media (max-width: 991px) {
   .legal-luminaries .ll-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* 2 per row on tablets */
     gap: 25px;
   }
 }
 
 @media (max-width: 575px) {
   .legal-luminaries .ll-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* 1 per row on small screens */
     gap: 20px;
   }
+}
 
+@media (max-width: 575px) {
   .legal-luminaries .ll-name {
     font-size: 14px;
   }
@@ -2031,6 +2032,7 @@ body {
   width: 100%;
   /* background-color: #062e4f; */
 }
+
 .has-submenu {
   width: 230px;
 }
