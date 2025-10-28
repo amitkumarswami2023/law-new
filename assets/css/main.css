@@ -149,6 +149,19 @@ p {
   font-family: "Poppins", sans-serif;
 }
 
+/* Make all cards in a row stretch equally */
+.law-blogs-section .row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch; /* ensures equal height columns */
+}
+
+/* Column styling */
+.law-blogs-section .col-md-6,
+.law-blogs-section .col-lg-4 {
+  display: flex;
+}
+
 /* Blog Card */
 .law-blog-card {
   border: none;
@@ -157,6 +170,9 @@ p {
   background: #fff;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .law-blog-card:hover {
@@ -166,31 +182,35 @@ p {
 
 /* Blog Image */
 .law-blog-img {
-  height: 180px !important;
   width: 100%;
+  height: 180px !important; /* fixed equal image height */
   object-fit: cover;
+  flex-shrink: 0;
 }
 
 /* Blog Body */
 .law-blog-body {
   background-color: #e9ecee;
   padding: 18px 20px;
-  height: 280px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  flex-grow: 1; /* make all body sections equal height */
 }
 
 /* Title */
 .law-blog-title {
   color: #062e4f;
+  font-weight: 600;
+  margin-bottom: 10px;
+  flex-shrink: 0;
 }
 
 /* Text */
 .law-blog-text {
   color: #333;
   line-height: 1.5;
-  flex-grow: 1;
+  flex-grow: 1; /* pushes footer down */
+  margin-bottom: 12px;
 }
 
 /* Footer */
@@ -200,12 +220,13 @@ p {
   align-items: center;
   border-top: 1px solid #e9ecef;
   padding-top: 10px;
-  margin-top: 10px;
+  margin-top: auto; /* stick footer at bottom */
+  flex-shrink: 0;
 }
 
 /* Date */
 .law-blog-date {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #062e4f;
 }
 
@@ -226,16 +247,16 @@ p {
 
 /* Responsive */
 @media (max-width: 767px) {
-  .law-blog-body {
+  .law-blogs-section .row {
+    display: block;
+  }
+
+  .law-blog-card {
     height: auto;
   }
 
-  .law-blog-title {
-    font-size: 1rem;
-  }
-
-  .law-blog-text {
-    font-size: 0.9rem;
+  .law-blog-img {
+    height: 150px;
   }
 }
 
@@ -1065,24 +1086,26 @@ mark {
 }
 
 /* News & Events Section */
-/* News & Events Section */
 .news-events-section {
   background-color: #f9f9f9;
 }
-
 .ne-section-title {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-size: 36px;
   color: #1a1a1a;
 }
-
 .ne-card {
   background: #ffffff;
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  /* NEW - make cards equal height */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .ne-card:hover {
@@ -1090,50 +1113,53 @@ mark {
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
+/* Image Wrapper */
 .ne-card-img-wrapper {
   position: relative;
+  flex-shrink: 0;
 }
 
 .ne-card-img {
   width: 100%;
   height: 150px;
   display: block;
+  object-fit: cover;
 }
 
-.ne-card-badge {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  padding: 5px 12px;
-  font-size: 12px;
-  font-weight: 600;
-  color: #fff;
-  background-color: #ff5e57;
-  border-radius: 5px;
-}
-
+/* Body should stretch to fill available space */
 .ne-card-body {
-  background-color: #f2f2f2; /* light custom gray */
+  background-color: #f2f2f2;
   padding: 15px 20px;
+
+  /* NEW */
+  flex: 1; /* fills leftover vertical space */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* pushes footer to bottom */
 }
 
+/* Title */
 .ne-card-title {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 18px;
   margin-bottom: 10px;
+  flex-grow: 1; /* allow long titles to take space */
 }
 
+/* Footer */
 .ne-card-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: auto; /* stick to bottom */
+  background: transparent;
 }
 
 .ne-card-date {
   font-family: "Poppins", sans-serif;
   font-size: 13px;
-  color: #062e4f; /* calendar icon color */
+  color: #062e4f;
 }
 
 .ne-card-date i {
@@ -1156,7 +1182,6 @@ mark {
 .ne-read-more:hover {
   background-color: #155ab6;
 }
-
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
   .col-6.col-md-3 {
@@ -1164,7 +1189,6 @@ mark {
     max-width: 50%;
   }
 }
-
 @media (max-width: 576px) {
   .col-6.col-md-3 {
     flex: 0 0 100%;
