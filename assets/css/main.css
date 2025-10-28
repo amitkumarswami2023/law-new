@@ -1969,7 +1969,12 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #062e4f;
+  /* Add gradient + background image */
+  background: linear-gradient(
+      rgba(6, 46, 79, 0.9),
+      /* Top gradient color */ rgba(6, 46, 79, 0.9) /* Bottom gradient color */
+    ),
+    url("../img/universityLPBanner.webp") center center / cover no-repeat;
   z-index: 1200;
   padding: 2rem;
   overflow-y: auto;
@@ -1995,9 +2000,10 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
+  width: 320px;
 }
 .menu-list > li {
-  border-bottom: 1px solid #fff;
+  /* border-bottom: 1px solid #fff; */
   position: relative;
 }
 
@@ -2008,7 +2014,7 @@ body {
   color: #fff;
   text-decoration: none;
   padding: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 .menu-list a:hover {
@@ -2016,27 +2022,27 @@ body {
 }
 
 .arrow {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
 
 .submenu {
   display: none;
   position: relative;
   width: 100%;
-  background-color: #062e4f;
+  /* background-color: #062e4f; */
 }
 
 .submenu.open {
   display: block;
 }
 
-.submenu li {
+/* .submenu li {
   border-bottom: 1px solid #fff;
-}
+} */
 
 .submenu a {
   padding: 0.8rem 1rem;
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #fff;
 }
 .submenu a:hover {
@@ -2057,9 +2063,9 @@ body {
   padding: 0;
   margin: 0;
 }
-.faculty-grid li {
+/* .faculty-grid li {
   border-bottom: 1px solid #fff;
-}
+} */
 .faculty-grid a {
   display: block;
   padding: 0.6rem 0.5rem;
@@ -2110,7 +2116,7 @@ body {
   line-height: 50px;
   transition: all 0.3s ease;
   position: relative;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 #side-quick-links ul li:hover {
   transform: scale(1.1);
@@ -2165,11 +2171,21 @@ body {
   font-size: 18px;
   transition: all 0.3s ease;
 }
-.social .social-icons a:nth-child(1) i { color: #1877F2; }  /* Facebook blue */
-.social .social-icons a:nth-child(2) i { color: #E4405F; }  /* Instagram pink */
-.social .social-icons a:nth-child(3) i { color: #0077B5; }  /* LinkedIn blue */
-.social .social-icons a:nth-child(4) i { color: #000000; }  /* X (Twitter) black */
-.social .social-icons a:nth-child(5) i { color: #FF0000; }  /* YouTube red */
+.social .social-icons a:nth-child(1) i {
+  color: #1877f2;
+} /* Facebook blue */
+.social .social-icons a:nth-child(2) i {
+  color: #e4405f;
+} /* Instagram pink */
+.social .social-icons a:nth-child(3) i {
+  color: #0077b5;
+} /* LinkedIn blue */
+.social .social-icons a:nth-child(4) i {
+  color: #000000;
+} /* X (Twitter) black */
+.social .social-icons a:nth-child(5) i {
+  color: #ff0000;
+} /* YouTube red */
 .social .social-icons a:hover {
   transform: scale(1.1);
   box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
@@ -2179,7 +2195,7 @@ body {
   border: 1px solid white;
 }
 .whatsapp {
-  background: #25D366 !important; 
+  background: #25d366 !important;
 }
 
 .call {
