@@ -259,6 +259,15 @@ p {
     height: 150px;
   }
 }
+@media (max-width: 767px) {
+  .law-blog-title {
+    font-size: 1rem;
+  }
+
+  .law-blog-text {
+    font-size: 0.9rem;
+  }
+}
 
 /* Sidebar */
 .sidebar {
