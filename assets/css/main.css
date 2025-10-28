@@ -2000,7 +2000,7 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
-  width: 280px;
+  width: 230px;
 }
 .menu-list > li {
   /* border-bottom: 1px solid #fff; */
@@ -2030,6 +2030,9 @@ body {
   position: relative;
   width: 100%;
   /* background-color: #062e4f; */
+}
+.has-submenu {
+  width: 230px;
 }
 
 .submenu.open {
