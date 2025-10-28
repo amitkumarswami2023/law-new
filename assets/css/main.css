@@ -1928,78 +1928,6 @@ body {
   }
 }
 
-/* Sidebar container */
-#side-quick-links {
-  position: fixed;
-  top: 40%;
-  right: 0;
-  z-index: 9999;
-}
-
-#side-quick-links ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-/* Each quick link */
-#side-quick-links li.quick-link {
-  position: relative;
-  margin: 10px 0;
-}
-
-#side-quick-links li.quick-link a {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  background: #6204f7;
-  color: #fff;
-  text-decoration: none;
-  padding: 10px;
-  border-radius: 8px 0 0 8px;
-  transition: all 0.3s ease;
-  width: 50px; /* collapsed width */
-  overflow: hidden;
-}
-
-#side-quick-links li.quick-link a i {
-  font-size: 20px;
-}
-
-/* Sliding text on hover */
-#side-quick-links li.quick-link a .slide-text {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-left: 10px;
-  opacity: 0;
-  white-space: nowrap;
-  transition: opacity 0.3s, margin 0.3s;
-}
-
-/* Hover effect */
-#side-quick-links li.quick-link:hover a {
-  width: 220px; /* expanded width */
-}
-
-#side-quick-links li.quick-link:hover a .slide-text {
-  opacity: 1;
-  margin-left: 15px;
-}
-
-/* Social icons styling */
-#side-quick-links li.quick-link.social a .slide-text a {
-  margin: 0;
-  color: #fff;
-  font-size: 18px;
-  display: inline-flex;
-  align-items: center;
-}
-
-#side-quick-links li.quick-link.social a .slide-text a:hover {
-  color: #ffdd57;
-}
-
 /* Hamburger Lines */
 .hamburger-line {
   width: 30px;
@@ -2145,11 +2073,14 @@ body {
   top: 35%;
   z-index: 9999;
 }
+
 #side-quick-links ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
+
+/* Each circle button */
 #side-quick-links ul li {
   background: #062e4f;
   color: #fff;
@@ -2157,20 +2088,30 @@ body {
   border-radius: 50%;
   width: 50px;
   height: 50px;
-  text-align: center;
-  line-height: 50px;
+  display: flex; /* ✅ ensures perfect centering */
+  align-items: center;
+  justify-content: center;
   transition: all 0.3s ease;
   position: relative;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
+
 #side-quick-links ul li:hover {
   transform: scale(1.1);
 }
+
+/* Main link icon */
 #side-quick-links ul li a {
   color: #fff;
-  font-size: 20px;
-  display: inline-block;
+  font-size: 22px;
+  display: flex; /* ✅ also flex center inside */
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }
+
+/* Tooltip text (if used later) */
 #side-quick-links ul li .content p {
   display: none;
   position: absolute;
@@ -2184,9 +2125,12 @@ body {
   white-space: nowrap;
   font-size: 14px;
 }
+
 #side-quick-links ul li:hover .content p {
   display: block;
 }
+
+/* Social icons expansion */
 .social .social-icons {
   display: flex;
   position: absolute;
@@ -2204,41 +2148,47 @@ body {
   opacity: 1;
   visibility: visible;
 }
+
+/* Social inner icons */
 .social .social-icons a {
   background: #f0f0f0;
   border: 1px solid white;
   border-radius: 50%;
-  width: 45px;
-  height: 45px;
+  width: 45px !important;
+  height: 45px !important;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 18px;
   transition: all 0.3s ease;
+  aspect-ratio: 1 / 1; /* ✅ always keeps width & height equal */
+  box-sizing: border-box; /* ✅ ensures border doesn’t distort the circle */
 }
+
+/* Individual colors */
 .social .social-icons a:nth-child(1) i {
   color: #1877f2;
-} /* Facebook blue */
+}
 .social .social-icons a:nth-child(2) i {
   color: #e4405f;
-} /* Instagram pink */
+}
 .social .social-icons a:nth-child(3) i {
   color: #0077b5;
-} /* LinkedIn blue */
+}
 .social .social-icons a:nth-child(4) i {
   color: #000000;
-} /* X (Twitter) black */
+}
 .social .social-icons a:nth-child(5) i {
   color: #ff0000;
-} /* YouTube red */
+}
+
+/* Hover effects */
 .social .social-icons a:hover {
   transform: scale(1.1);
   box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
 }
-.social .social-icons a:hover {
-  color: #fff;
-  border: 1px solid white;
-}
+
+/* Custom colors */
 .whatsapp {
   background: #25d366 !important;
 }
