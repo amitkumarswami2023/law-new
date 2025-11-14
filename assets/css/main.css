@@ -13,9 +13,9 @@ body {
 /* H2 */
 h2 {
   font-family: "Poppins", sans-serif;
-  font-style: italic;
+  /* font-style: italic; */
   font-weight: 500; /* Medium */
-  font-size: 36px;
+  font-size: 44px;
   line-height: 1.4;
   color: #000; /* optional */
   margin-bottom: 20px;
