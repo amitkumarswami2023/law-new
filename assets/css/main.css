@@ -1417,8 +1417,15 @@ mark {
   cursor: pointer;
   margin-left: 40px;
 }
+.footer-links ul li a {
+  margin-bottom: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+}
 
-.footer-links ul li:hover {
+.footer-links ul li a:hover {
   color: #0060aa;
   /* Hover color for links */
 }
@@ -1552,6 +1559,16 @@ mark {
 #footerAccordion ul.list-styled li {
   padding: 0.25rem 0;
   font-size: 14px;
+}
+
+#footerAccordion ul.list-styled li a {
+  padding: 0.25rem 0;
+  font-size: 14px;
+  color: #ffffff;
+  text-decoration: none;
+}
+#footerAccordion ul.list-styled li a:hover {
+  color: #0060aa;
 }
 
 /* .accreditation-slider */
