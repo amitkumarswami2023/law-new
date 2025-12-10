@@ -1,0 +1,617 @@
+<!-- Save as header-mega-bootstrap.html and include Bootstrap 5 CSS/JS (CDN used below) -->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>SGT Header — Bootstrap Mega Menu</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --brand: #134080;
+            --accent: #c30046;
+        }
+
+        html,
+        body {
+            overflow-x: hidden;
+        }
+
+        /* avoid horizontal scrolling */
+        header.pageHeader {
+            background: var(--brand);
+            color: #fff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1050;
+            width: 100%;
+        }
+
+        /* Two-row header container */
+        .header-inner {
+            max-width: 1260px;
+            margin: 0 auto;
+            padding: 8px 16px;
+        }
+
+        .logo-block {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-right: 1px solid rgba(255, 255, 255, 0.18);
+            padding-right: 16px;
+        }
+
+        .logo-block img {
+            height: 56px;
+            object-fit: contain;
+        }
+
+        /* Top row controls */
+        .top-controls .btn-visit {
+            background: #fff;
+            color: var(--brand);
+            font-weight: 600
+        }
+
+        .phone-text {
+            color: #fff;
+            font-weight: 600
+        }
+
+        /* Nav row */
+        nav.header-nav {
+            padding: 10px 0;
+        }
+
+        .header-nav .nav-link {
+            color: #fff;
+            font-weight: 600;
+            padding: 8px 12px;
+        }
+
+        .header-nav .nav-link .caret {
+            margin-left: 6px;
+        }
+
+        /* Mega menus */
+        .mega-menu {
+            position: fixed;
+            left: 0;
+            width: 100vw;
+            background: #fff;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+            z-index: 1040;
+            transform: translateY(-8px);
+            opacity: 0;
+            visibility: hidden;
+            transition: all .18s ease;
+            padding: 28px 60px;
+            color: #111;
+        }
+
+        .mega-menu.show {
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mega-menu h4 {
+            color: var(--brand);
+            font-weight: 700;
+        }
+
+        .mega-menu .mega-links a {
+            color: #000;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .mega-menu .mega-links p {
+            color: #6b6b6b;
+            margin: 6px 0 12px;
+            font-size: 14px;
+        }
+
+        /* small adjustments */
+        .mega-menu .border-end {
+            border-right: 1px solid #e6e6e6;
+        }
+
+        .academics-types li {
+            padding: 10px 0;
+            cursor: pointer;
+            font-weight: 600
+        }
+
+        .academics-types li.active {
+            color: var(--accent)
+        }
+
+        .faculties-list li {
+            padding: 8px 0;
+            cursor: pointer
+        }
+
+        .faculties-list li.active {
+            color: var(--accent)
+        }
+
+        .courses-list li {
+            padding: 6px 0
+        }
+
+        /* mobile slide menu */
+        .mobile-drawer {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            height: 100vh;
+            width: 320px;
+            background: #fff;
+            z-index: 1060;
+            transition: right .28s ease;
+            padding: 18px;
+            overflow: auto;
+        }
+
+        .mobile-drawer.open {
+            right: 0;
+        }
+
+        .hamburger {
+            cursor: pointer
+        }
+
+        /* keep header height for content offset */
+        .page-top-spacer {
+            height: 120px;
+        }
+
+        /* fallback - script will set exact later */
+        /* accessibility / pointer control */
+        .mega-wrapper {
+            pointer-events: none
+        }
+
+        .mega-menu {
+            pointer-events: auto
+        }
+
+        @media (max-width:991.98px) {
+            .logo-block img {
+                height: 48px
+            }
+
+            .mega-menu {
+                position: static;
+                width: 100%;
+                transform: none;
+                opacity: 1;
+                visibility: visible;
+                padding: 16px;
+                display: none
+            }
+
+            .mega-menu.mobile-open {
+                display: block
+            }
+
+            .header-inner {
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="pageHeader">
+        <div class="header-inner">
+            <!-- TOP ROW -->
+            <div class="d-flex align-items-center justify-content-between top-controls">
+                <div class="d-flex align-items-center">
+                    <!-- logos left -->
+                    <div class="logo-block me-4">
+                        <img src="assets/images/sgtu-updated.png" alt="SGT Logo" id="logo-sgt">
+                        <img src="assets/images/NAAC-ICON.png" alt="NAAC Logo" id="logo-naac" style="height:40px;">
+                    </div>
+
+                    <!-- Select course (desktop hidden on small) -->
+                    <div class="d-none d-md-flex align-items-center">
+                        <button id="selectCourseBtn" class="btn btn-link text-white d-flex align-items-center gap-1">
+                            Select a Course <span class="caret">▾</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-center gap-3">
+                    <button class="btn btn-sm btn-visit">CAMPUS VISIT</button>
+                    <div class="phone-text d-none d-md-flex align-items-center gap-2">📞 1800 102 5661</div>
+
+                    <!-- hamburger for mobile -->
+                    <div class="d-md-none">
+                        <div class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+                            <svg width="28" height="18" viewBox="0 0 28 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="28" height="2" rx="1" fill="#fff" />
+                                <rect y="8" width="28" height="2" rx="1" fill="#fff" />
+                                <rect y="16" width="28" height="2" rx="1" fill="#fff" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BOTTOM ROW: nav and apply -->
+            <div class="d-flex align-items-center justify-content-between nav-row mt-2">
+                <nav class="header-nav flex-grow-1">
+                    <ul class="nav align-items-center">
+                        <!-- About (mega) -->
+                        <li class="nav-item dropdown mega-parent dropdown-hover" data-menu="about">
+                            <a class="nav-link" href="#" role="button">About <span class="caret">▾</span></a>
+                        </li>
+
+                        <!-- Academics (mega with dynamic columns) -->
+                        <li class="nav-item dropdown mega-parent" data-menu="academics">
+                            <a class="nav-link" href="#" role="button">Academics <span class="caret">▾</span></a>
+                        </li>
+
+                        <li class="nav-item"><a class="nav-link" href="#">Admissions <span class="caret">▾</span></a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#">Research <span class="caret">▾</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Life at SGT <span class="caret">▾</span></a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#">IQAC</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">NIRF</a></li>
+                    </ul>
+                </nav>
+
+                <div class="d-none d-md-block">
+                    <button class="btn btn-primary" id="applyNowBtn">APPLY NOW</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- spacer so content below doesn't hide under fixed header -->
+    <div class="page-top-spacer"></div>
+
+    <!-- MEGA MENU: ABOUT -->
+    <div id="mega-about" class="mega-menu" aria-hidden="true" role="region">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4 border-end pe-4">
+                    <h4>About SGT University</h4>
+                    <p>SGT University is a multi‑campus, multi‑disciplinary research institution accredited 'A++' by
+                        NAAC...</p>
+                    <a class="text-decoration-none" href="#">KNOW MORE →</a>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-unstyled mega-links mb-0">
+                        <li><a href="#">Rankings ›</a>
+                            <p>Only Indian University in World’s Top 100 (THE Rankings).</p>
+                        </li>
+                        <li><a href="#">Accreditation ›</a>
+                            <p>A++ grade awarded by NAAC in 2023.</p>
+                        </li>
+                        <li><a href="#">Governance ›</a>
+                            <p>Supports academic & administrative excellence.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-unstyled mega-links mb-0">
+                        <li><a href="#">Chancellor ›</a>
+                            <p>Founder & Chancellor: Sri Mata Amritanandamayi Devi</p>
+                        </li>
+                        <li><a href="#">Leadership ›</a>
+                            <p>Experienced professionals guiding the institution.</p>
+                        </li>
+                        <li><a href="#">Press Media ›</a>
+                            <p>Latest news & media coverage.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MEGA MENU: ACADEMICS (3-column dynamic) -->
+    <div id="mega-academics" class="mega-menu" aria-hidden="true" role="region">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- degrees -->
+                <div class="col-12 col-md-3 border-end">
+                    <ul class="list-unstyled academics-types mb-0">
+                        <li data-type="ug" class="active">Undergraduate</li>
+                        <li data-type="pg">Postgraduate</li>
+                        <li data-type="dip">Diploma</li>
+                        <li data-type="cert">Certificate</li>
+                        <li data-type="online">Online Programs</li>
+                    </ul>
+                </div>
+
+                <!-- faculties -->
+                <div class="col-12 col-md-3 border-end">
+                    <ul class="list-unstyled faculties-list mb-0"></ul>
+                </div>
+
+                <!-- programs -->
+                <div class="col-12 col-md-6">
+                    <ul class="list-unstyled courses-list mb-0"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Drawer (hamburger) -->
+    <div id="mobileDrawer" class="mobile-drawer" aria-hidden="true">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <div><img src="assets/images/sgtu-updated.png" alt="SGT" style="height:48px"></div>
+            <button id="closeDrawer" class="btn btn-sm btn-outline-secondary">Close</button>
+        </div>
+
+        <!-- Mirror menu (accordion style) -->
+        <nav>
+            <ul class="list-unstyled">
+                <li>
+                    <button class="btn btn-toggle w-100 text-start py-2" data-toggle-target="#mobileAbout">About
+                        ▾</button>
+                    <div id="mobileAbout" class="mobile-sub d-none ps-3">
+                        <a class="d-block py-2" href="#">Our University</a>
+                        <a class="d-block py-2" href="#">Leadership</a>
+                        <a class="d-block py-2" href="#">Rankings</a>
+                    </div>
+                </li>
+
+                <li>
+                    <button class="btn btn-toggle w-100 text-start py-2" data-toggle-target="#mobileAcademics">Academics
+                        ▾</button>
+                    <div id="mobileAcademics" class="mobile-sub d-none ps-3">
+                        <!-- Example inner items (you can expand) -->
+                        <a class="d-block py-2" href="#">Undergraduate › Allied</a>
+                        <a class="d-block py-2" href="#">Postgraduate › Engineering</a>
+                    </div>
+                </li>
+
+                <li><a class="d-block py-2" href="#">Admissions</a></li>
+                <li><a class="d-block py-2" href="#">Research</a></li>
+                <li><a class="d-block py-2" href="#">Life at SGT</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Bootstrap 5 and optional Popper (needed by bootstrap) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        /* -------------------------
+           Positioning & helpers
+           ------------------------- */
+        const headerEl = document.querySelector('.pageHeader');
+        const aboutMega = document.getElementById('mega-about');
+        const academicsMega = document.getElementById('mega-academics');
+
+        function setMegaTop() {
+            const rect = headerEl.getBoundingClientRect();
+            const top = Math.ceil(rect.top + rect.height);
+            [aboutMega, academicsMega].forEach(m => { m.style.top = top + 'px'; });
+            // set spacer height to header height so page content sits below
+            document.querySelector('.page-top-spacer').style.height = rect.height + 'px';
+        }
+        window.addEventListener('load', setMegaTop);
+        window.addEventListener('resize', () => { setMegaTop(); closeAll(); });
+
+        /* -------------------------
+           Desktop hover behavior for mega parents
+           Keeps menu open when mouse enters the menu itself
+           ------------------------- */
+        function makeHoverMenu(triggerSelector, menuEl) {
+            let enterTimeout, leaveTimeout;
+            const navTrigger = document.querySelector(triggerSelector);
+            if (!navTrigger) return;
+
+            // show
+            const show = () => {
+                clearTimeout(leaveTimeout);
+                menuEl.classList.add('show');
+                menuEl.setAttribute('aria-hidden', 'false');
+            };
+            // hide
+            const hide = () => {
+                clearTimeout(enterTimeout);
+                menuEl.classList.remove('show');
+                menuEl.setAttribute('aria-hidden', 'true');
+            };
+
+            // only for wide screens use hover
+            function attach() {
+                navTrigger.addEventListener('mouseenter', show);
+                navTrigger.addEventListener('mouseleave', () => {
+                    leaveTimeout = setTimeout(() => { if (!menuEl.matches(':hover')) hide(); }, 120);
+                });
+                menuEl.addEventListener('mouseenter', show);
+                menuEl.addEventListener('mouseleave', () => { leaveTimeout = setTimeout(hide, 120); });
+                // also allow clicking trigger to toggle on small screens - below
+            }
+            attach();
+        }
+
+        // attach to About (nav li has attribute data-menu="about")
+        makeHoverMenu('li[data-menu="about"]', aboutMega);
+        makeHoverMenu('li[data-menu="academics"]', academicsMega);
+
+        /* -------------------------
+           Academics dynamic behaviour
+           Degrees -> Faculties -> Programs
+           ------------------------- */
+        const academicsData = {
+            ug: {
+                "Engineering": [
+                    "B.Tech Computer Science",
+                    "B.Tech Mechanical Engineering",
+                    "B.Tech Civil Engineering"
+                ],
+                "Fashion": [
+                    "B.Des Fashion Design",
+                    "B.Sc Fashion Technology"
+                ]
+            },
+            pg: {
+                "Engineering": [
+                    "M.Tech AI & ML",
+                    "M.Tech Structural Engineering"
+                ],
+                "Fashion": [
+                    "M.Des Fashion Merchandising",
+                    "M.Sc Fashion Management"
+                ]
+            },
+            dip: {
+                "Engineering": ["Diploma in Civil Engg", "Diploma in Mechanical"],
+                "Fashion": ["Diploma in Textile Design"]
+            },
+            cert: {
+                "Fashion": ["Certificate in Fashion Sewing"],
+            },
+            online: {
+                "Engineering": ["Online Diploma in AI"]
+            }
+        };
+
+        const typeItemsContainer = academicsMega.querySelector('.academics-types');
+        const facultiesListEl = academicsMega.querySelector('.faculties-list');
+        const coursesListEl = academicsMega.querySelector('.courses-list');
+
+        function loadFaculties(type) {
+            facultiesListEl.innerHTML = '';
+            coursesListEl.innerHTML = '';
+            const facs = Object.keys(academicsData[type] || {});
+            facs.forEach((f, idx) => {
+                const li = document.createElement('li');
+                li.textContent = f;
+                li.dataset.fac = f;
+                if (idx === 0) li.classList.add('active');
+                facultiesListEl.appendChild(li);
+            });
+            // auto load first faculty
+            if (facs.length) loadCourses(type, facs[0]);
+        }
+        function loadCourses(type, faculty) {
+            coursesListEl.innerHTML = '';
+            const arr = (academicsData[type] && academicsData[type][faculty]) || [];
+            arr.forEach(p => {
+                const li = document.createElement('li');
+                li.innerHTML = `<a href="#">${p}</a>`;
+                coursesListEl.appendChild(li);
+            });
+        }
+
+        // initial load for UG
+        loadFaculties('ug');
+
+        // degree hover listeners
+        academicsMega.querySelectorAll('.academics-types li').forEach(li => {
+            li.addEventListener('mouseenter', () => {
+                academicsMega.querySelectorAll('.academics-types li').forEach(x => x.classList.remove('active'));
+                li.classList.add('active');
+                const type = li.dataset.type;
+                loadFaculties(type);
+            });
+        });
+
+        // facultiy hover (delegated)
+        facultiesListEl.addEventListener('mouseenter', (e) => {
+            const li = e.target.closest('li');
+            if (!li) return;
+            facultiesListEl.querySelectorAll('li').forEach(x => x.classList.remove('active'));
+            li.classList.add('active');
+            const type = academicsMega.querySelector('.academics-types li.active').dataset.type;
+            loadCourses(type, li.dataset.fac);
+        }, true);
+
+        /* -------------------------
+           Desktop / Mobile toggles & mobile drawer
+           ------------------------- */
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const mobileDrawer = document.getElementById('mobileDrawer');
+        const closeDrawer = document.getElementById('closeDrawer');
+
+        hamburgerBtn && hamburgerBtn.addEventListener('click', () => mobileDrawer.classList.add('open'));
+        closeDrawer && closeDrawer.addEventListener('click', () => mobileDrawer.classList.remove('open'));
+
+        // mobile accordion toggles in drawer
+        document.querySelectorAll('.btn-toggle').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const target = document.querySelector(btn.dataset.toggleTarget || btn.getAttribute('data-toggle-target'));
+                if (!target) return;
+                target.classList.toggle('d-none');
+            });
+        });
+
+        // small screens: clicking nav triggers should open the corresponding mega as a mobile content
+        document.querySelectorAll('.mega-parent').forEach(parent => {
+            parent.addEventListener('click', (ev) => {
+                // on small screens, toggle inner mega menu as block under nav
+                if (window.innerWidth < 992) {
+                    ev.preventDefault();
+                    const menuName = parent.dataset.menu;
+                    if (menuName === 'about') {
+                        aboutMega.classList.toggle('mobile-open');
+                    } else if (menuName === 'academics') {
+                        academicsMega.classList.toggle('mobile-open');
+                    }
+                }
+            });
+        });
+
+        // utility: close both mega menus
+        function closeAll() {
+            aboutMega.classList.remove('show', 'mobile-open');
+            academicsMega.classList.remove('show', 'mobile-open');
+            aboutMega.setAttribute('aria-hidden', 'true');
+            academicsMega.setAttribute('aria-hidden', 'true');
+        }
+
+        // close when clicking outside
+        document.addEventListener('click', (e) => {
+            if (window.innerWidth > 991) {
+                // if click not inside any mega menu or its trigger -> close
+                if (!e.target.closest('.mega-menu') && !e.target.closest('.mega-parent')) {
+                    closeAll();
+                }
+            }
+        });
+
+        // keyboard Esc close
+        document.addEventListener('keydown', (ev) => {
+            if (ev.key === 'Escape') closeAll();
+        });
+
+        /* Prevent accidental hover gaps:
+           ensure top of menus track header height on move. */
+        document.querySelectorAll('.mega-menu').forEach(m => {
+            m.addEventListener('mousemove', setMegaTop);
+        });
+
+        /* Select Course modal (simple) */
+        document.getElementById('selectCourseBtn')?.addEventListener('click', (ev) => {
+            ev.preventDefault();
+            // quick, simple native modal using prompt as demonstration - replace with fancy modal if you want
+            alert('Open course selector modal here (replace with your modal implementation).');
+        });
+
+        // ensure initial set
+        setMegaTop();
+    </script>
+</body>
+
+</html>
