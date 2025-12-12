@@ -2778,3 +2778,47 @@ header .nav .nav-link {
 .offcanvas.offcanvas-start {
   top: 57px;
 }
+
+/* Apply background color to accordion headers */
+#footerAccordion1 .accordion-button {
+  background-color: #def1ff !important;
+  color: #000 !important;
+  font-weight: 600;
+}
+
+/* Remove blue focus ring */
+#footerAccordion1 .accordion-button:focus {
+  box-shadow: none !important;
+}
+
+/* Change arrow icon color */
+#footerAccordion1 .accordion-button::after {
+  filter: brightness(0) saturate(0);
+}
+
+/* Background for accordion body */
+#footerAccordion1 .accordion-body {
+  background-color: #def1ff !important;
+  padding: 0.75rem 1rem;
+}
+
+/* Left-align UL and list items */
+#footerAccordion1 ul {
+  padding-left: 0;
+  margin: 0;
+}
+
+#footerAccordion1 ul li {
+  text-align: left !important;
+  margin-bottom: 6px;
+}
+
+/* Style links inside accordion */
+#footerAccordion1 ul li a {
+  color: #000;
+  text-decoration: none;
+}
+
+#footerAccordion1 ul li a:hover {
+  text-decoration: underline;
+}
