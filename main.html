@@ -43,22 +43,24 @@
 
                         <!-- Select Course -->
                         <div>
-                            <select class="form-select form-select-sm" style="width:170px;">
+                            <!-- <select class="form-select form-select-sm" style="width:170px;">
                                 <option selected>Select a Course</option>
                                 <option>B.Tech</option>
                                 <option>MBA</option>
-                            </select>
+                            </select> -->
                         </div>
 
                         <!-- Campus Visit + Phone -->
                         <div class="d-flex align-items-center">
 
-                            <button class="btn btn-dark btn-sm me-3">
+                            <button class="btn btn-dark btn-sm me-3"
+                                onclick="openYoutubeModal('guoMNrOQZF4?si=Rt7NjC-q18nyHO1q')">
                                 CAMPUS VISIT
                             </button>
 
                             <div class="d-flex align-items-center fw-bold">
-                                <i class="bi bi-telephone me-1"></i> 1800 102 5661
+                                <a href="tel:1800 102 5661" class="text-decoration-none" style="color: #000;"><i
+                                        class="bi bi-telephone me-1"></i> 1800 102 5661</a>
                             </div>
                         </div>
                     </div>
@@ -470,9 +472,9 @@
                         </ul>
 
                         <!-- APPLY NOW -->
-                        <button class="btn btn-primary btn-sm px-4">
-                            APPLY NOW
-                        </button>
+                        <a href="https://admission.sgtuniversity.ac.in/" target="_blank"
+                            class="btn btn-primary btn-sm px-4">APPLY
+                            NOW</a>
                     </div>
 
                 </div>
@@ -1009,8 +1011,7 @@
                 <div class="col-md-6">
                     <div class="campus-card position-relative">
                         <img src="assets/img/main/Campus-Life2.webp" class="campus-img" alt="">
-                        <div class="play-btn"
-                            onclick="openYoutubeModal('https://www.youtube.com/embed/guoMNrOQZF4?si=Rt7NjC-q18nyHO1q')">
+                        <div class="play-btn" onclick="openYoutubeModal('guoMNrOQZF4?si=Rt7NjC-q18nyHO1q')">
                             <i class="bi bi-play-fill text-white fs-4"></i>
                         </div>
                     </div>
@@ -2044,7 +2045,21 @@
                     "Agriculture": [
                         { name: "Bachelor of Science (Hons.) (Agriculture)", link: "https://sgtuniversity.ac.in/agri/programmes/bsc-in-agriculture" }
                     ],
-                    "Allied Health Sciences": [],
+                    "Allied Health Sciences": [
+                        { name: "Bachelor of Science (Neuro-Physiology Technology)", link: "https://sgtuniversity.ac.in/ahs/programmes/bsc-in-neuro-physiology-technology" },
+                        { name: "", link: "" },
+                        { name: "", link: "" },
+                        { name: "", link: "" },
+                        { name: "", link: "" },
+                        { name: "", link: "" },
+                        { name: "", link: "" },
+                        { name: "", link: "" },
+                        { name: "", link: "" },
+                        { name: "", link: "" },
+                        { name: "", link: "" },
+                        { name: "", link: "" },
+                        { name: "", link: "" }
+                    ],
                     "Applied and Basic Sciences": [],
                     "Behavioural Sciences": [],
                     "Commerce and Management": [],
@@ -2084,7 +2099,20 @@
                         { name: "Master of Business Administration (Agri-business)", link: "https://sgtuniversity.ac.in/agri/programmes/mba-in-agri-business" },
                         { name: "MSc. (Ag.) Horticulture in Floriculture and Landscaping", link: "https://sgtuniversity.ac.in/agri/programmes/msc-ag-in-horticulture-in-floriculture-and-landscaping" },
                     ],
-                    "Allied Health Sciences": [],
+                    "Allied Health Sciences": [
+                        { name: "", link: "" },
+                        { name: "", link: "" },
+                        { name: "", link: "" },
+                        { name: "", link: "" },
+                        { name: "", link: "" },
+                        { name: "", link: "" },
+                        { name: "", link: "" },
+                        { name: "", link: "" },
+                        { name: "", link: "" },
+                        { name: "", link: "" },
+                        { name: "", link: "" },
+                        { name: "", link: "" }
+                    ],
                     "Applied and Basic Sciences": [],
                     "Behavioural Sciences": [],
                     "Commerce and Management": [],
@@ -2178,33 +2206,6 @@
                     "Physiotherapy": []
                 },
                 online: {
-                    "Agriculture": [],
-                    "Allied Health Sciences": [],
-                    "Applied and Basic Sciences": [],
-                    "Behavioural Sciences": [],
-                    "Commerce and Management": [],
-                    "Dental Science": [],
-                    "Design": [
-                        { name: "B.Des Fashion Design", link: "/bdes-fashion" },
-                        { name: "B.Sc Fashion Technology", link: "/bsc-fashion-tech" },
-                        { name: "B.Sc Fashion Technology Advanced", link: "/bsc-fashion-adv" }
-                    ],
-                    "Education": [],
-                    "Engineering & Technology": [
-                        { name: "B.Tech Computer Science", link: "/btech-cs" },
-                        { name: "B.Tech Mechanical Engineering", link: "/btech-me" },
-                        { name: "B.Tech Civil Engineering", link: "/btech-ce" }
-                    ],
-                    "Hotel & Tourism Management": [],
-                    "Humanities, Liberal Arts": [],
-                    "Indian Medical System": [],
-                    "Law": [],
-                    "Media, Communication and Film": [],
-                    "Medicine and Health Science": [],
-                    "Naturopathy and Yogic Sciences": [],
-                    "Nursing": [],
-                    "Pharmacy": [],
-                    "Physiotherapy": []
                 }
             };
 
@@ -2689,16 +2690,21 @@
         });
     </script>
     <script>
-        let youtubeModal = new bootstrap.Modal(document.getElementById('youtubeModal'));
-        let iframe = document.getElementById('youtubeIframe');
+        const modalEl = document.getElementById('youtubeModal');
+        const youtubeModal = new bootstrap.Modal(modalEl, {
+            backdrop: true,
+            keyboard: true
+        });
 
-        function openYoutubeModal(videoUrl) {
-            iframe.src = videoUrl + "?autoplay=1";
+        const iframe = document.getElementById('youtubeIframe');
+
+        function openYoutubeModal(videoId) {
+            iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0`;
             youtubeModal.show();
         }
 
-        document.getElementById('youtubeModal').addEventListener('hidden.bs.modal', function () {
-            iframe.src = ""; // stops video when modal closes
+        modalEl.addEventListener('hidden.bs.modal', function () {
+            iframe.src = '';
         });
     </script>
 

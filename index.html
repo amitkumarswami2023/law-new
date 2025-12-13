@@ -21,217 +21,639 @@
 </head>
 
 <body>
-    <div class="container">
-        <header class="main-header py-3 px-2 rounded-bottom shadow-sm">
-            <div class="d-flex align-items-center justify-content-between px-4 py-3 position-relative">
+    <header class="border-bottom desktop-header fixed-top bg-white shadow-sm d-none d-lg-block">
+        <div class="container-fluid py-2">
+            <div class="row align-items-center">
 
-                <!-- Left empty on large screens -->
-                <div class="flex-fill d-none d-md-block"></div>
-
-                <!-- Centered logo (desktop) -->
-                <div
-                    class="header-logo text-center flex-grow-1 position-absolute start-50 translate-middle-x d-none d-md-block">
-                    <img src="assets/img/main-logo.png" alt="University Logo" class="img-fluid"
-                        style="max-height:100px;">
+                <!-- LEFT LOGO COLUMN (ROWSPAN 2 EFFECT USING FLEX COLUMN) -->
+                <div class="col-auto d-flex flex-column justify-content-center pe-3 border-end">
+                    <div class="d-flex align-items-center mb-2">
+                        <img src="assets/img/sgtu_naac.png" class="img-fluid" style="height:100px;" alt="SGT Logo">
+                        <!-- <img src="assets/images/NAAC-ICON.png" class="img-fluid ms-3" style="height:55px;"
+                                alt="NAAC Logo"> -->
+                    </div>
                 </div>
 
-                <!-- Logo (mobile) -->
-                <div class="d-flex align-items-center d-md-none">
-                    <img src="assets/img/main-logo.png" alt="University Logo" class="img-fluid"
-                        style="max-height:70px;">
-                </div>
+                <!-- RIGHT SIDE COLUMN -->
+                <div class="col">
 
-                <!-- Right side (buttons + hamburger for large screens) -->
-                <div class="d-none d-md-flex align-items-center gap-2">
-                    <!-- Dropdown -->
-                    <div class="dropdown">
-                        <button class="btn dropdown-toggle btn-primary" type="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Law Courses
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="#">LLB (Hons.)</a></li>
-                            <li><a class="dropdown-item" href="#">BA LLB</a></li>
-                            <li><a class="dropdown-item" href="#">BBA LLB</a></li>
-                            <li><a class="dropdown-item" href="#">LLM</a></li>
-                        </ul>
+                    <!-- ROW 1 -->
+                    <div class="d-flex justify-content-between align-items-center mb-2 pb-2 border-bottom">
+
+                        <!-- Select Course -->
+                        <div>
+                            <select class="form-select form-select-sm" style="width:170px;">
+                                <option selected>Select a Course</option>
+                                <option>B.Tech</option>
+                                <option>MBA</option>
+                            </select>
+                        </div>
+
+                        <!-- Campus Visit + Phone -->
+                        <div class="d-flex align-items-center">
+
+                            <button class="btn btn-dark btn-sm me-3"
+                                onclick="openYoutubeModal('guoMNrOQZF4?si=Rt7NjC-q18nyHO1q')">
+                                CAMPUS VISIT
+                            </button>
+
+                            <div class="d-flex align-items-center fw-bold">
+                                <a href="tel:1800 102 5661" class="text-decoration-none" style="color: #000;"><i
+                                        class="bi bi-telephone me-1"></i> 1800 102 5661</a>
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- Apply Now -->
-                    <button class="btn btn-secondary">Apply Now</button>
+                    <!-- ROW 2 (MENU + APPLY NOW) -->
+                    <div class="d-flex justify-content-between align-items-center">
 
-                    <!-- Hamburger -->
-                    <button
-                        class="hamburger-btn d-flex flex-column justify-content-center gap-1 p-0 border-0 bg-transparent"
-                        aria-label="Menu">
-                        <span class="hamburger-line rounded"></span>
-                        <span class="hamburger-line rounded"></span>
-                        <span class="hamburger-line rounded"></span>
-                    </button>
-                </div>
+                        <!-- MENU ITEMS -->
+                        <ul class="nav">
 
-                <!-- Hamburger only on mobile -->
-                <div class="d-flex d-md-none align-items-center">
-                    <button
-                        class="hamburger-btn d-flex flex-column justify-content-center gap-1 p-0 border-0 bg-transparent"
-                        aria-label="Menu">
-                        <span class="hamburger-line rounded"></span>
-                        <span class="hamburger-line rounded"></span>
-                        <span class="hamburger-line rounded"></span>
-                    </button>
+                            <!-- ABOUT MENU ITEM -->
+                            <li class="nav-item about-parent">
+
+                                <a class="nav-link about-trigger dropdown-toggle" href="#">
+                                    About
+                                </a>
+
+                                <!-- MEGA MENU -->
+                                <div class="about-menu mega-menu">
+
+                                    <div class="container">
+                                        <div class="row g-5">
+
+                                            <!-- LEFT COLUMN -->
+                                            <div class="col-md-4 pe-5 border-end">
+                                                <h4 class="fw-bold mb-3">About SGT University
+                                                </h4>
+
+                                                <p class="text-muted mb-4">
+                                                    Accredited with an A+ grade by NAAC, SGT University is a
+                                                    distinguished institution
+                                                    committed to “Nurturing Future Leaders” through academic excellence,
+                                                    research,
+                                                    and industry-driven innovation.
+                                                </p>
+
+                                                <a href="https://sgtuniversity.ac.in/about/our-university"
+                                                    class="fw-bold text-decoration-none know">
+                                                    KNOW MORE →
+                                                </a>
+                                            </div>
+
+                                            <!-- MIDDLE COLUMN -->
+                                            <div class="col-md-4">
+                                                <ul class="list-unstyled mega-links">
+                                                    <li>
+                                                        <a
+                                                            href="https://sgtuniversity.ac.in/about/accreditations-ranking">Rankings
+                                                            <span>›</span></a>
+                                                        <p>Proudly Rated Among the Top Private Universities in India by
+                                                            nirf, IIRF, QS Asian University, The World University, The
+                                                            Impact Ranking, etc.</p>
+                                                    </li>
+
+                                                    <li>
+                                                        <a
+                                                            href="https://sgtuniversity.ac.in/about/accreditations-ranking">Accreditation
+                                                            <span>›</span></a>
+                                                        <p>NAAC A+, NABL, Govt. of Haryana, Bar council of India, UGC,
+                                                            RCI, QS I-Gauge, ICAR, Indian Nursing Council, 20+ others
+                                                        </p>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="#">Achievements <span>›</span></a>
+                                                        <p>With 280+ Patents, our faculty members are recognized in
+                                                            Stanford University’s “Top 2% Scientists” list.</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            <!-- RIGHT COLUMN -->
+                                            <div class="col-md-4">
+                                                <ul class="list-unstyled mega-links">
+                                                    <li>
+                                                        <a href="https://sgtuniversity.ac.in/about/our-chancellor">Chancellor
+                                                            <span>›</span></a>
+                                                        <p>Padma Bhushan Shri Ram Bahadur Rai is our Vision</p>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="https://sgtuniversity.ac.in/about/our-chancellor">Vice
+                                                            Chancellor <span>›</span></a>
+                                                        <p>Prof. (Dr.) Hemant Verma - believe our true strength lies in
+                                                            vibrant community of our students, faculty, researchers,
+                                                            and collaborators.</p>
+                                                    </li>
+
+                                                    <li>
+                                                        <a
+                                                            href="https://sgtuniversity.ac.in/about/organizational-structure">Leadership
+                                                            Team <span>›</span></a>
+                                                        <p>Our Leadership Team comprises brilliant individuals who
+                                                            strongly drives governance, transparency, and accountability
+                                                            in
+                                                            the system.</p>
+                                                    </li>
+
+                                                    <!-- <li>
+                                                            <a href="#">Newsletters <span>›</span></a>
+                                                            <p>Regular updates & upcoming events.</p>
+                                                        </li> -->
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </li>
+
+                            <li class="nav-item academics-parent">
+
+                                <a class="nav-link academics-trigger dropdown-toggle" href="#">
+                                    Academics
+                                </a>
+
+                                <!-- MEGA MENU -->
+                                <div class="academics-menu mega-menu full-width">
+                                    <div class="container-fluid py-4">
+
+                                        <div class="row">
+
+                                            <!-- COLUMN 1 – COURSE TYPES -->
+                                            <div class="col-2 border-end">
+                                                <ul class="list-unstyled academics-types">
+                                                    <li data-type="ug" class="active">Undergraduate</li>
+                                                    <li data-type="pg">Postgraduate</li>
+                                                    <li data-type="doctoral">Doctoral</li>
+                                                    <li data-type="diploma">Diploma</li>
+                                                    <li data-type="online">Online Programs</li>
+                                                </ul>
+                                            </div>
+
+                                            <!-- COLUMN 2 – FACULTIES (Dynamic) -->
+                                            <div class="col-2 border-end">
+                                                <ul class="list-unstyled faculties-list">
+                                                    <!-- dynamically updated -->
+                                                </ul>
+                                            </div>
+
+                                            <!-- COLUMN 3 – COURSES (Dynamic) -->
+                                            <div class="col-8">
+                                                <div class="courses-list"></div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </li>
+
+                            <li class="nav-item admission-parent">
+
+                                <a class="nav-link admission-trigger dropdown-toggle" href="#">
+                                    Admissions
+                                </a>
+
+                                <!-- MEGA MENU -->
+                                <div class="admission-menu mega-menu">
+
+                                    <div class="container">
+                                        <div class="row g-5">
+
+                                            <!-- LEFT COLUMN -->
+                                            <div class="col-md-4 pe-5 border-end">
+                                                <h4 class="fw-bold mb-3">Admissions at SGT University
+                                                </h4>
+
+                                                <p class="text-muted mb-4">
+                                                    Admission opens for 2026-27 session. Applying at SGT in 200+ courses
+                                                    is easy via online and offline modes.
+                                                </p>
+
+                                                <a href="#" class="fw-bold text-decoration-none know">
+                                                    KNOW MORE →
+                                                </a>
+                                            </div>
+
+                                            <!-- MIDDLE COLUMN -->
+                                            <div class="col-md-4">
+                                                <ul class="list-unstyled mega-links">
+                                                    <li>
+                                                        <a href="https://admission.sgtuniversity.ac.in/">Apply Online
+                                                            <span>›</span></a>
+                                                        <p>Select the Faculty/ School and respective course with your
+                                                            details you are interested in.</p>
+                                                    </li>
+                                                    <li>
+                                                        <a href="https://sgtuniversity.ac.in/list-of-programmes">Explore
+                                                            Programs <span>›</span></a>
+                                                        <p>200+ Programs to choose from with deep-dive counselling in
+                                                            each subject.</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            <!-- RIGHT COLUMN -->
+                                            <div class="col-md-4">
+                                                <ul class="list-unstyled mega-links">
+                                                    <li>
+                                                        <a
+                                                            href="https://sgtuniversity.ac.in/admissions/admission-procedure">Admission
+                                                            Procedure <span>›</span></a>
+                                                        <p>Follow step by step Admissions procedure in online or offline
+                                                            mode</p>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="https://sgtuniversity.ac.in/academics/study-at-sgt">Why
+                                                            Study at SGT <span>›</span></a>
+                                                        <p>Our 10,000+ Alumni has given us uncountable stories to be a
+                                                            part of the SGT.</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </li>
+
+                            <!-- <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Admissions</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item">Apply</a></li>
+                                    </ul>
+                                </li> -->
+
+                            <li class="nav-item research-parent">
+
+                                <a class="nav-link research-trigger dropdown-toggle" href="#">
+                                    Research
+                                </a>
+
+                                <!-- MEGA MENU -->
+                                <div class="research-menu mega-menu">
+
+                                    <div class="container">
+                                        <div class="row g-5">
+
+                                            <!-- LEFT COLUMN -->
+                                            <div class="col-md-4 pe-5 border-end">
+                                                <h4 class="fw-bold mb-3">Research at SGT University
+                                                </h4>
+
+                                                <p class="text-muted mb-4">
+                                                    SGT University views research and development (R&D) as a key
+                                                    component that propels both innovation and academic
+                                                    excellence.
+                                                </p>
+
+                                                <a href="https://sgtuniversity.ac.in/research/introduction"
+                                                    class="fw-bold text-decoration-none know">
+                                                    KNOW MORE →
+                                                </a>
+                                            </div>
+
+                                            <!-- MIDDLE COLUMN -->
+                                            <div class="col-md-4">
+                                                <ul class="list-unstyled mega-links">
+                                                    <li>
+                                                        <a href="https://sgtuniversity.ac.in/research/research-labs">
+                                                            Research Labs <span>›</span></a>
+                                                        <p>The Central Scientific Instrumentation Facility (CSIF) serves
+                                                            as a cutting-edge, multidisciplinary hub equipped with
+                                                            state-of-the-art instrumentation.</p>
+                                                    </li>
+                                                    <li>
+                                                        <a href="https://sgtuniversity.ac.in/research/publications">Publications
+                                                            <span>›</span></a>
+                                                        <p>More than 10,000+ publications on record. 780+ faculty are
+                                                            researching and sharing their work endlessly.</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            <!-- RIGHT COLUMN -->
+                                            <div class="col-md-4">
+                                                <ul class="list-unstyled mega-links">
+                                                    <li>
+                                                        <a href="https://sgtuniversity.ac.in/research/ipr">Patents and
+                                                            IPR <span>›</span></a>
+                                                        <p>More than 280+ patents and Intellectual Property Rights (IPR)
+                                                            are crucial for higher education institutions</p>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="https://sgtuniversity.ac.in/research/projects">Projects
+                                                            <span>›</span></a>
+                                                        <p>With our strong Research advisory board and over 30+
+                                                            collaborations with about 100+ Consulting projects.</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </li>
+
+                            <!-- <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown"></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item">Publications</a></li>
+                                    </ul>
+                                </li> -->
+                            <li class="nav-item life-parent">
+
+                                <a class="nav-link life-trigger dropdown-toggle" href="#">
+                                    Life at SGT
+                                </a>
+
+                                <!-- MEGA MENU -->
+                                <div class="life-menu mega-menu">
+
+                                    <div class="container">
+                                        <div class="row g-5">
+
+                                            <!-- LEFT COLUMN -->
+                                            <div class="col-md-3 pe-5 border-end">
+                                                <h4 class="fw-bold mb-3">Life at SGT University
+                                                </h4>
+
+                                                <p class="text-muted mb-4">
+                                                    SGT University is a multi‑campus, multi‑disciplinary
+                                                    research academia
+                                                    accredited 'A++' by NAAC and ranked among the best research
+                                                    institutions in India.
+                                                </p>
+
+                                                <a href="#" class="fw-bold text-decoration-none know">
+                                                    KNOW MORE →
+                                                </a>
+                                            </div>
+
+                                            <!-- MIDDLE COLUMN -->
+                                            <div class="col-md-3">
+                                                <ul class="list-unstyled mega-links">
+                                                    <li>
+                                                        <a href="#">
+                                                            Student Welfare Centre <span>›</span></a>
+                                                        <p>Only Indian University in World’s Top 100 (THE Impact
+                                                            Rankings).</p>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Accomodation <span>›</span></a>
+                                                        <p>A++ grade awarded by NAAC in 2023.</p>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Synergy <span>›</span></a>
+                                                        <p>A++ grade awarded by NAAC in 2023.</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            <!-- RIGHT COLUMN -->
+                                            <div class="col-md-3">
+                                                <ul class="list-unstyled mega-links">
+                                                    <li>
+                                                        <a href="#">Events <span>›</span></a>
+                                                        <p>Founder is Sri Mata Amritanandamayi Devi.</p>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="#">Blogs <span>›</span></a>
+                                                        <p>Experienced professionals guiding the institution.</p>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Transportation <span>›</span></a>
+                                                        <p>Experienced professionals guiding the institution.</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            <!-- RIGHT COLUMN -->
+                                            <div class="col-md-3">
+                                                <ul class="list-unstyled mega-links">
+                                                    <li>
+                                                        <a href="#">Campus <span>›</span></a>
+                                                        <p>Founder is Sri Mata Amritanandamayi Devi.</p>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="#">Library <span>›</span></a>
+                                                        <p>Experienced professionals guiding the institution.</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </li>
+
+                            <!-- <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Life at SGT</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item">Campus</a></li>
+                                    </ul>
+                                </li> -->
+
+                            <li class="nav-item"><a class="nav-link">IQAC</a></li>
+                            <li class="nav-item"><a class="nav-link">NRF</a></li>
+
+                        </ul>
+
+                        <!-- APPLY NOW -->
+                        <a href="https://admission.sgtuniversity.ac.in/" target="_blank"
+                            class="btn btn-primary btn-sm px-4">APPLY
+                            NOW</a>
+                    </div>
+
                 </div>
             </div>
-        </header>
-    </div>
+        </div>
+    </header>
 
-    <!-- Fullscreen Sliding Menu -->
-    <div id="fullscreen-menu" class="fullscreen-menu">
-        <button class="close-menu">&times;</button>
-        <nav class="menu-content">
-            <ul class="menu-list list-unstyled">
-                <li class="has-submenu">
-                    <a href="#">About<span class="arrow">&rsaquo;</span></a>
-                    <ul class="submenu list-unstyled">
-                        <li><a href="https://sgtuniversity.ac.in/about/our-university">Our University</a></li>
-                        <li><a href="https://sgtuniversity.ac.in/about/our-chancellor">Our Chancellor</a></li>
-                        <li><a href="https://sgtuniversity.ac.in/about/our-vice-chancellor">Our Vice Chancellor</a></li>
-                        <li><a href="https://sgtuniversity.ac.in/about/organizational-structure">Organizational
-                                Structure</a></li>
-                        <li><a href="https://sgtuniversity.ac.in/about/accreditations-ranking">Accreditation &
-                                Rankings</a></li>
-                        <li><a href="https://sgtuniversity.ac.in/about/regulations-policies">Regulation & Policy</a>
-                        </li>
-                        <li><a href="https://sgtuniversity.ac.in/about/library">Library</a></li>
-                    </ul>
+
+    <!-- MOBILE HEADER -->
+    <header
+        class="d-lg-none d-flex justify-content-between align-items-center px-3 py-2 border-bottom bg-white position-fixed top-0 w-100"
+        style="z-index:9999;">
+        <!-- LOGO -->
+        <a href="#">
+            <img src="assets/img/sgtu_naac.png" alt="SGT University" style="height:56px;">
+        </a>
+
+        <!-- HAMBURGER -->
+        <button class="btn p-0 border-0 bg-transparent" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+            <i class="bi bi-list" style="font-size:32px;"></i>
+        </button>
+    </header>
+
+
+    <!-- SINGLE OFFCANVAS -->
+    <!-- SINGLE OFFCANVAS -->
+    <div class="d-lg-none d-flex offcanvas offcanvas-start top-20" tabindex="-1" id="mobileMenu"
+        aria-labelledby="mobileMenuLabel">
+        <!-- HEADER (dynamic based on panel) -->
+        <div class="offcanvas-header">
+            <button class="btn p-0 me-3 d-none" id="backBtn" aria-label="Back">
+                <i class="bi bi-chevron-left fs-4"></i>
+            </button>
+            <h5 class="offcanvas-title" id="panelTitle">Menu</h5>
+
+            <!-- CLOSE BUTTON -->
+            <button class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close menu"></button>
+        </div>
+
+        <!-- MAIN PANEL -->
+        <div id="mainPanel" class="menu-panel">
+            <ul class="list-unstyled mobile-menu mb-0">
+                <li class="mb-2"><a href="#" class="menu-item d-block py-2">Home</a></li>
+
+                <li class="mb-2">
+                    <button class="menu-item d-block w-100 py-2 text-start open-sub" data-target="aboutPanel">
+                        About <i class="bi bi-arrow-right float-end"></i>
+                    </button>
                 </li>
 
-                <li class="has-submenu">
-                    <a href="#">Academics <span class="arrow">&rsaquo;</span></a>
-                    <ul class="submenu list-unstyled">
-                        <li><a href="https://sgtuniversity.ac.in/academics/study-at-sgt">Study at SGT</a></li>
-                        <li class="has-submenu">
-                            <a href="#" aria-expanded="false">Faculty <span class="arrow">&rsaquo;</span></a>
-                            <ul class="submenu faculty-submenu list-unstyled">
-                                <div class="faculty-grid">
-                                    <ul>
-                                        <li><a href="https://sgtuniversity.ac.in/agri/">Agricultural Sciences</a></li>
-                                        <li><a href="https://sgtuniversity.ac.in/science/">School of Basic and Applied
-                                                Sciences</a></li>
-                                        <li><a href="https://sgtuniversity.ac.in/bhs/">School of Behavioural
-                                                Sciences</a></li>
-                                        <li><a href="https://sgtuniversity.ac.in/cm/">School of Commerce &
-                                                Management</a></li>
-                                        <li><a href="https://sgtuniversity.ac.in/fashion/">School of Design</a></li>
-                                        <li><a href="https://sgtuniversity.ac.in/education/">Education</a></li>
-                                        <li><a href="https://sgtuniversity.ac.in/engineering/">School of Engineering &
-                                                Technology</a></li>
-                                        <li><a href="https://sgtuniversity.ac.in/masscomm/">School of Emerging Media,
-                                                Communication and Film Studies</a>
-                                        </li>
-                                        <li><a href="https://sgtuniversity.ac.in/htm/">School of Hotel & Tourism
-                                                Management</a></li>
-                                        <li><a href="https://sgtuniversity.ac.in/hsla/">School of Humanities, Social
-                                                Sciences & Liberal Arts</a></li>
-                                        <li><a href="https://sgtuniversity.ac.in/law/">Law</a></li>
-
-                                    </ul>
-                                    <ul>
-                                        <li><a href="https://sgtuniversity.ac.in/ahs/">School of Allied Health
-                                                Sciences</a></li>
-                                        <li><a href="https://sgtuniversity.ac.in/dental/">Dental Sciences</a></li>
-                                        <li><a href="https://sgtuniversity.ac.in/ims/">Indian Medical System</a></li>
-                                        <li><a href="https://sgtuniversity.ac.in/medical/">Medicine & Health
-                                                Sciences</a></li>
-                                        <li><a href="https://sgtuniversity.ac.in/fnys/">School of Naturopathy & Yogic
-                                                Sciences</a></li>
-                                        <li><a href="https://sgtuniversity.ac.in/nursing/">Nursing</a></li>
-                                        <li><a href="https://sgtuniversity.ac.in/physiotherapy/">School of
-                                                Physiotherapy</a></li>
-                                        <li><a href="https://sgtuniversity.ac.in/pharmacy/">SGT College of Pharmacy</a>
-                                        </li>
-                                        <li><a href="https://sgtuniversity.ac.in/dpsr/">Department of Pharmaceutical
-                                                Sciences and Research</a></li>
-
-                                    </ul>
-                                </div>
-                            </ul>
-                        </li>
-                        <li class="has-submenu">
-                            <a href="#">University Clusters<span class="arrow">&rsaquo;</span></a>
-                            <ul class="submenu list-unstyled">
-                                <li><a href="https://sgtuniversity.ac.in/clusters/medical-health-sciences">Medical &
-                                        Health
-                                        Sciences</a></li>
-                                <li><a href="https://sgtuniversity.ac.in/clusters/social-science-humanities">Humanities
-                                        &
-                                        Social Sciences</a></li>
-                                <li><a href="https://sgtuniversity.ac.in/clusters/science-technology-management">Science,
-                                        Technology, and Management</a></li>
-                                <li><a href="https://sgtuniversity.ac.in/clusters/pharmacy">Pharmacy</a></li>
-                            </ul>
-                        </li>
-                        <li class="has-submenu">
-                            <a href="#">Examination<span class="arrow">&rsaquo;</span></a>
-                            <ul class="submenu list-unstyled">
-                                <li><a
-                                        href="https://sgtuniversity.ac.in/academics/examination#result-and-notifications">Result
-                                        & Notification</a></li>
-                                <li><a href="https://sgtuniversity.ac.in/academics/examination#date-sheet">Datesheet</a>
-                                </li>
-                                <li><a href="https://sgtuniversity.ac.in/academics/examination#old-question-papers">Old
-                                        Question Papers</a></li>
-                                <li><a href="https://sgtuniversity.ac.in/academics/examination#abc-nad-digilocker">ABC-NAD
-                                        Digilocker</a></li>
-                                <li><a
-                                        href="https://sgtuniversity.ac.in/academics/examination#controller-of-examination">Controller
-                                        of Examination</a></li>
-                                <li><a href="https://sgtuniversity.ac.in/academics/degree-in-advanced">Degree in
-                                        advance</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+                <li class="mb-2">
+                    <button class="menu-item d-block w-100 py-2 text-start open-sub" data-target="academicsPanel">
+                        Academics <i class="bi bi-arrow-right float-end"></i>
+                    </button>
                 </li>
 
-                <li class="has-submenu">
-                    <a href="#">Admissions <span class="arrow">&rsaquo;</span></a>
-                    <ul class="submenu list-unstyled">
-                        <li><a href="https://admission.sgtuniversity.ac.in/">Apply Online</a></li>
-                        <li><a href="https://sgtuniversity.ac.in/list-of-programmes">Explore Programs</a></li>
-                        <li><a href="https://sgtuniversity.ac.in/admissions/admission-procedure">Admission Procedure</a>
-                        </li>
-                    </ul>
+                <li class="mb-2">
+                    <button class="menu-item d-block w-100 py-2 text-start open-sub" data-target="admissionsPanel">
+                        Admissions <i class="bi bi-arrow-right float-end"></i>
+                    </button>
                 </li>
-
-                <li class="has-submenu">
-                    <a href="#">Research <span class="arrow">&rsaquo;</span></a>
-                    <ul class="submenu list-unstyled">
-                        <li><a href="https://sgtuniversity.ac.in/research/introduction">Introduction</a></li>
-                        <li><a href="https://sgtuniversity.ac.in/research/projects">Projects</a></li>
-                        <li><a href="https://sgtuniversity.ac.in/research/publications">Publications</a></li>
-                        <li><a href="https://sgtuniversity.ac.in/research/research-labs">CSIF</a></li>
-                        <li><a href="https://sgtuniversity.ac.in/research/phd">Ph.D.</a></li>
-                        <li><a
-                                href="https://sgterp.org/sgterp/resources/entranceAdmitCardPrint?ke=RW50cmFuY2VBZG1pdENhcmQ=">Ph.D.
-                                Admit Card</a></li>
-                    </ul>
+                <li class="mb-2">
+                    <button class="menu-item d-block w-100 py-2 text-start open-sub" data-target="researchPanel">
+                        Research <i class="bi bi-arrow-right float-end"></i>
+                    </button>
                 </li>
-
-                <li class="has-submenu">
-                    <a href="#">Life at SGT <span class="arrow">&rsaquo;</span></a>
-                    <ul class="submenu list-unstyled">
-                        <li><a href="https://sgtuniversity.ac.in/life-at-sgt/student-welfare-centre">Student Welfare
-                                Centre</a></li>
-                        <li><a href="https://sgtuniversity.ac.in/life-at-sgt/accommodation">Accomodation</a></li>
-                        <li><a href="https://sgtuniversity.ac.in/life-at-sgt/synergy">Synergy</a></li>
-                        <li><a href="https://sgtuniversity.ac.in/life-at-sgt/events/">Events</a></li>
-                        <li><a href="https://sgtuniversity.ac.in/life-at-sgt/blogs/">Blogs</a></li>
-                    </ul>
+                <li class="mb-2">
+                    <button class="menu-item d-block w-100 py-2 text-start open-sub" data-target="lifePanel">
+                        Life at SGT <i class="bi bi-arrow-right float-end"></i>
+                    </button>
                 </li>
-
-                <li><a href="https://iqac1.sgtuniversity.ac.in/">IQAC</a></li>
-                <li><a href="https://sgtuniversity.ac.in/about/nirf">NIRF</a></li>
+                <li class="mb-2"><a href="#" class="menu-item d-block py-2">IQAC</a></li>
+                <li class="mb-2"><a href="#" class="menu-item d-block py-2">NIRF</a></li>
             </ul>
-        </nav>
+        </div>
+
+        <!-- ABOUT PANEL -->
+        <div id="aboutPanel" class="menu-panel d-none">
+            <ul class="list-unstyled mobile-menu mb-0">
+                <li class="mb-2"><a href="https://sgtuniversity.ac.in/about/our-university"
+                        class="menu-item d-block py-2">About University</a></li>
+                <li class="mb-2"><a href="https://sgtuniversity.ac.in/about/our-chancellor"
+                        class="menu-item d-block py-2">Chancellor</a></li>
+                <li class="mb-2"><a href="https://sgtuniversity.ac.in/about/our-chancellor"
+                        class="menu-item d-block py-2">Vice Chancellor</a></li>
+                <li class="mb-2"><a href="https://sgtuniversity.ac.in/about/organizational-structure"
+                        class="menu-item d-block py-2">Leadership Team</a></li>
+                <li class="mb-2"><a href="https://sgtuniversity.ac.in/about/accreditations-ranking"
+                        class="menu-item d-block py-2">Rankings</a></li>
+                <li class="mb-2"><a href="https://sgtuniversity.ac.in/about/accreditations-ranking"
+                        class="menu-item d-block py-2">Accredition</a></li>
+                <li class="mb-2"><a href="http://127.0.0.1:5502/main.html#"
+                        class="menu-item d-block py-2">Achievements</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- ACADEMICS PANEL -->
+        <div id="academicsPanel" class="menu-panel d-none">
+            <ul class="list-unstyled mobile-menu mb-0">
+                <li class="mb-2">
+                    <button class="menu-item d-block w-100 py-2 text-start open-sub" data-target="medPanel">
+                        Medical <i class="bi bi-arrow-right float-end"></i>
+                    </button>
+                </li>
+
+                <li class="mb-2">
+                    <button class="menu-item d-block w-100 py-2 text-start open-sub" data-target="nonmedPanel">
+                        Non-Medical <i class="bi bi-arrow-right float-end"></i>
+                    </button>
+                </li>
+            </ul>
+        </div>
+
+        <!-- MEDICAL FACULTY PANEL (populated dynamically) -->
+        <div id="medPanel" class="menu-panel d-none">
+            <ul id="medList" class="list-unstyled mobile-menu mb-0"></ul>
+        </div>
+
+        <!-- NON-MEDICAL FACULTY PANEL (populated dynamically) -->
+        <div id="nonmedPanel" class="menu-panel d-none">
+            <ul id="nonmedList" class="list-unstyled mobile-menu mb-0"></ul>
+        </div>
+
+        <!-- ADMISSIONS PANEL -->
+        <div id="admissionsPanel" class="menu-panel d-none">
+            <ul class="list-unstyled mobile-menu mb-0">
+                <li class="mb-2"><a href="https://admission.sgtuniversity.ac.in/" class="menu-item d-block py-2">Apply
+                        Online</a></li>
+                <li class="mb-2"><a href="https://sgtuniversity.ac.in/list-of-programmes"
+                        class="menu-item d-block py-2">Explore Programs</a></li>
+                <li class="mb-2"><a href="https://sgtuniversity.ac.in/admissions/admission-procedure"
+                        class="menu-item d-block py-2">Admission Procedure</a></li>
+                <li class="mb-2"><a href="https://sgtuniversity.ac.in/academics/study-at-sgt"
+                        class="menu-item d-block py-2">Why Study at SGT</a></li>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Research PANEL -->
+        <div id="researchPanel" class="menu-panel d-none">
+            <ul class="list-unstyled mobile-menu mb-0">
+                <li class="mb-2"><a href="https://sgtuniversity.ac.in/research/introduction"
+                        class="menu-item d-block py-2">Introduction</a></li>
+                <li class="mb-2"><a href="https://sgtuniversity.ac.in/research/research-labs"
+                        class="menu-item d-block py-2">Research Labs</a></li>
+                <li class="mb-2"><a href="https://sgtuniversity.ac.in/research/publications"
+                        class="menu-item d-block py-2">Publications</a></li>
+                <li class="mb-2"><a href="https://sgtuniversity.ac.in/research/ipr"
+                        class="menu-item d-block py-2">Patents
+                        and IPR</a></li>
+                <li class="mb-2"><a href="https://sgtuniversity.ac.in/research/projects"
+                        class="menu-item d-block py-2">Projects</a></li>
+                </li>
+            </ul>
+        </div>
+
+        <!-- LIFE AT SGT PANEL -->
+        <div id="lifePanel" class="menu-panel d-none">
+            <ul class="list-unstyled mobile-menu mb-0">
+                <li class="mb-2"><a href="https://sgtuniversity.ac.in/life-at-sgt/student-welfare-centre"
+                        class="menu-item d-block py-2">Student Welfare Centre</a></li>
+                <li class="mb-2"><a href="https://sgtuniversity.ac.in/life-at-sgt/accommodation"
+                        class="menu-item d-block py-2">Accomodation</a></li>
+                <li class="mb-2"><a href="https://sgtuniversity.ac.in/life-at-sgt/synergy"
+                        class="menu-item d-block py-2">Synergy</a></li>
+                <li class="mb-2"><a href="https://sgtuniversity.ac.in/life-at-sgt/events/"
+                        class="menu-item d-block py-2">Events</a></li>
+                <li class="mb-2"><a href="https://sgtuniversity.ac.in/life-at-sgt/blogs/"
+                        class="menu-item d-block py-2">Blogs</a></li>
+                <li class="mb-2"><a href="https://sgtuniversity.ac.in/life-at-sgt/accommodation.html#easeofaccess"
+                        class="menu-item d-block py-2">Transportation</a></li>
+                <li class="mb-2"><a href="#" class="menu-item d-block py-2">Campus</a>
+                <li class="mb-2"><a href="https://sgtuniversity.ac.in/about/library.html"
+                        class="menu-item d-block py-2">Library</a>
+                </li>
+            </ul>
+        </div>
+
+
     </div>
 
 
@@ -1036,7 +1458,7 @@
         </section>
     </div>
 
-    <div class="image-container container position-relative">
+    <div class="image-container position-relative">
         <img src="assets/img/home/Building.png" alt="Blog Image" class="img-fluid image-wrapper">
     </div>
 
@@ -1074,354 +1496,345 @@
 
 
     <!-- Footer Section -->
-    <div class="container">
-        <footer class="site-footer position-relative text-white pt-2">
+    <footer class="footer-section pt-5 pb-3" style="background:#DEF1FF;">
+        <div class="container-fluid">
 
-            <!-- Top Links Section -->
-            <div class="container p-4">
-                <div class="row footer-links d-none d-lg-flex">
-
-                    <!-- Row 1: 4 columns -->
-                    <div class="col-lg-3 col-md-6 mb-4">
-                        <h5>Admissions</h5>
-                        <ul class="list-unstyled">
-                            <li><a href="https://admission.sgtuniversity.ac.in">Admission 2025-26</a></li>
-                            <li><a href="https://sgtuniversity.ac.in/admissions/admission-procedure">How To Apply</a>
-                            </li>
-                            <li><a href="https://sgtuniversity.ac.in/list-of-programmes">List of Courses</a></li>
-                            <!-- <li><a href="https://sgtuniversity.ac.in/#" target="_blank">Course Fee</a></li> -->
-                            <li><a href="https://sgtuniversity.ac.in/about/docs/scholarship-policy-of-sgt-university-for-the-academic-session-2025-26.pdf"
-                                    target="_blank">Scholarship</a></li>
-                            <!-- <li><a href="https://sgtuniversity.ac.in/assets/docs/Admission-Withdrawal-Cancellation-and-Fee-Refund-Policy-2023-24-for-New-Admissions-1-3-2.pdf" target="_blank">Refund Policy</a></li> -->
-                            <li><a href="https://f2.leadsquaredcdn.com/t/sgtuni/content/common/documents/sgtu-brochure-2025-26.pdf"
-                                    target="_blank">Brochure</a></li>
-                            <li><a href="https://sgtuniversity.ac.in/assets/docs/Notification-Re-constitution-of-RTI-Cell-of-the-University.pdf"
-                                    target="_blank">RTI</a></li>
-                            <li><a href="https://sgtuniversity.ac.in/faq" target="_blank">FAQ</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 mb-4">
-                        <h5>Useful Links</h5>
-                        <ul class="list-unstyled">
-                            <li><a href="https://sgtuniversity.ac.in/alumni">Alumni</a></li>
-                            <li><a href="https://sgtuniversity.ac.in/academic-calendar">Academic Calendar</a></li>
-                            <li><a href="https://sgtuniversity.ac.in/grievance-complaints">Grievance/Complaints</a></li>
-                            <li><a
-                                    href="https://sgtuniversity.ac.in/life-at-sgt/accommodation#easeofaccess">Transportation</a>
-                            </li>
-                            <li><a href="https://sgtuniversity.ac.in/assets/docs/List-of-Holidays-2025.pdf"
-                                    target="_blank">Holiday List</a></li>
-                            <li><a href="https://sgtuniversity.ac.in/matlab">Matlab@SGT</a></li>
-                            <li><a href="https://sgtuniversity.ac.in/about/library">Library</a></li>
-                            <li><a href="https://iqac1.sgtuniversity.ac.in/feedback" target="_blank">Feedback</a>
-                            </li>
-                            <li><a href="https://sgttimes.com/" target="_blank">SGT Times</a></li>
-                            <li><a href="https://iic.sgtuniversity.ac.in/" target="_blank">IIC</a></li>
-                            <li><a href="https://sgtuniversity.ac.in/research/ipr" target="_blank">IPR Cell</a></li>
-                            <li><a href="https://sgtuniversity.ac.in/assets/docs/Institutional-Development-Plan-(IDP).pdf"
-                                    target="_blank">IDP</a>
-                            </li>
-                        </ul>
-                    </div>
-
-
-
-                    <div class="col-lg-3 col-md-6 mb-4">
-                        <h5>Important Links</h5>
-                        <ul class="list-unstyled">
-                            <li><a href="https://sgtuniversity.ac.in/annual-report">Annual Report</a></li>
-                            <li><a href="https://sgtuniversity.ac.in/assets/docs/website-homepage-antiragging-information-II.pdf"
-                                    target="_blank">National Ragging Prevention
-                                    Program</a></li>
-                            <li><a href="https://www.sgthospital.org/" target="_blank">Hospital</a></li>
-                            <li><a href="https://sgtuniversity.ac.in/life-at-sgt/accommodation">Infrastructure</a></li>
-                            <li>
-                                <a href="https://www.indianjournals.com/journals" target="_blank" rel="nofollow">SGTU
-                                    Journal
-                                </a>
-                            </li>
-                            <li><a href="https://www.acicsgtu.xyz/" target="_blank">Incubation Cell</a></li>
-                            <li><a href="https://sgtuniversity.ac.in/green-environment">Green Environment</a></li>
-                            <li><a href="https://sgtuniversity.ac.in/womens-study-center">Women's Study Centre</a></li>
-                            <!-- <li><a href="students_testimonials.html">Student's Testimonial Submission</a></li> -->
-                            <li><a href="https://sgtuniversity.ac.in/sgt-ka-sparsh">SGT ka Sparsh</a></li>
-                            <li><a href="https://swayam.gov.in/" target="_blank" rel="nofollow">Swayam</a></li>
-                            <li><a href="https://sgtuniversity.ac.in/assets/docs/handbook-on-basics-of-cyber-hygiene-for-higher-education-institutions.pdf"
-                                    target="_blank">Cyber Hygiene</a></li>
-                            <li><a href="https://sgtuniversity.ac.in/public-self-disclosure" target="_blank">Public Self
-                                    Disclosure</a></li>
-                            <li><a href="http://samadhaan.ugc.ac.in/" target="_blank">UGC e-Samadhan</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 mb-4">
-                        <h5>Connect With Us</h5>
-                        <ul class="list-unstyled">
-                            <li><a href="https://sgtuniversity.ac.in/contact-us">Contact Us</a></li>
-                            <li><a href="https://sgtuniversity.ac.in/academics/examination">Exam Corner</a></li>
-                            <li><a href="https://sgtuniversity.ac.in/tenders">Tenders</a></li>
-                            <li><a href="https://sgtuniversity.ac.in/academic-clubs">Academic Clubs</a></li>
-                            <li><a href="https://sgtuniversity.ac.in/internal-compliants-committee">Internal Complaint
-                                    Committee</a></li>
-                            <li><a href="https://erp.sgtu.in/" target="_blank" rel="nofollow">ERP Login</a></li>
-                            <li><a href="https://sgtuniversity.ac.in/a-z_list" target="_blank">Sitemap</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 mb-4">
-                        <h5>Learn With Us</h5>
-                        <ul class="list-unstyled">
-                            <li><a href="https://sgtuniversity.ac.in/research/projects">Research &amp; Innovation</a>
-                            </li>
-                            <li><a href="https://sgtuniversity.ac.in/research/publications">Publications</a></li>
-                            <li><a href="https://www.sanrachna.foundation/" target="_blank">Sanrachna</a></li>
-                            <li><a href="https://www.acicsgtu.xyz/" target="_blank">Entrepreneurship</a></li>
-                            <li><a href="https://sgtuniversity.ac.in/about/library">Library</a></li>
-                            <li><a href="https://sgtuniversity.ac.in/stdc/index" target="_blank">Student Training &
-                                    Development Centre</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- Row 2: 2 columns under first row -->
-                    <div class="col-lg-3 col-md-6 mb-4">
-                        <h5>Grow With Us</h5>
-                        <ul class="list-unstyled">
-                            <li><a href="https://sgtuniversity.ac.in/corporate-resource-center">Placements</a></li>
-                            <li><a href="https://sgtuniversity.ac.in/careers">Careers</a></li>
-                            <li><a href="https://sgtuniversity.ac.in/life-at-sgt/student-welfare-centre">Culture at
-                                    SGTU</a></li>
-                            <li><a href="https://sgtuniversity.ac.in/about/accreditations-ranking">Awards and
-                                    Ranking</a></li>
-                            <li><a href="https://sgtuniversity.ac.in/life-at-sgt/blogs">SGTU Blogs</a></li>
-                            <li><a href="https://sgtuniversity.ac.in/sgtu-web-stories">SGTU Web Stories</a></li>
-                        </ul>
-                    </div>
+            <div class="row g-4 d-none d-md-flex">
+                <div class="col-md-1"></div>
+                <!-- Admissions -->
+                <div class="col-md-2 col-6">
+                    <h6 class="fw-bold mb-3">Admissions</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="https://admission.sgtuniversity.ac.in">Admission 2025-26</a></li>
+                        <li><a href="https://sgtuniversity.ac.in/admissions/admission-procedure">How To Apply</a>
+                        </li>
+                        <li><a href="https://sgtuniversity.ac.in/list-of-programmes">List of Courses</a></li>
+                        <!-- <li><a href="https://sgtuniversity.ac.in/#" target="_blank">Course Fee</a></li> -->
+                        <li><a href="https://sgtuniversity.ac.in/about/docs/scholarship-policy-of-sgt-university-for-the-academic-session-2025-26.pdf"
+                                target="_blank">Scholarship</a></li>
+                        <!-- <li><a href="https://sgtuniversity.ac.in/assets/docs/Admission-Withdrawal-Cancellation-and-Fee-Refund-Policy-2023-24-for-New-Admissions-1-3-2.pdf" target="_blank">Refund Policy</a></li> -->
+                        <li><a href="https://f2.leadsquaredcdn.com/t/sgtuni/content/common/documents/sgtu-brochure-2025-26.pdf"
+                                target="_blank">Brochure</a></li>
+                        <li><a href="https://sgtuniversity.ac.in/assets/docs/Notification-Re-constitution-of-RTI-Cell-of-the-University.pdf"
+                                target="_blank">RTI</a></li>
+                        <li><a href="https://sgtuniversity.ac.in/faq" target="_blank">FAQ</a></li>
+                    </ul>
                 </div>
 
-                <!-- Mobile Accordion -->
-                <div class="accordion d-lg-none" id="footerAccordion">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingAdmissions">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseAdmissions" aria-expanded="false"
-                                aria-controls="collapseAdmissions">
-                                Admissions
-                            </button>
-                        </h2>
-                        <div id="collapseAdmissions" class="accordion-collapse collapse"
-                            aria-labelledby="headingAdmissions" data-bs-parent="#footerAccordion">
-                            <div class="accordion-body p-2">
-                                <ul class="list-styled mb-2">
-                                    <li><a href="https://admission.sgtuniversity.ac.in">Admission 2025-26</a></li>
-                                    <li><a href="https://sgtuniversity.ac.in/admissions/admission-procedure">How To
-                                            Apply</a>
-                                    </li>
-                                    <li><a href="https://sgtuniversity.ac.in/list-of-programmes">List of Courses</a>
-                                    </li>
-                                    <!-- <li><a href="https://sgtuniversity.ac.in/#" target="_blank">Course Fee</a></li> -->
-                                    <li><a href="https://sgtuniversity.ac.in/about/docs/scholarship-policy-of-sgt-university-for-the-academic-session-2025-26.pdf"
-                                            target="_blank">Scholarship</a></li>
-                                    <!-- <li><a href="https://sgtuniversity.ac.in/assets/docs/Admission-Withdrawal-Cancellation-and-Fee-Refund-Policy-2023-24-for-New-Admissions-1-3-2.pdf" target="_blank">Refund Policy</a></li> -->
-                                    <li><a href="https://f2.leadsquaredcdn.com/t/sgtuni/content/common/documents/sgtu-brochure-2025-26.pdf"
-                                            target="_blank">Brochure</a></li>
-                                    <li><a href="https://sgtuniversity.ac.in/assets/docs/Notification-Re-constitution-of-RTI-Cell-of-the-University.pdf"
-                                            target="_blank">RTI</a></li>
-                                    <li><a href="https://sgtuniversity.ac.in/faq" target="_blank">FAQ</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingUseful">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseUseful" aria-expanded="false" aria-controls="collapseUseful">
-                                Useful Links
-                            </button>
-                        </h2>
-                        <div id="collapseUseful" class="accordion-collapse collapse" aria-labelledby="headingUseful"
-                            data-bs-parent="#footerAccordion">
-                            <div class="accordion-body p-2">
-                                <ul class="list-styled mb-2">
-                                    <li><a href="https://sgtuniversity.ac.in/alumni">Alumni</a></li>
-                                    <li><a href="https://sgtuniversity.ac.in/academic-calendar">Academic Calendar</a>
-                                    </li>
-                                    <li><a
-                                            href="https://sgtuniversity.ac.in/grievance-complaints">Grievance/Complaints</a>
-                                    </li>
-                                    <li><a
-                                            href="https://sgtuniversity.ac.in/life-at-sgt/accommodation#easeofaccess">Transportation</a>
-                                    </li>
-                                    <li><a href="https://sgtuniversity.ac.in/assets/docs/List-of-Holidays-2025.pdf"
-                                            target="_blank">Holiday List</a></li>
-                                    <li><a href="https://sgtuniversity.ac.in/matlab">Matlab@SGT</a></li>
-                                    <li><a href="https://sgtuniversity.ac.in/about/library">Library</a></li>
-                                    <li><a href="https://iqac1.sgtuniversity.ac.in/feedback"
-                                            target="_blank">Feedback</a>
-                                    </li>
-                                    <li><a href="https://sgttimes.com/" target="_blank">SGT Times</a></li>
-                                    <li><a href="https://iic.sgtuniversity.ac.in/" target="_blank">IIC</a></li>
-                                    <li><a href="https://sgtuniversity.ac.in/research/ipr" target="_blank">IPR Cell</a>
-                                    </li>
-                                    <li><a href="https://sgtuniversity.ac.in/assets/docs/Institutional-Development-Plan-(IDP).pdf"
-                                            target="_blank">IDP</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingImportant">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseImportant" aria-expanded="false"
-                                aria-controls="collapseImportant">
-                                Important Links
-                            </button>
-                        </h2>
-                        <div id="collapseImportant" class="accordion-collapse collapse"
-                            aria-labelledby="headingImportant" data-bs-parent="#footerAccordion">
-                            <div class="accordion-body p-2">
-                                <ul class="list-styled mb-2">
-                                    <li><a href="https://sgtuniversity.ac.in/annual-report">Annual Report</a></li>
-                                    <li><a href="https://sgtuniversity.ac.in/assets/docs/website-homepage-antiragging-information-II.pdf"
-                                            target="_blank">National Ragging Prevention
-                                            Program</a></li>
-                                    <li><a href="https://www.sgthospital.org/" target="_blank">Hospital</a></li>
-                                    <li><a
-                                            href="https://sgtuniversity.ac.in/life-at-sgt/accommodation">Infrastructure</a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.indianjournals.com/journals" target="_blank"
-                                            rel="nofollow">SGTU
-                                            Journal
-                                        </a>
-                                    </li>
-                                    <li><a href="https://www.acicsgtu.xyz/" target="_blank">Incubation Cell</a></li>
-                                    <li><a href="https://sgtuniversity.ac.in/green-environment">Green Environment</a>
-                                    </li>
-                                    <li><a href="https://sgtuniversity.ac.in/womens-study-center">Women's Study
-                                            Centre</a></li>
-                                    <!-- <li><a href="students_testimonials.html">Student's Testimonial Submission</a></li> -->
-                                    <li><a href="https://sgtuniversity.ac.in/sgt-ka-sparsh">SGT ka Sparsh</a></li>
-                                    <li><a href="https://swayam.gov.in/" target="_blank" rel="nofollow">Swayam</a></li>
-                                    <li><a href="https://sgtuniversity.ac.in/assets/docs/handbook-on-basics-of-cyber-hygiene-for-higher-education-institutions.pdf"
-                                            target="_blank">Cyber Hygiene</a></li>
-                                    <li><a href="https://sgtuniversity.ac.in/public-self-disclosure"
-                                            target="_blank">Public Self
-                                            Disclosure</a></li>
-                                    <li><a href="http://samadhaan.ugc.ac.in/" target="_blank">UGC e-Samadhan</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingConnect">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseConnect" aria-expanded="false" aria-controls="collapseConnect">
-                                Connect With Us
-                            </button>
-                        </h2>
-                        <div id="collapseConnect" class="accordion-collapse collapse" aria-labelledby="headingConnect"
-                            data-bs-parent="#footerAccordion">
-                            <div class="accordion-body p-2">
-                                <ul class="list-styled mb-2">
-                                    <li><a href="https://sgtuniversity.ac.in/contact-us">Contact Us</a></li>
-                                    <li><a href="https://sgtuniversity.ac.in/academics/examination">Exam Corner</a></li>
-                                    <li><a href="https://sgtuniversity.ac.in/tenders">Tenders</a></li>
-                                    <li><a href="https://sgtuniversity.ac.in/academic-clubs">Academic Clubs</a></li>
-                                    <li><a href="https://sgtuniversity.ac.in/internal-compliants-committee">Internal
-                                            Complaint
-                                            Committee</a></li>
-                                    <li><a href="https://erp.sgtu.in/" target="_blank" rel="nofollow">ERP Login</a></li>
-                                    <li><a href="https://sgtuniversity.ac.in/a-z_list" target="_blank">Sitemap</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingLearn">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseLearn" aria-expanded="false" aria-controls="collapseLearn">
-                                Learn with Us
-                            </button>
-                        </h2>
-                        <div id="collapseLearn" class="accordion-collapse collapse" aria-labelledby="headingLearn"
-                            data-bs-parent="#footerAccordion">
-                            <div class="accordion-body p-2">
-                                <ul class="list-styled mb-2">
-                                    <li><a href="https://sgtuniversity.ac.in/research/projects">Research &amp;
-                                            Innovation</a>
-                                    </li>
-                                    <li><a href="https://sgtuniversity.ac.in/research/publications">Publications</a>
-                                    </li>
-                                    <li><a href="https://www.sanrachna.foundation/" target="_blank">Sanrachna</a></li>
-                                    <li><a href="https://www.acicsgtu.xyz/" target="_blank">Entrepreneurship</a></li>
-                                    <li><a href="https://sgtuniversity.ac.in/about/library">Library</a></li>
-                                    <li><a href="https://sgtuniversity.ac.in/stdc/index" target="_blank">Student
-                                            Training &
-                                            Development Centre</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingGrow">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseGrow" aria-expanded="false" aria-controls="collapseGrow">
-                                Grow with Us
-                            </button>
-                        </h2>
-                        <div id="collapseGrow" class="accordion-collapse collapse" aria-labelledby="headingGrow"
-                            data-bs-parent="#footerAccordion">
-                            <div class="accordion-body p-2">
-                                <ul class="list-styled mb-2">
-                                    <li><a href="https://sgtuniversity.ac.in/corporate-resource-center">Placements</a>
-                                    </li>
-                                    <li><a href="https://sgtuniversity.ac.in/careers">Careers</a></li>
-                                    <li><a href="https://sgtuniversity.ac.in/life-at-sgt/student-welfare-centre">Culture
-                                            at
-                                            SGTU</a></li>
-                                    <li><a href="https://sgtuniversity.ac.in/about/accreditations-ranking">Awards and
-                                            Ranking</a></li>
-                                    <li><a href="https://sgtuniversity.ac.in/life-at-sgt/blogs">SGTU Blogs</a></li>
-                                    <li><a href="https://sgtuniversity.ac.in/sgtu-web-stories">SGTU Web Stories</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                <!-- Important Links -->
+                <div class="col-md-2 col-6">
+                    <h6 class="fw-bold mb-3">Important Links</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="https://sgtuniversity.ac.in/annual-report">Annual Report</a></li>
+                        <li><a href="https://sgtuniversity.ac.in/assets/docs/website-homepage-antiragging-information-II.pdf"
+                                target="_blank">National Ragging Prevention
+                                Program</a></li>
+                        <li><a href="https://www.sgthospital.org/" target="_blank">Hospital</a></li>
+                        <li><a href="https://sgtuniversity.ac.in/life-at-sgt/accommodation">Infrastructure</a></li>
+                        <li>
+                            <a href="https://www.indianjournals.com/journals" target="_blank" rel="nofollow">SGTU
+                                Journal
+                            </a>
+                        </li>
+                        <li><a href="https://www.acicsgtu.xyz/" target="_blank">Incubation Cell</a></li>
+                        <li><a href="https://sgtuniversity.ac.in/green-environment">Green Environment</a></li>
+                        <li><a href="https://sgtuniversity.ac.in/womens-study-center">Women's Study Centre</a></li>
+                        <!-- <li><a href="students_testimonials.html">Student's Testimonial Submission</a></li> -->
+                        <li><a href="https://sgtuniversity.ac.in/sgt-ka-sparsh">SGT ka Sparsh</a></li>
+                        <li><a href="https://swayam.gov.in/" target="_blank" rel="nofollow">Swayam</a></li>
+                        <li><a href="https://sgtuniversity.ac.in/assets/docs/handbook-on-basics-of-cyber-hygiene-for-higher-education-institutions.pdf"
+                                target="_blank">Cyber Hygiene</a></li>
+                        <li><a href="https://sgtuniversity.ac.in/public-self-disclosure" target="_blank">Public Self
+                                Disclosure</a></li>
+                        <li><a href="http://samadhaan.ugc.ac.in/" target="_blank">UGC e-Samadhan</a></li>
+                    </ul>
                 </div>
 
+                <!-- Useful Links -->
+                <div class="col-md-2 col-6">
+                    <h6 class="fw-bold mb-3">Useful Links</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="https://sgtuniversity.ac.in/alumni">Alumni</a></li>
+                        <li><a href="https://sgtuniversity.ac.in/academic-calendar">Academic Calendar</a></li>
+                        <li><a href="https://sgtuniversity.ac.in/grievance-complaints">Grievance/Complaints</a></li>
+                        <li><a
+                                href="https://sgtuniversity.ac.in/life-at-sgt/accommodation#easeofaccess">Transportation</a>
+                        </li>
+                        <li><a href="https://sgtuniversity.ac.in/assets/docs/List-of-Holidays-2025.pdf"
+                                target="_blank">Holiday List</a></li>
+                        <li><a href="https://sgtuniversity.ac.in/matlab">Matlab@SGT</a></li>
+                        <li><a href="https://sgtuniversity.ac.in/about/library">Library</a></li>
+                        <li><a href="https://iqac1.sgtuniversity.ac.in/feedback" target="_blank">Feedback</a>
+                        </li>
+                        <li><a href="https://sgttimes.com/" target="_blank">SGT Times</a></li>
+                        <li><a href="https://iic.sgtuniversity.ac.in/" target="_blank">IIC</a></li>
+                        <li><a href="https://sgtuniversity.ac.in/research/ipr" target="_blank">IPR Cell</a></li>
+                        <li><a href="https://sgtuniversity.ac.in/assets/docs/Institutional-Development-Plan-(IDP).pdf"
+                                target="_blank">IDP</a>
+                        </li>
+                    </ul>
+                </div>
 
+                <!-- Connect With Us -->
+                <div class="col-md-2 col-6">
+                    <h6 class="fw-bold mb-3">Connect With Us</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="https://sgtuniversity.ac.in/contact-us">Contact Us</a></li>
+                        <li><a href="https://sgtuniversity.ac.in/academics/examination">Exam Corner</a></li>
+                        <li><a href="https://sgtuniversity.ac.in/tenders">Tenders</a></li>
+                        <li><a href="https://sgtuniversity.ac.in/academic-clubs">Academic Clubs</a></li>
+                        <li><a href="https://sgtuniversity.ac.in/internal-compliants-committee">Internal Complaint
+                                Committee</a></li>
+                        <li><a href="https://erp.sgtu.in/" target="_blank" rel="nofollow">ERP Login</a></li>
+                        <li><a href="https://sgtuniversity.ac.in/a-z_list" target="_blank">Sitemap</a></li>
+                    </ul>
+                </div>
 
+                <!-- Grow With Us -->
+                <div class="col-md-2 col-6">
+                    <h6 class="fw-bold mb-3">Grow With Us</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="https://sgtuniversity.ac.in/research/projects">Research &amp;
+                                Innovation</a>
+                        </li>
+                        <li><a href="https://sgtuniversity.ac.in/research/publications">Publications</a></li>
+                        <li><a href="https://www.sanrachna.foundation/" target="_blank">Sanrachna</a></li>
+                        <li><a href="https://www.acicsgtu.xyz/" target="_blank">Entrepreneurship</a></li>
+                        <li><a href="https://sgtuniversity.ac.in/about/library">Library</a></li>
+                        <li><a href="https://sgtuniversity.ac.in/stdc/index" target="_blank">Student Training &
+                                Development Centre</a></li>
+                        <li><a href="https://sgtuniversity.ac.in/corporate-resource-center">Placements</a></li>
+                        <li><a href="https://sgtuniversity.ac.in/careers">Careers</a></li>
+                        <li><a href="https://sgtuniversity.ac.in/life-at-sgt/student-welfare-centre">Culture at
+                                SGTU</a></li>
+                        <li><a href="https://sgtuniversity.ac.in/about/accreditations-ranking">Awards and
+                                Ranking</a></li>
+                        <li><a href="https://sgtuniversity.ac.in/life-at-sgt/blogs">SGTU Blogs</a></li>
+                        <li><a href="https://sgtuniversity.ac.in/sgtu-web-stories">SGTU Web Stories</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-1"></div>
 
             </div>
 
-            <!-- Middle Contact Section (Full Width) -->
-            <div class="footer-contact py-4 mt-3">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-md-4 mb-3 mb-md-0 text-center text-md-left">
-                            <img src="assets/img/main-logo.png" alt="SGT University Logo" class="img-fluid"
-                                style="max-height:250px;">
-                        </div>
-                        <div class="col-md-8 text-center text-md-left">
-                            <p class="text-white mb-1"><i class="bi bi-geo-alt me-4 text-white"></i>Budhera,
-                                Gurugram-Badli Road,
-                                Gurugram-122505,
-                                Haryana, India.</p>
-                            <p class="text-white mb-1"><i class="bi bi-map me-4 text-white"></i>Campus Map | Get
-                                Directions</p>
-                            <p class="text-white mb-1"><i class="bi bi-telephone me-4 text-white"></i>1800 102 5661</p>
-                            <p class="text-white mb-1"><i
-                                    class="bi bi-envelope me-4 text-white"></i>info@sgtuniversity.org</p>
+            <!-- MOBILE ACCORDION VIEW -->
+            <div class="accordion d-md-none" id="footerAccordion1">
+
+                <!-- Admissions -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#acc1">
+                            Admissions
+                        </button>
+                    </h2>
+                    <div id="acc1" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <ul class="list-unstyled footer-links">
+                                <li><a href="https://admission.sgtuniversity.ac.in">Admission 2025-26</a></li>
+                                <li><a href="https://sgtuniversity.ac.in/admissions/admission-procedure">How To
+                                        Apply</a>
+                                </li>
+                                <li><a href="https://sgtuniversity.ac.in/list-of-programmes">List of Courses</a></li>
+                                <!-- <li><a href="https://sgtuniversity.ac.in/#" target="_blank">Course Fee</a></li> -->
+                                <li><a href="https://sgtuniversity.ac.in/about/docs/scholarship-policy-of-sgt-university-for-the-academic-session-2025-26.pdf"
+                                        target="_blank">Scholarship</a></li>
+                                <!-- <li><a href="https://sgtuniversity.ac.in/assets/docs/Admission-Withdrawal-Cancellation-and-Fee-Refund-Policy-2023-24-for-New-Admissions-1-3-2.pdf" target="_blank">Refund Policy</a></li> -->
+                                <li><a href="https://f2.leadsquaredcdn.com/t/sgtuni/content/common/documents/sgtu-brochure-2025-26.pdf"
+                                        target="_blank">Brochure</a></li>
+                                <li><a href="https://sgtuniversity.ac.in/assets/docs/Notification-Re-constitution-of-RTI-Cell-of-the-University.pdf"
+                                        target="_blank">RTI</a></li>
+                                <li><a href="https://sgtuniversity.ac.in/faq" target="_blank">FAQ</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
+
+                <!-- Repeat for other sections -->
+                <!-- Important Links -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#acc2">
+                            Important Links
+                        </button>
+                    </h2>
+                    <div id="acc2" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <ul class="list-unstyled footer-links">
+                                <li><a href="https://sgtuniversity.ac.in/annual-report">Annual Report</a></li>
+                                <li><a href="https://sgtuniversity.ac.in/assets/docs/website-homepage-antiragging-information-II.pdf"
+                                        target="_blank">National Ragging Prevention
+                                        Program</a></li>
+                                <li><a href="https://www.sgthospital.org/" target="_blank">Hospital</a></li>
+                                <li><a href="https://sgtuniversity.ac.in/life-at-sgt/accommodation">Infrastructure</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.indianjournals.com/journals" target="_blank"
+                                        rel="nofollow">SGTU
+                                        Journal
+                                    </a>
+                                </li>
+                                <li><a href="https://www.acicsgtu.xyz/" target="_blank">Incubation Cell</a></li>
+                                <li><a href="https://sgtuniversity.ac.in/green-environment">Green Environment</a></li>
+                                <li><a href="https://sgtuniversity.ac.in/womens-study-center">Women's Study Centre</a>
+                                </li>
+                                <!-- <li><a href="students_testimonials.html">Student's Testimonial Submission</a></li> -->
+                                <li><a href="https://sgtuniversity.ac.in/sgt-ka-sparsh">SGT ka Sparsh</a></li>
+                                <li><a href="https://swayam.gov.in/" target="_blank" rel="nofollow">Swayam</a></li>
+                                <li><a href="https://sgtuniversity.ac.in/assets/docs/handbook-on-basics-of-cyber-hygiene-for-higher-education-institutions.pdf"
+                                        target="_blank">Cyber Hygiene</a></li>
+                                <li><a href="https://sgtuniversity.ac.in/public-self-disclosure" target="_blank">Public
+                                        Self
+                                        Disclosure</a></li>
+                                <li><a href="http://samadhaan.ugc.ac.in/" target="_blank">UGC e-Samadhan</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Useful Links -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#acc3">
+                            Useful Links
+                        </button>
+                    </h2>
+                    <div id="acc3" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <ul class="list-unstyled footer-links">
+                                <li><a href="https://sgtuniversity.ac.in/alumni">Alumni</a></li>
+                                <li><a href="https://sgtuniversity.ac.in/academic-calendar">Academic Calendar</a></li>
+                                <li><a href="https://sgtuniversity.ac.in/grievance-complaints">Grievance/Complaints</a>
+                                </li>
+                                <li><a
+                                        href="https://sgtuniversity.ac.in/life-at-sgt/accommodation#easeofaccess">Transportation</a>
+                                </li>
+                                <li><a href="https://sgtuniversity.ac.in/assets/docs/List-of-Holidays-2025.pdf"
+                                        target="_blank">Holiday List</a></li>
+                                <li><a href="https://sgtuniversity.ac.in/matlab">Matlab@SGT</a></li>
+                                <li><a href="https://sgtuniversity.ac.in/about/library">Library</a></li>
+                                <li><a href="https://iqac1.sgtuniversity.ac.in/feedback" target="_blank">Feedback</a>
+                                </li>
+                                <li><a href="https://sgttimes.com/" target="_blank">SGT Times</a></li>
+                                <li><a href="https://iic.sgtuniversity.ac.in/" target="_blank">IIC</a></li>
+                                <li><a href="https://sgtuniversity.ac.in/research/ipr" target="_blank">IPR Cell</a></li>
+                                <li><a href="https://sgtuniversity.ac.in/assets/docs/Institutional-Development-Plan-(IDP).pdf"
+                                        target="_blank">IDP</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Connect With Us -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#acc4">
+                            Connect With Us
+                        </button>
+                    </h2>
+                    <div id="acc4" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <ul class="list-unstyled footer-links">
+                                <li><a href="https://sgtuniversity.ac.in/contact-us">Contact Us</a></li>
+                                <li><a href="https://sgtuniversity.ac.in/academics/examination">Exam Corner</a></li>
+                                <li><a href="https://sgtuniversity.ac.in/tenders">Tenders</a></li>
+                                <li><a href="https://sgtuniversity.ac.in/academic-clubs">Academic Clubs</a></li>
+                                <li><a href="https://sgtuniversity.ac.in/internal-compliants-committee">Internal
+                                        Complaint
+                                        Committee</a></li>
+                                <li><a href="https://erp.sgtu.in/" target="_blank" rel="nofollow">ERP Login</a></li>
+                                <li><a href="https://sgtuniversity.ac.in/a-z_list" target="_blank">Sitemap</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Grow With Us -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#acc5">
+                            Grow With Us
+                        </button>
+                    </h2>
+                    <div id="acc5" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <ul class="list-unstyled footer-links">
+                                <li><a href="https://sgtuniversity.ac.in/research/projects">Research &amp;
+                                        Innovation</a>
+                                </li>
+                                <li><a href="https://sgtuniversity.ac.in/research/publications">Publications</a></li>
+                                <li><a href="https://www.sanrachna.foundation/" target="_blank">Sanrachna</a></li>
+                                <li><a href="https://www.acicsgtu.xyz/" target="_blank">Entrepreneurship</a></li>
+                                <li><a href="https://sgtuniversity.ac.in/about/library">Library</a></li>
+                                <li><a href="https://sgtuniversity.ac.in/stdc/index" target="_blank">Student Training &
+                                        Development Centre</a></li>
+                                <li><a href="https://sgtuniversity.ac.in/corporate-resource-center">Placements</a></li>
+                                <li><a href="https://sgtuniversity.ac.in/careers">Careers</a></li>
+                                <li><a href="https://sgtuniversity.ac.in/life-at-sgt/student-welfare-centre">Culture at
+                                        SGTU</a></li>
+                                <li><a href="https://sgtuniversity.ac.in/about/accreditations-ranking">Awards and
+                                        Ranking</a></li>
+                                <li><a href="https://sgtuniversity.ac.in/life-at-sgt/blogs">SGTU Blogs</a></li>
+                                <li><a href="https://sgtuniversity.ac.in/sgtu-web-stories">SGTU Web Stories</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-        </footer>
 
-    </div>
+            <hr class="mt-4">
 
+            <!-- Bottom Section -->
+            <div class="row align-items-center text-center text-md-start mx-5">
+
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <img src="assets/img/sgtu_naac.png" style="height:55px;" alt="">
+                    <!-- <img src="naac.png" style="height:55px;" alt=""> -->
+                </div>
+
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <p class="mb-0 small">
+                        Budhera, Gurugram-Badli Road, Gurugram– 122505, Haryana, India.<br>
+                        1800 102 5661 | info@sgtuniversity.org
+                    </p>
+                </div>
+
+                <div class="col-md-4 text-md-end">
+                    <a href="#" class="footer-social"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="footer-social"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="footer-social"><i class="bi bi-youtube"></i></a>
+                    <a href="#" class="footer-social"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="footer-social"><i class="bi bi-twitter"></i></a>
+                </div>
+
+            </div>
+
+            <hr>
+
+            <!-- Copyright Row -->
+            <div class="container-fluid py-3 ">
+                <div class="row align-items-center small mx-5">
+
+                    <!-- Left Column -->
+                    <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+                        © 2025 SGT University – TopRanked University in Gurugram, Haryana & Delhi NCR
+                    </div>
+
+                    <!-- Right Column -->
+                    <div class="col-md-6 text-center text-md-end">
+                        <a href="#" class="me-2">A to Z Index</a>
+                        <a href="#" class="me-2">Disclaimer</a>
+                        <a href="#" class="me-2">Privacy Policy</a>
+                        <a href="#">Terms of Use</a>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </footer>
 
 
 
@@ -1592,6 +2005,756 @@
         });
 
     </script>
+
+
+
+    <script>
+        // ------------------ ABOUT MENU ------------------
+        const aboutParent = document.querySelector(".about-parent");
+        const aboutMenu = document.querySelector(".about-menu");
+
+        aboutParent.addEventListener("mouseenter", () => {
+            aboutMenu.style.display = "block";
+            setTimeout(() => aboutMenu.style.opacity = "1", 20);
+        });
+
+        aboutParent.addEventListener("mouseleave", () => {
+            aboutMenu.style.opacity = "0";
+            setTimeout(() => aboutMenu.style.display = "none", 200);
+        });
+
+        // ------------------ Admission MENU ------------------
+        const admissionParent = document.querySelector(".admission-parent");
+        const admissionMenu = document.querySelector(".admission-menu");
+
+        admissionParent.addEventListener("mouseenter", () => {
+            admissionMenu.style.display = "block";
+            setTimeout(() => admissionMenu.style.opacity = "1", 20);
+        });
+
+        admissionParent.addEventListener("mouseleave", () => {
+            admissionMenu.style.opacity = "0";
+            setTimeout(() => admissionMenu.style.display = "none", 200);
+        });
+
+        // ------------------ Research MENU ------------------
+        const researchParent = document.querySelector(".research-parent");
+        const researchMenu = document.querySelector(".research-menu");
+
+        researchParent.addEventListener("mouseenter", () => {
+            researchMenu.style.display = "block";
+            setTimeout(() => researchMenu.style.opacity = "1", 20);
+        });
+
+        researchParent.addEventListener("mouseleave", () => {
+            researchMenu.style.opacity = "0";
+            setTimeout(() => researchMenu.style.display = "none", 200);
+        });
+
+        // ------------------ Life MENU ------------------
+        const lifeParent = document.querySelector(".life-parent");
+        const lifeMenu = document.querySelector(".life-menu");
+
+        lifeParent.addEventListener("mouseenter", () => {
+            lifeMenu.style.display = "block";
+            setTimeout(() => lifeMenu.style.opacity = "1", 20);
+        });
+
+        lifeParent.addEventListener("mouseleave", () => {
+            lifeMenu.style.opacity = "0";
+            setTimeout(() => lifeMenu.style.display = "none", 200);
+        });
+
+        // ------------------ ACADEMICS MENU ------------------
+        const academicsParent = document.querySelector(".academics-parent");
+        const academicsMenu = document.querySelector(".academics-menu");
+
+        academicsParent.addEventListener("mouseenter", () => {
+            academicsMenu.style.display = "block";
+            setTimeout(() => academicsMenu.style.opacity = "1", 20);
+        });
+
+        academicsParent.addEventListener("mouseleave", () => {
+            academicsMenu.style.opacity = "0";
+            setTimeout(() => academicsMenu.style.display = "none", 200);
+        });
+
+
+    </script>
+    <!-- keep your existing HTML unchanged -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // ---------- Data ----------
+            const academicsData = {
+                ug: {
+                    "Agriculture": [
+                        { name: "Bachelor of Science (Hons.) (Agriculture)", link: "https://sgtuniversity.ac.in/agri/programmes/bsc-in-agriculture" }
+                    ],
+                    "Allied Health Sciences": [],
+                    "Applied and Basic Sciences": [],
+                    "Behavioural Sciences": [],
+                    "Commerce and Management": [],
+                    "Dental Science": [],
+                    "Design": [
+                        { name: "B.Des Fashion Design", link: "/bdes-fashion" },
+                        { name: "B.Sc Fashion Technology", link: "/bsc-fashion-tech" },
+                        { name: "B.Sc Fashion Technology Advanced", link: "/bsc-fashion-adv" }
+                    ],
+                    "Education": [],
+                    "Engineering & Technology": [
+                        { name: "B.Tech Computer Science", link: "/btech-cs" },
+                        { name: "B.Tech Mechanical Engineering", link: "/btech-me" },
+                        { name: "B.Tech Civil Engineering", link: "/btech-ce" }
+                    ],
+                    "Hotel & Tourism Management": [],
+                    "Humanities, Liberal Arts": [],
+                    "Indian Medical System": [],
+                    "Law": [],
+                    "Media, Communication and Film": [],
+                    "Medicine and Health Science": [],
+                    "Naturopathy and Yogic Sciences": [],
+                    "Nursing": [],
+                    "Pharmacy": [],
+                    "Physiotherapy": []
+                },
+                pg: {
+                    "Agriculture": [
+                        { name: "M. Sc. Ag. (Agronomy)", link: "https://sgtuniversity.ac.in/agri/programmes/msc-ag-in-agronomy" },
+                        { name: "M. Sc. Ag. (Plant Pathology)", link: "https://sgtuniversity.ac.in/agri/programmes/msc-ag-in-plant-pathology" },
+                        { name: "M. Sc. Ag. (Genetics & Plant Breeding)", link: "https://sgtuniversity.ac.in/agri/programmes/msc-ag-in-genetics-and-plant-breeding" },
+                        { name: "M. Sc. Ag. (Soil Science and Agriculture Chemistry)", link: "https://sgtuniversity.ac.in/agri/programmes/msc-ag-in-soil-science-and-ag-chemistry" },
+                        { name: "M. Sc. Ag. (Agricultural Extension & Communication)", link: "https://sgtuniversity.ac.in/agri/programmes/msc-ag-in-agricultural-extension-and-communication" },
+                        { name: "M.Sc (Ag.) Horticulture Fruit Science", link: "https://sgtuniversity.ac.in/agri/programmes/msc-ag-in-horticulture-fruit-science" },
+                        { name: "M.Sc (Ag.) Horticulture Vegetable Science", link: "https://sgtuniversity.ac.in/agri/programmes/msc-ag-in-horticulture-vegetable-science" },
+                        { name: "M. Sc. Ag. (Entomology)", link: "https://sgtuniversity.ac.in/agri/programmes/msc-ag-in-agronomy-entomology" },
+                        { name: "Master of Business Administration (Agri-business)", link: "https://sgtuniversity.ac.in/agri/programmes/mba-in-agri-business" },
+                        { name: "MSc. (Ag.) Horticulture in Floriculture and Landscaping", link: "https://sgtuniversity.ac.in/agri/programmes/msc-ag-in-horticulture-in-floriculture-and-landscaping" },
+                    ],
+                    "Allied Health Sciences": [],
+                    "Applied and Basic Sciences": [],
+                    "Behavioural Sciences": [],
+                    "Commerce and Management": [],
+                    "Dental Science": [],
+                    "Design": [
+                        { name: "B.Des Fashion Design", link: "/bdes-fashion" },
+                        { name: "B.Sc Fashion Technology", link: "/bsc-fashion-tech" },
+                        { name: "B.Sc Fashion Technology Advanced", link: "/bsc-fashion-adv" }
+                    ],
+                    "Education": [],
+                    "Engineering & Technology": [
+                        { name: "B.Tech Computer Science", link: "/btech-cs" },
+                        { name: "B.Tech Mechanical Engineering", link: "/btech-me" },
+                        { name: "B.Tech Civil Engineering", link: "/btech-ce" }
+                    ],
+                    "Hotel & Tourism Management": [],
+                    "Humanities, Liberal Arts": [],
+                    "Indian Medical System": [],
+                    "Law": [],
+                    "Media, Communication and Film": [],
+                    "Medicine and Health Science": [],
+                    "Naturopathy and Yogic Sciences": [],
+                    "Nursing": [],
+                    "Pharmacy": [],
+                    "Physiotherapy": []
+                },
+                doctoral: {
+                    "Agriculture": [
+                        { name: "Doctor of Philosophy (Agriculture Science) (Agronomy)", link: "https://sgtuniversity.ac.in/agri/programmes/phd-in-agronomy" },
+                        { name: "Doctor of Philosophy (Agriculture Science) (Horticulture)", link: "https://sgtuniversity.ac.in/agri/programmes/phd-in-horticulture" },
+                        { name: "Doctor of Philosophy (Agriculture Science) (Genetics & Plant Breeding)", link: "https://sgtuniversity.ac.in/agri/programmes/phd-in-genetics-and-plant-breeding" },
+                        { name: "Doctor of Philosophy (Agriculture Science) (Soil Science)", link: "https://sgtuniversity.ac.in/agri/programmes/phd-in-soil-science-and-agriculture-chemistry" }
+                    ],
+                    "Allied Health Sciences": [],
+                    "Applied and Basic Sciences": [],
+                    "Behavioural Sciences": [],
+                    "Commerce and Management": [],
+                    "Dental Science": [],
+                    "Design": [
+                        { name: "B.Des Fashion Design", link: "/bdes-fashion" },
+                        { name: "B.Sc Fashion Technology", link: "/bsc-fashion-tech" },
+                        { name: "B.Sc Fashion Technology Advanced", link: "/bsc-fashion-adv" }
+                    ],
+                    "Education": [],
+                    "Engineering & Technology": [
+                        { name: "B.Tech Computer Science", link: "/btech-cs" },
+                        { name: "B.Tech Mechanical Engineering", link: "/btech-me" },
+                        { name: "B.Tech Civil Engineering", link: "/btech-ce" }
+                    ],
+                    "Hotel & Tourism Management": [],
+                    "Humanities, Liberal Arts": [],
+                    "Indian Medical System": [],
+                    "Law": [],
+                    "Media, Communication and Film": [],
+                    "Medicine and Health Science": [],
+                    "Naturopathy and Yogic Sciences": [],
+                    "Nursing": [],
+                    "Pharmacy": [],
+                    "Physiotherapy": []
+                },
+                diploma: {
+                    "Agriculture": [
+                        { name: "Diploma in Agricultural Extension Services for Input Dealers (DAESI) (Certified by MANAGE Hyderabad)", link: "https://sgtuniversity.ac.in/agri/programmes/#" },
+                        { name: "Diploma in Seed Production Technologies", link: "https://sgtuniversity.ac.in/agri/programmes/#" }
+                    ],
+                    "Allied Health Sciences": [],
+                    "Applied and Basic Sciences": [],
+                    "Behavioural Sciences": [],
+                    "Commerce and Management": [],
+                    "Dental Science": [],
+                    "Design": [
+                        { name: "B.Des Fashion Design", link: "/bdes-fashion" },
+                        { name: "B.Sc Fashion Technology", link: "/bsc-fashion-tech" },
+                        { name: "B.Sc Fashion Technology Advanced", link: "/bsc-fashion-adv" }
+                    ],
+                    "Education": [],
+                    "Engineering & Technology": [
+                        { name: "B.Tech Computer Science", link: "/btech-cs" },
+                        { name: "B.Tech Mechanical Engineering", link: "/btech-me" },
+                        { name: "B.Tech Civil Engineering", link: "/btech-ce" }
+                    ],
+                    "Hotel & Tourism Management": [],
+                    "Humanities, Liberal Arts": [],
+                    "Indian Medical System": [],
+                    "Law": [],
+                    "Media, Communication and Film": [],
+                    "Medicine and Health Science": [],
+                    "Naturopathy and Yogic Sciences": [],
+                    "Nursing": [],
+                    "Pharmacy": [],
+                    "Physiotherapy": []
+                },
+                online: {
+                    "Agriculture": [],
+                    "Allied Health Sciences": [],
+                    "Applied and Basic Sciences": [],
+                    "Behavioural Sciences": [],
+                    "Commerce and Management": [],
+                    "Dental Science": [],
+                    "Design": [
+                        { name: "B.Des Fashion Design", link: "/bdes-fashion" },
+                        { name: "B.Sc Fashion Technology", link: "/bsc-fashion-tech" },
+                        { name: "B.Sc Fashion Technology Advanced", link: "/bsc-fashion-adv" }
+                    ],
+                    "Education": [],
+                    "Engineering & Technology": [
+                        { name: "B.Tech Computer Science", link: "/btech-cs" },
+                        { name: "B.Tech Mechanical Engineering", link: "/btech-me" },
+                        { name: "B.Tech Civil Engineering", link: "/btech-ce" }
+                    ],
+                    "Hotel & Tourism Management": [],
+                    "Humanities, Liberal Arts": [],
+                    "Indian Medical System": [],
+                    "Law": [],
+                    "Media, Communication and Film": [],
+                    "Medicine and Health Science": [],
+                    "Naturopathy and Yogic Sciences": [],
+                    "Nursing": [],
+                    "Pharmacy": [],
+                    "Physiotherapy": []
+                }
+            };
+
+            // ---------- DOM ----------
+            const typeContainer = document.querySelector(".academics-types");
+            const typeItems = document.querySelectorAll(".academics-types li");
+            const facultyList = document.querySelector(".faculties-list");
+            const courseList = document.querySelector(".courses-list");
+
+            // sanity checks
+            if (!typeContainer || !facultyList || !courseList) {
+                console.error("Academics menu: missing DOM elements", {
+                    typeContainerExists: !!typeContainer,
+                    facultyListExists: !!facultyList,
+                    courseListExists: !!courseList
+                });
+                return;
+            }
+
+            // ---------- helpers ----------
+            function clearActive(selector) {
+                document.querySelectorAll(selector).forEach(el => el.classList.remove("active"));
+            }
+
+            function sanitizeText(s) { return String(s || ""); }
+
+            // ---------- load faculties ----------
+            function loadFaculties(type) {
+                facultyList.innerHTML = "";
+                courseList.innerHTML = "";
+
+                if (!academicsData[type]) {
+                    facultyList.innerHTML = `<li class="text-muted">No faculties available</li>`;
+                    courseList.innerHTML = `<p class="text-muted">No courses available</p>`;
+                    console.warn("Academics menu: unknown type:", type);
+                    return;
+                }
+
+                const faculties = Object.keys(academicsData[type] || {});
+                if (faculties.length === 0) {
+                    facultyList.innerHTML = `<li class="text-muted">No faculties available</li>`;
+                    courseList.innerHTML = `<p class="text-muted">No courses available</p>`;
+                    return;
+                }
+
+                // build list
+                const frag = document.createDocumentFragment();
+                faculties.forEach((fac, idx) => {
+                    const li = document.createElement("li");
+                    li.textContent = fac;
+                    li.dataset.fac = encodeURIComponent(fac);
+                    li.tabIndex = 0; // make focusable
+                    if (idx === 0) li.classList.add("active");
+                    frag.appendChild(li);
+                });
+                facultyList.appendChild(frag);
+
+                // load courses for first faculty
+                loadCourses(type, faculties[0]);
+            }
+
+            // ---------- load courses ----------
+            function loadCourses(type, facultyRaw) {
+                const faculty = decodeURIComponent(String(facultyRaw || ""));
+                courseList.innerHTML = "";
+
+                if (!academicsData[type]) {
+                    courseList.innerHTML = `<p class="text-muted">No courses available</p>`;
+                    return;
+                }
+
+                const courses = academicsData[type][faculty] || [];
+
+                if (!courses.length) {
+                    courseList.innerHTML = `<p class="text-muted">No courses available</p>`;
+                    return;
+                }
+
+                const columns = 3;
+                const perCol = Math.max(1, Math.ceil(courses.length / columns));
+                let html = `<div class="row">`;
+                for (let i = 0; i < columns; i++) {
+                    html += `<div class="col-4"><ul class="list-unstyled">`;
+                    courses.slice(i * perCol, (i + 1) * perCol).forEach(course => {
+                        const href = sanitizeText(course.link || "#");
+                        const name = sanitizeText(course.name || "");
+                        html += `<li><a href="${href}" class="course-link">${name}</a></li>`;
+                    });
+                    html += `</ul></div>`;
+                }
+                html += `</div>`;
+                courseList.innerHTML = html;
+            }
+
+            // ---------- type interactions ----------
+            // support pointerenter (mouse) + focus (keyboard) + click (touch)
+            typeItems.forEach(item => {
+                item.tabIndex = 0; // ensure focusable
+                function activateType() {
+                    clearActive(".academics-types li");
+                    item.classList.add("active");
+                    const type = item.dataset.type || "ug";
+                    loadFaculties(type);
+                }
+
+                item.addEventListener("mouseenter", activateType);
+                item.addEventListener("focus", activateType);
+                item.addEventListener("click", activateType);
+                // optional: keyboard selection with Enter
+                item.addEventListener("keydown", (ev) => {
+                    if (ev.key === "Enter" || ev.key === " ") {
+                        ev.preventDefault();
+                        activateType();
+                    }
+                });
+            });
+
+            // ---------- faculty interactions (delegated) ----------
+            facultyList.addEventListener("mouseover", (e) => {
+                const li = e.target.closest("li");
+                if (!li || !facultyList.contains(li)) return;
+                if (!li.dataset.fac) return;
+
+                clearActive(".faculties-list li");
+                li.classList.add("active");
+
+                const activeTypeEl = document.querySelector(".academics-types li.active");
+                const type = activeTypeEl ? activeTypeEl.dataset.type : "ug";
+                loadCourses(type, li.dataset.fac);
+            });
+
+            // click for touch devices
+            facultyList.addEventListener("click", (e) => {
+                const li = e.target.closest("li");
+                if (!li || !facultyList.contains(li)) return;
+                if (!li.dataset.fac) return;
+
+                clearActive(".faculties-list li");
+                li.classList.add("active");
+
+                const activeTypeEl = document.querySelector(".academics-types li.active");
+                const type = activeTypeEl ? activeTypeEl.dataset.type : "ug";
+                loadCourses(type, li.dataset.fac);
+            });
+
+            // keyboard selection for faculty
+            facultyList.addEventListener("keydown", (e) => {
+                const li = e.target.closest("li");
+                if (!li || !facultyList.contains(li)) return;
+                if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    clearActive(".faculties-list li");
+                    li.classList.add("active");
+                    const activeTypeEl = document.querySelector(".academics-types li.active");
+                    const type = activeTypeEl ? activeTypeEl.dataset.type : "ug";
+                    loadCourses(type, li.dataset.fac);
+                }
+            });
+
+            // ---------- init ----------
+            // ensure a type has active class
+            const initialTypeEl = document.querySelector('.academics-types li.active') ||
+                document.querySelector('.academics-types li[data-type="ug"]') ||
+                document.querySelector('.academics-types li');
+            if (initialTypeEl) {
+                clearActive(".academics-types li");
+                initialTypeEl.classList.add("active");
+                loadFaculties(initialTypeEl.dataset.type || "ug");
+            } else {
+                console.error("Academics menu: no type items found");
+            }
+        }); // DOMContentLoaded
+    </script>
+    <script>
+        var swiper1 = new Swiper(".hero-swiper", {
+            loop: true,
+            autoplay: {
+                delay: 4000,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            effect: "fade",
+            fadeEffect: {
+                crossFade: true
+            },
+            speed: 900
+        });
+    </script>
+    <script>
+        const counters = document.querySelectorAll(".counter");
+
+        counters.forEach(counter => {
+            const update = () => {
+                const target = +counter.getAttribute("data-target");
+                let current = +counter.innerText;
+
+                const increment = target / 100;
+
+                if (current < target) {
+                    counter.innerText = Math.ceil(current + increment);
+                    setTimeout(update, 20);
+                } else {
+                    // Convert to K format
+                    if (target >= 1000) {
+                        counter.innerText = Math.floor(target / 1000) + "K+";
+                    } else {
+                        counter.innerText = target + "+";
+                    }
+                }
+            };
+
+            update();
+        });
+    </script>
+    <script>
+        const faculties = {
+            "non-medical": [
+                { title: "Agricultural Sciences", img: "assets/img/main/Agricultural-Sciences.webp", link: "https://sgtuniversity.ac.in/agri/" },
+                { title: "Behavioural Sciences", img: "assets/img/main/Behavioural-Sciences.webp", link: "https://sgtuniversity.ac.in/bhs/" },
+                { title: "Commerce & Management", img: "assets/img/main/Commerce-Management.webp", link: "https://sgtuniversity.ac.in/cm/" },
+                { title: "Education", img: "assets/img/main/Education.webp", link: "https://sgtuniversity.ac.in/education/" },
+                { title: "Engineering & Technology", img: "assets/img/main/Engineering-Technology .webp", link: "https://sgtuniversity.ac.in/engineering/" },
+                { title: "Design", img: "assets/img/main/Design.webp", link: "https://sgtuniversity.ac.in/fashion/" },
+                { title: "Hotel & Tourism Management", img: "assets/img/main/Hotel-Managment.webp", link: "https://sgtuniversity.ac.in/htm/" },
+                { title: "Emerging Media, Communication & Film Studies", img: "assets/img/main/Emerging.webp", video: "vid4.mp4", link: "https://sgtuniversity.ac.in/masscomm/" },
+                { title: "Law", img: "assets/img/main/Law.webp", link: "https://sgtuniversity.ac.in/law/" },
+                { title: "Basic & Applied Sciences", img: "assets/img/main/Applied-Sciences.webp", link: "https://sgtuniversity.ac.in/science/" },
+                { title: "Humanities, Social Sciences & Liberal Arts", img: "assets/img/main/Humanities.webp", link: "https://sgtuniversity.ac.in/hsla/" },
+                { title: "SGT Online", img: "assets/img/main/SGT-Online.webp", link: "https://sgtonline.in" }
+            ],
+
+            "medical": [
+                { title: "Medical Sciences", img: "assets/img/main/mhs.webp", link: "https://sgtuniversity.ac.in/medical/" },
+                { title: "Dental Sciences", img: "assets/img/main/dental.webp", link: "https://sgtuniversity.ac.in/dental/" },
+                { title: "Nursing", img: "assets/img/main/Humanities.webp", link: "https://sgtuniversity.ac.in/nursing/" },
+                { title: "Allied Health Sciences", img: "assets/img/main/nursing.webp", link: "https://sgtuniversity.ac.in/ahs/" },
+                { title: "Pharmacy", img: "assets/img/main/pharmacy.webp", link: "https://sgtuniversity.ac.in/pharmacy/" },
+                { title: "Physiotherapy", img: "assets/img/main/physiotherapy.webp", link: "https://sgtuniversity.ac.in/physiotherapy/" },
+                { title: "Indian Medical System", img: "assets/img/main/ims.webp", link: "https://sgtuniversity.ac.in/ims/" },
+                { title: "Naturopathy and Yogic Sciences", img: "assets/img/main/fnys.webp", link: "https://sgtuniversity.ac.in/fnys/" },
+                { title: "DPSR", img: "assets/img/main/dpsr.jpg", link: "https://sgtuniversity.ac.in/dpsr/" }
+            ]
+        };
+
+        function loadFaculties(type) {
+            const grid = document.getElementById("facultyGrid");
+            grid.innerHTML = "";
+
+            (faculties[type] || []).forEach(item => {
+                // if link exists, wrap card in anchor; open in same tab by default, you can add target:"_blank" to item if needed
+                const linkStart = item.link ? `<a href="${item.link}" class="faculty-link" ${item.linkTarget ? `target="${item.linkTarget}" rel="noopener noreferrer"` : ''} style="text-decoration:none;color:inherit;">` : '';
+                const linkEnd = item.link ? `</a>` : '';
+
+                grid.innerHTML += `
+      <div class="col-md-3 col-sm-6">
+        ${linkStart}
+          <div class="faculty-card" role="group" aria-label="${escapeHtml(item.title)}" style="cursor:pointer;">
+            <div class="faculty-img1 position-relative">
+              <img src="${item.img}" alt="${escapeHtml(item.title)}" class="img-fluid w-100">
+              ${item.video ? `
+                <button class="play-icon btn btn-link p-0 position-absolute" style="right:10px;bottom:10px;color:#fff;background:rgba(0,0,0,0.4);border-radius:50%;width:44px;height:44px;display:flex;align-items:center;justify-content:center;"
+                        onclick="(function(ev){ ev.stopPropagation(); ev.preventDefault(); openVideo('${item.video}'); })(event)"
+                        aria-label="Play ${escapeHtml(item.title)} video">
+                  <i class="bi bi-play-fill text-white fs-4" aria-hidden="true"></i>
+                </button>
+              ` : ""}
+            </div>
+            <div class="faculty-title mt-2">${escapeHtml(item.title)}</div>
+          </div>
+        ${linkEnd}
+      </div>
+    `;
+            });
+        }
+
+        // helper to escape (small)
+        function escapeHtml(str) {
+            if (!str && str !== 0) return "";
+            return String(str)
+                .replaceAll("&", "&amp;")
+                .replaceAll("<", "&lt;")
+                .replaceAll(">", "&gt;")
+                .replaceAll('"', "&quot;")
+                .replaceAll("'", "&#039;");
+        }
+
+        // Open video in modal
+        function openVideo(url) {
+            const frame = document.getElementById("videoFrame");
+            if (!frame) return console.warn("videoFrame not found");
+            frame.src = url;
+            const modalEl = document.getElementById('videoModal');
+            const modal = new bootstrap.Modal(modalEl);
+            modal.show();
+
+            modalEl.addEventListener('hidden.bs.modal', () => {
+                frame.src = "";
+            }, { once: true });
+        }
+
+        // Default load
+        loadFaculties("non-medical");
+
+        // Tab click switching
+        document.querySelectorAll(".faculty-tab").forEach(btn => {
+            btn.addEventListener("click", () => {
+                document.querySelectorAll(".faculty-tab").forEach(b => b.classList.remove("active"));
+                btn.classList.add("active");
+
+                const type = btn.getAttribute("data-type");
+                loadFaculties(type);
+            });
+        });
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper1 = new Swiper(".expertSwiper", {
+            slidesPerView: 2,
+            spaceBetween: 30,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                0: { slidesPerView: 1 },
+                768: { slidesPerView: 2 }
+            }
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // === Sample faculties data (use your existing object if present) ===
+            const faculties = {
+                "non-medical": [
+                    { title: "Agricultural Sciences", link: "https://sgtuniversity.ac.in/agri/" },
+                    { title: "Behavioural Sciences", link: "https://sgtuniversity.ac.in/bhs/" },
+                    { title: "Commerce & Management", link: "https://sgtuniversity.ac.in/cm/" },
+                    { title: "Education", link: "https://sgtuniversity.ac.in/education/" },
+                    { title: "Engineering & Technology", link: "https://sgtuniversity.ac.in/engineering/" },
+                    { title: "Design", link: "https://sgtuniversity.ac.in/fashion/" },
+                    { title: "Hotel & Tourism Management", link: "https://sgtuniversity.ac.in/htm/" },
+                    { title: "Emerging Media, Communication & Film Studies", link: "https://sgtuniversity.ac.in/masscomm/" },
+                    { title: "Law", link: "https://sgtuniversity.ac.in/law/" },
+                    { title: "Applied & Basic Sciences", link: "https://sgtuniversity.ac.in/science/" },
+                    { title: "Humanities, Social Sciences & Liberal Arts", link: "https://sgtuniversity.ac.in/hsla/" },
+                    { title: "SGT Online", link: "https://sgtonline.in" }
+                ],
+                "medical": [
+                    { title: "Medical Sciences", link: "https://sgtuniversity.ac.in/medical/" },
+                    { title: "Dental Sciences", link: "https://sgtuniversity.ac.in/dental/" },
+                    { title: "Nursing", link: "https://sgtuniversity.ac.in/nursing/" },
+                    { title: "Allied Health Sciences", link: "https://sgtuniversity.ac.in/ahs/" },
+                    { title: "Pharmacy", link: "https://sgtuniversity.ac.in/pharmacy/" },
+                    { title: "Physiotherapy", link: "https://sgtuniversity.ac.in/physiotherapy/" },
+                    { title: "Indian Medical System", link: "https://sgtuniversity.ac.in/ims/" },
+                    { title: "Naturopahy and Yogic Sciences", link: "https://sgtuniversity.ac.in/fnys/" },
+                    { title: "DPSR", link: "https://sgtuniversity.ac.in/dpsr/" }
+                ]
+            };
+
+            // === Elements & state ===
+            const backBtn = document.getElementById("backBtn");
+            const titleEl = document.getElementById("panelTitle");
+
+            const panels = {
+                main: document.getElementById("mainPanel"),
+                about: document.getElementById("aboutPanel"),
+                academics: document.getElementById("academicsPanel"),
+                med: document.getElementById("medPanel"),
+                nonmed: document.getElementById("nonmedPanel"),
+                admissions: document.getElementById("admissionsPanel"),
+                research: document.getElementById("researchPanel"),
+                life: document.getElementById("lifePanel")
+            };
+
+            // panel stack holds the ids: 'main' is root
+            const stack = ["main"];
+
+            // helper: show a panel by name, hide others
+            function showPanel(name, pushToStack = true) {
+                // hide all
+                Object.values(panels).forEach(p => p.classList.add("d-none"));
+
+                const mapNameToPanelId = {
+                    main: "mainPanel",
+                    about: "aboutPanel",
+                    academics: "academicsPanel",
+                    med: "medPanel",
+                    nonmed: "nonmedPanel"
+                };
+
+                const panelDom = panels[name];
+                if (!panelDom) return console.warn("Unknown panel:", name);
+
+                panelDom.classList.remove("d-none");
+
+                // update title text (friendly)
+                const titleMap = {
+                    main: "Menu",
+                    about: "About",
+                    academics: "Academics",
+                    med: "Medical Faculties",
+                    nonmed: "Non-Medical Faculties"
+                };
+                titleEl.innerText = titleMap[name] || "Menu";
+
+                // back button visibility
+                if (name === "main") {
+                    backBtn.classList.add("d-none");
+                } else {
+                    backBtn.classList.remove("d-none");
+                }
+
+                // manage stack
+                if (pushToStack) stack.push(name);
+            }
+
+            // open-sub buttons
+            document.querySelectorAll(".open-sub").forEach(btn => {
+                btn.addEventListener("click", () => {
+                    const target = btn.dataset.target;
+                    if (!target) return;
+
+                    // determine logical name from id:
+                    // e.g. 'aboutPanel' -> 'about', 'medPanel' -> 'med'
+                    const name = target.replace("Panel", "").replace("panel", "");
+                    showPanel(name, true);
+                });
+            });
+
+            // BACK behavior: pop current and show previous
+            backBtn.addEventListener("click", () => {
+                if (stack.length <= 1) {
+                    // nothing to go back to
+                    showPanel("main", false);
+                    stack.length = 1;
+                    return;
+                }
+                // pop current
+                stack.pop();
+                const prev = stack[stack.length - 1] || "main";
+                // show previous without adding to stack
+                showPanel(prev, false);
+            });
+
+            // When offcanvas closes (any close action), reset to main
+            const offcanvasEl = document.getElementById("mobileMenu");
+            offcanvasEl.addEventListener("hidden.bs.offcanvas", () => {
+                // reset stack and show main
+                stack.length = 0;
+                stack.push("main");
+                showPanel("main", false);
+            });
+
+            // === populate med/non-med lists dynamically ===
+            function makeListItems(listElId, items) {
+                const ul = document.getElementById(listElId);
+                ul.innerHTML = ""; // clear
+                items.forEach(it => {
+                    const li = document.createElement("li");
+                    li.className = "mb-2";
+                    const a = document.createElement("a");
+                    a.className = "menu-item d-block py-2";
+                    a.href = it.link || "#";
+                    a.textContent = it.title;
+                    // if you want to open faculty pages in new tab, set: a.target = "_blank"; a.rel = "noopener noreferrer";
+                    li.appendChild(a);
+                    ul.appendChild(li);
+                });
+            }
+
+            makeListItems("medList", faculties["medical"]);
+            makeListItems("nonmedList", faculties["non-medical"]);
+
+            // init: ensure main shown
+            showPanel("main", false);
+        });
+    </script>
+    <script>
+        const modalEl = document.getElementById('youtubeModal');
+        const youtubeModal = new bootstrap.Modal(modalEl, {
+            backdrop: true,
+            keyboard: true
+        });
+
+        const iframe = document.getElementById('youtubeIframe');
+
+        function openYoutubeModal(videoId) {
+            iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0`;
+            youtubeModal.show();
+        }
+
+        modalEl.addEventListener('hidden.bs.modal', function () {
+            iframe.src = '';
+        });
+    </script>
+
+
 
 
 

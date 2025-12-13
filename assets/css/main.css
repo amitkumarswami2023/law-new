@@ -47,6 +47,7 @@ p {
   font-family: "Poppins", sans-serif;
   overflow-x: auto;
   white-space: nowrap;
+  margin-top: 140px !important;
 }
 
 /* Menu item container */
@@ -948,8 +949,9 @@ mark {
   margin-top: 50px;
   position: relative; /* allows overlap */
   z-index: 2;
-  margin-bottom: -180px; /* overlap amount; adjust as needed */
+  margin-bottom: 0px; /* overlap amount; adjust as needed */
 }
+
 /* About Page */
 /* Dean Image */
 .dean-img {
@@ -2291,6 +2293,38 @@ header .nav .nav-link {
   color: #134080;
 }
 
+.faculties-list {
+  max-height: 60vh; /* limits height relative to screen */
+  overflow-y: auto; /* enables vertical scroll */
+  padding-right: 6px; /* space for scrollbar */
+}
+
+/* Smooth scrolling (optional) */
+.faculties-list {
+  scroll-behavior: smooth;
+}
+
+/* Scrollbar styling (optional – Chrome/Edge) */
+.faculties-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.faculties-list::-webkit-scrollbar-thumb {
+  background-color: #c5c5c5;
+  border-radius: 10px;
+}
+
+.faculties-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+@media (max-width: 1366px) {
+  .faculties-list {
+    max-height: 55vh;
+    overflow-y: auto;
+  }
+}
+
 .courses-list a {
   text-decoration: none !important;
   color: #000 !important;
@@ -2821,4 +2855,31 @@ header .nav .nav-link {
 
 #footerAccordion1 ul li a:hover {
   text-decoration: underline;
+}
+/* Allow clicking background when modal is open */
+.modal-backdrop {
+  pointer-events: none;
+}
+
+/* Large laptops */
+
+/* Small laptops */
+@media (max-width: 1280px) {
+  #main-menu {
+    margin-top: 150px !important;
+  }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  #main-menu {
+    margin-top: 80px !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  #main-menu {
+    margin-top: 80px !important;
+  }
 }
