@@ -2250,7 +2250,8 @@ header .nav .nav-link {
 .academics-parent,
 .admission-parent,
 .research-parent,
-.life-parent {
+.life-parent,
+.examination-parent {
   position: static !important;
 }
 
@@ -2272,7 +2273,8 @@ header .nav .nav-link {
 .academics-parent:hover .academics-menu,
 .admission-parent:hover .admission-menu,
 .research-parent:hover .research-menu,
-.life-parent:hover .life-menu {
+.life-parent:hover .life-menu,
+.examination-parent:hover .examination-menu {
   visibility: visible;
 }
 
@@ -2882,4 +2884,33 @@ header .nav .nav-link {
   #main-menu {
     margin-top: 80px !important;
   }
+}
+
+.contact-info a {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #000 !important; /* force black links */
+  font-size: 13px; /* smaller text */
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  color: #000; /* prevent blue on hover */
+  text-decoration: underline;
+}
+
+.contact-info i {
+  font-size: 20px; /* bigger icons */
+  color: #000 !important; /* force black icons */
+  margin-top: 2px;
+}
+
+.contact-info li {
+  margin-bottom: 6px;
+}
+
+.external-links a {
+  color: #000;
+  text-decoration: none;
 }
