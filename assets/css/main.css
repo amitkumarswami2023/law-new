@@ -2281,6 +2281,7 @@ header .nav .nav-link {
 .academics-types li {
   margin-top: 10px;
   cursor: pointer;
+  font-size: 14px;
 }
 .academics-types li:hover {
   color: #134080;
@@ -2326,7 +2327,9 @@ header .nav .nav-link {
     overflow-y: auto;
   }
 }
-
+.courses-list li {
+  font-size: 14px;
+}
 .courses-list a {
   text-decoration: none !important;
   color: #000 !important;
@@ -2341,6 +2344,7 @@ header .nav .nav-link {
 /* Default – no scrollbar on large screens */
 .courses-list {
   overflow-y: visible;
+  overflow-x: hidden;
 }
 
 /* Small laptops (≤ 1366px width) */
