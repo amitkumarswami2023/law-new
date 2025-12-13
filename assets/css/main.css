@@ -2338,6 +2338,19 @@ header .nav .nav-link {
   color: #134080 !important;
 }
 
+/* Default – no scrollbar on large screens */
+.courses-list {
+  overflow-y: visible;
+}
+
+/* Small laptops (≤ 1366px width) */
+@media (max-width: 1366px) {
+  .courses-list {
+    max-height: 420px; /* adjust as needed */
+    overflow-y: auto;
+  }
+}
+
 .hero-section {
   height: 90vh;
   background: url("../img/home/Building.png") no-repeat right bottom / contain;
