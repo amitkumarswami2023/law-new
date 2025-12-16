@@ -135,7 +135,8 @@
                 <!-- LEFT LOGO COLUMN (ROWSPAN 2 EFFECT USING FLEX COLUMN) -->
                 <div class="col-auto d-flex flex-column justify-content-center pe-3 border-end">
                     <div class="d-flex align-items-center mb-2">
-                        <img src="assets/img/sgtu_naac.png" class="img-fluid" style="height:100px;" alt="SGT Logo">
+                        <a href="https://sgtuniversity.ac.in"><img src="assets/img/sgtu_naac.png" class="img-fluid"
+                                style="height:100px;" alt="SGT Logo"></a>
                         <!-- <img src="assets/images/NAAC-ICON.png" class="img-fluid ms-3" style="height:55px;"
                             alt="NAAC Logo"> -->
                     </div>
@@ -739,7 +740,7 @@
         <!-- MAIN PANEL -->
         <div id="mainPanel" class="menu-panel">
             <ul class="list-unstyled mobile-menu mb-0">
-                <li class="mb-2"><a href="#" class="menu-item d-block py-2">Home</a></li>
+                <li class="mb-2"><a href="https://sgtuniversity.ac.in/" class="menu-item d-block py-2">Home</a></li>
 
                 <li class="mb-2">
                     <button class="menu-item d-block w-100 py-2 text-start open-sub" data-target="aboutPanel">
@@ -2329,6 +2330,29 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
+            const facultyLinks = {
+                "Agriculture": "https://sgtuniversity.ac.in/agri",
+                "Allied Health Sciences": "https://sgtuniversity.ac.in/ahs",
+                "Basic and Applied Sciences": "https://sgtuniversity.ac.in/science",
+                "Behavioural Sciences": "https://sgtuniversity.ac.in/bhs",
+                "Commerce and Management": "https://sgtuniversity.ac.in/cm",
+                "Dental Science": "https://sgtuniversity.ac.in/dental",
+                "Design": "https://sgtuniversity.ac.in/fashion",
+                "Education": "https://sgtuniversity.ac.in/education",
+                "Engineering & Technology": "https://sgtuniversity.ac.in/engineering",
+                "Hotel & Tourism Management": "https://sgtuniversity.ac.in/htm",
+                "Humanities, Liberal Arts": "https://sgtuniversity.ac.in/hsla",
+                "Indian Medical System": "https://sgtuniversity.ac.in/ims",
+                "Law": "https://sgtuniversity.ac.in/law",
+                "Emerging Media, Communication and Film": "https://sgtuniversity.ac.in/masscomm",
+                "Medicine and Health Science": "https://sgtuniversity.ac.in/medical",
+                "Naturopathy and Yogic Sciences": "https://sgtuniversity.ac.in/fnys",
+                "Nursing": "https://sgtuniversity.ac.in/nursing",
+                "Pharmacy": "https://sgtuniversity.ac.in/pharmacy",
+                "Physiotherapy": "https://sgtuniversity.ac.in/physiotherapy",
+                "SGT Online": "https://sgtonline.in"
+            };
+
             // ---------- Data ----------
             const academicsData = {
                 ug: {
@@ -2769,7 +2793,17 @@
                 const frag = document.createDocumentFragment();
                 faculties.forEach((fac, idx) => {
                     const li = document.createElement("li");
-                    li.textContent = fac;
+                    li.dataset.fac = encodeURIComponent(fac);
+                    li.tabIndex = 0;
+
+                    const link = document.createElement("a");
+                    link.href = facultyLinks[fac] || "#";
+                    link.textContent = fac;
+                    link.className = "faculty-link";
+                    link.target = "_self"; // same tab (recommended for menu)
+
+                    li.appendChild(link);
+
                     li.dataset.fac = encodeURIComponent(fac);
                     li.tabIndex = 0; // make focusable
                     if (idx === 0) li.classList.add("active");
