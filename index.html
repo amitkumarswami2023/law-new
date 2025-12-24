@@ -3165,6 +3165,23 @@
         });
     </script>
 
+    <script>
+        document.querySelectorAll('.academics-types li').forEach(item => {
+            item.addEventListener('mouseenter', function () {
+
+                // Remove active class from all
+                document.querySelectorAll('.academics-types li')
+                    .forEach(li => li.classList.remove('active'));
+
+                // Add active to hovered item
+                this.classList.add('active');
+
+                // OPTIONAL: get data-type if you want to load faculties/courses
+                const type = this.getAttribute('data-type');
+                // loadFaculties(type);
+            });
+        });
+    </script>
 
 
 

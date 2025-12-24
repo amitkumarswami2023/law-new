@@ -2258,7 +2258,7 @@ header .nav .nav-link {
 .mega-menu {
   position: fixed;
   left: 0;
-  top: 105px; /* adjust according to header height */
+  top: 100px; /* adjust according to header height */
   width: 100vw;
   background: #fff;
   display: none;
@@ -2284,7 +2284,12 @@ header .nav .nav-link {
   font-size: 14px;
 }
 .academics-types li:hover {
-  color: #134080;
+  color: #000;
+}
+/* Active (selected) state */
+.academics-types li.active {
+  color: #000;
+  font-weight: 700;
 }
 
 .faculties-list li {
@@ -2293,7 +2298,7 @@ header .nav .nav-link {
   font-size: 14px;
 }
 .faculties-list li:hover {
-  color: #134080;
+  color: #000;
 }
 
 .faculties-list {
@@ -2338,7 +2343,8 @@ header .nav .nav-link {
 }
 
 .courses-list a:hover {
-  color: #134080 !important;
+  color: #000 !important;
+  font-weight: 700;
 }
 
 /* Default – no scrollbar on large screens */
@@ -2940,5 +2946,85 @@ header .nav .nav-link {
 }
 
 .faculties-list li.active a {
+  font-weight: 700;
+}
+
+/* Expert voices page */
+.expert-section {
+  margin-top: 120px;
+}
+.expert-title {
+  font-weight: 700;
+  color: #0060aa;
+}
+
+.expert-subtitle {
+  color: #000;
+  margin-bottom: 1.5rem;
+}
+
+/* Grid Layout */
+.expert-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* Card */
+.expert-card h6 {
+  margin-top: 12px;
+  margin-bottom: 4px;
   font-weight: 600;
+}
+
+.expert-card p {
+  font-size: 14px;
+  color: #000;
+}
+
+/* Video Box */
+.expert-video {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.expert-video img {
+  width: 100%;
+  display: block;
+  border-radius: 16px;
+}
+
+/* Play Button */
+.expert-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 0, 0, 0.85);
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.expert-play i {
+  font-size: 32px;
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .expert-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 575px) {
+  .expert-grid {
+    grid-template-columns: 1fr;
+  }
 }
