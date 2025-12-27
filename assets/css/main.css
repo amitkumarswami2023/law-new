@@ -2277,7 +2277,11 @@ header .nav .nav-link {
 .examination-parent:hover .examination-menu {
   visibility: visible;
 }
-
+.academics-menu h4 {
+  color: #000;
+  font-size: 16px;
+  font-weight: 800;
+}
 .academics-types li {
   margin-top: 10px;
   cursor: pointer;
