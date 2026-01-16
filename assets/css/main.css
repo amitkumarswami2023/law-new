@@ -3794,22 +3794,24 @@ ul li {
   overflow: hidden;
 }
 
-/* SLIDE */
+/* SLIDE BACKGROUND */
 .sgt-hero-slide {
   position: relative;
   height: 100vh;
-  background: url("../img/hero-bg.webp") center/cover no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-/* DARK OVERLAY */
+/* OVERLAY */
 .sgt-hero-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     90deg,
     rgba(0, 0, 0, 0.75) 0%,
-    rgba(0, 0, 0, 0.3) 60%,
-    rgba(0, 0, 0, 0.1) 100%
+    rgba(0, 0, 0, 0.45) 50%,
+    rgba(0, 0, 0, 0.15) 100%
   );
   z-index: 1;
 }
@@ -3837,7 +3839,7 @@ ul li {
 /* BUTTON */
 .sgt-hero-btn {
   display: inline-block;
-  padding: 12px 30px;
+  padding: 12px 32px;
   border: 2px solid #fff;
   color: #fff;
   border-radius: 50px;
@@ -3851,11 +3853,10 @@ ul li {
   color: #000;
 }
 
-/* RIGHT IMAGE */
-.sgt-hero-img {
-  max-height: 500px;
-  position: relative;
-  z-index: 2;
+/* CAROUSEL CONTROLS */
+.carousel-control-prev,
+.carousel-control-next {
+  z-index: 3;
 }
 
 /* RESPONSIVE */
@@ -3874,82 +3875,26 @@ ul li {
     height: 90vh;
   }
 
-  .sgt-hero-title {
-    font-size: 36px;
-  }
-
   .sgt-hero-content {
     text-align: center;
   }
-}
 
-/* SECTION BACKGROUND */
-#sgt-home-intro {
-  background-color: #e9e3f0;
-}
-
-/* TEXT CONTENT */
-.sgt-home-intro-title {
-  font-size: 3rem;
-  font-weight: 700;
-  line-height: 1.15;
-  color: #0b1220;
-}
-
-/* BUTTONS */
-.sgt-btn-dark {
-  background-color: #0b1220;
-  color: #fff;
-  border-radius: 30px;
-  padding: 12px 26px;
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.sgt-btn-dark:hover {
-  background-color: #000;
-  color: #fff;
-}
-
-.sgt-btn-green {
-  background-color: #18b26b;
-  color: #fff;
-  border-radius: 30px;
-  padding: 12px 26px;
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.sgt-btn-green:hover {
-  background-color: #13965a;
-  color: #fff;
-}
-
-.sgt-btn-arrow {
-  font-size: 1.1rem;
-}
-
-/* IMAGE */
-.sgt-home-intro-image img {
-  max-width: 100%;
-}
-
-/* RESPONSIVE */
-@media (max-width: 991px) {
-  .sgt-home-intro-title {
-    font-size: 2.3rem;
+  .sgt-hero-title {
+    font-size: 36px;
   }
+}
 
-  .sgt-home-intro-content {
-    text-align: center;
+/* OPTIONAL BACKGROUND ZOOM EFFECT */
+.carousel-item.active .sgt-hero-slide {
+  animation: zoomBg 12s ease forwards;
+}
+
+@keyframes zoomBg {
+  from {
+    background-size: 100%;
   }
-
-  .sgt-home-intro-actions {
-    justify-content: center;
+  to {
+    background-size: 110%;
   }
 }
 
