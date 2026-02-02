@@ -4595,3 +4595,48 @@ ul li {
   background: #f9fbfd;
   font-size: 14px;
 }
+
+.sgt-counsellor-section {
+  width: 100%;
+}
+
+.counsellor-banner {
+  position: relative;
+  min-height: 120px;
+  border-radius: 16px;
+  background-image:
+    radial-gradient(rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.65) 100%),
+    url("../img/talk.png"); /* change image path */
+  background-size: cover;
+  background-position: center;
+  padding: 30px 20px;
+}
+
+.counsellor-content h3 {
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: 600;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.counsellor-content a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.counsellor-content a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile tweaks */
+@media (max-width: 576px) {
+  .counsellor-content h3 {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+}
