@@ -4551,44 +4551,49 @@ ul li {
   }
 }
 
+/* FAQ Section */
 .faq-section {
   background: #fff;
 }
 
-.faq-accordion .accordion-item {
+/* Accordion Item */
+.custom-faq-item {
   border: none;
+  margin-bottom: 14px;
   border-radius: 10px;
   overflow: hidden;
 }
 
-.faq-btn {
-  background: linear-gradient(90deg, #dbeaf7 0%, #ffffff 70%);
+/* Accordion Button */
+.custom-faq-btn {
+  background: linear-gradient(90deg, #dbeaf6 0%, #ffffff 100%);
   font-weight: 500;
   padding: 18px 20px;
-  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* arrow stays right */
+  text-align: left; /* 🔑 important */
 }
 
-.accordion-button:not(.collapsed) {
-  background: linear-gradient(90deg, #cfe4f6 0%, #ffffff 70%);
-  color: #000;
+/* Question Text */
+.faq-question-text {
+  flex: 1;
+  text-align: left; /* 🔑 forces left alignment */
+  margin-right: 20px;
+}
+
+/* Remove Bootstrap blue focus */
+.custom-faq-btn:focus {
   box-shadow: none;
 }
 
-.accordion-button::after {
-  background-image: none;
-  content: "›";
-  font-size: 26px;
-  transform: rotate(0deg);
-  transition: transform 0.3s ease;
+/* Arrow icon */
+.custom-faq-btn::after {
+  margin-left: auto;
 }
 
-.accordion-button:not(.collapsed)::after {
-  transform: rotate(90deg);
-}
-
-.accordion-body {
-  font-size: 15px;
-  line-height: 1.7;
-  background: #fff;
-  padding: 18px 20px;
+/* Accordion body */
+.custom-faq-item .accordion-body {
+  background: #f9fbfd;
+  font-size: 14px;
 }
