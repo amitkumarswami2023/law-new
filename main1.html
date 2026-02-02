@@ -180,6 +180,20 @@
             }
         }
     </style>
+    <style>
+        .bg-testimonials {
+            background-color: #ddeaff;
+        }
+
+        .hover-shadow:hover {
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .cursor-pointer {
+            cursor: pointer;
+        }
+    </style>
     <!-- Google Tag Manager -->
     <script>(function (w, d, s, l, i) {
             w[l] = w[l] || []; w[l].push({
@@ -1072,6 +1086,92 @@
 
     </section>
 
+    <section id="testimonials" class="py-5 py-lg-6 bg-testimonials w-100">
+        <div class="container-xxl text-center px-3">
+
+            <h2 class="display-5 fw-bold text-secondary mb-5 lh-sm">
+                Student Experiences:
+                <span class="text-dark">In Their Words</span>
+            </h2>
+
+            <p class="mx-auto fs-5 text-muted mb-5" style="max-width: 48rem;">
+                Authentic voices, real journeys—students share how SGT University is shaping their paths forward.
+            </p>
+
+            <div class="d-flex gap-4 overflow-auto video-slider">
+
+                <div class="video-thumb position-relative bg-white rounded-4 p-3 shadow-sm hover-shadow"
+                    data-video="https://www.youtube.com/embed/raroXR2uPXU?autoplay=1" style="min-width: 250px;">
+                    <img src="https://img.youtube.com/vi/raroXR2uPXU/hqdefault.jpg"
+                        class="img-fluid rounded-3 mx-auto d-block cursor-pointer" alt="Video 1">
+                    <div class="play-button position-absolute top-50 start-50 translate-middle pe-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="white" class="drop-shadow"
+                            viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="video-thumb position-relative bg-white rounded-4 p-3 shadow-sm hover-shadow"
+                    data-video="https://www.youtube.com/embed/3Rl9TCko8AA?autoplay=1" style="min-width: 250px;">
+                    <img src="https://img.youtube.com/vi/3Rl9TCko8AA/hqdefault.jpg"
+                        class="img-fluid rounded-3 mx-auto d-block" alt="Video 2">
+                    <div class="play-button position-absolute top-50 start-50 translate-middle pe-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="white" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="video-thumb position-relative bg-white rounded-4 p-3 shadow-sm hover-shadow"
+                    data-video="https://www.youtube.com/embed/3Rl9TCko8AA?autoplay=1" style="min-width: 250px;">
+                    <img src="https://img.youtube.com/vi/3Rl9TCko8AA/hqdefault.jpg"
+                        class="img-fluid rounded-3 mx-auto d-block" alt="Video 2">
+                    <div class="play-button position-absolute top-50 start-50 translate-middle pe-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="white" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="video-thumb position-relative bg-white rounded-4 p-3 shadow-sm hover-shadow"
+                    data-video="https://www.youtube.com/embed/3Rl9TCko8AA?autoplay=1" style="min-width: 250px;">
+                    <img src="https://img.youtube.com/vi/3Rl9TCko8AA/hqdefault.jpg"
+                        class="img-fluid rounded-3 mx-auto d-block" alt="Video 2">
+                    <div class="play-button position-absolute top-50 start-50 translate-middle pe-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="white" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="video-thumb position-relative bg-white rounded-4 p-3 shadow-sm hover-shadow"
+                    data-video="https://www.youtube.com/embed/3Rl9TCko8AA?autoplay=1" style="min-width: 250px;">
+                    <img src="https://img.youtube.com/vi/3Rl9TCko8AA/hqdefault.jpg"
+                        class="img-fluid rounded-3 mx-auto d-block" alt="Video 2">
+                    <div class="play-button position-absolute top-50 start-50 translate-middle pe-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="white" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div id="videoModal" class="modal fade" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+                <div class="modal-content bg-transparent border-0">
+                    <button type="button" class="btn-close btn-close-white ms-auto mb-2"
+                        data-bs-dismiss="modal"></button>
+
+                    <div class="ratio ratio-16x9">
+                        <iframe id="modalVideo" src="" allow="autoplay; encrypted-media" allowfullscreen
+                            class="rounded-3"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <section>
         <div class="container-fluid lab-container pb-5 position-relative">
 
@@ -1083,7 +1183,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col text-center text-md-start">
-                            <h2 style="font-size:30px;">Labs</h2>
+                            <h2 style="font-size:30px; text-align: center;">Labs</h2>
                         </div>
                     </div>
                 </div>
@@ -4260,6 +4360,32 @@
             }
         });
 
+    </script>
+    <script>
+        const videoThumbs = document.querySelectorAll('.video-thumb');
+        const modal = document.getElementById('videoModal');
+        const modalVideo = document.getElementById('modalVideo');
+        const closeModalBtn = document.getElementById('closeModal');
+
+        videoThumbs.forEach(thumb => {
+            thumb.addEventListener('click', () => {
+                const videoSrc = thumb.getAttribute('data-video');
+                modalVideo.src = videoSrc;
+                modal.classList.remove('hidden');
+            });
+        });
+
+        closeModalBtn.addEventListener('click', () => {
+            modalVideo.src = ''; // stop video
+            modal.classList.add('hidden');
+        });
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modalVideo.src = '';
+                modal.classList.add('hidden');
+            }
+        });
     </script>
 
 

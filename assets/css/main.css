@@ -170,7 +170,9 @@ p {
   overflow: hidden;
   background: #fff;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -402,7 +404,9 @@ mark {
   /* Box background color */
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -467,7 +471,9 @@ mark {
   align-items: center;
   justify-content: center;
   background-color: #fff;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
 }
 
 .recruiter-logo img {
@@ -535,7 +541,9 @@ mark {
   width: 100%;
   height: auto;
   border-radius: 30px;
-  transition: transform 1s ease, opacity 1s ease;
+  transition:
+    transform 1s ease,
+    opacity 1s ease;
   opacity: 0;
   transform: scale(1.05);
 }
@@ -583,7 +591,9 @@ mark {
 
 /* ---------------- Icon Box Styling ---------------- */
 .icon-box {
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
 }
 
 .icon-box h5 {
@@ -618,7 +628,9 @@ mark {
   /* Box background color */
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
 }
 
 .logo-box img {
@@ -849,7 +861,9 @@ mark {
 .cell-card {
   border-radius: 30px;
   overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
 }
 
 .cell-card:hover {
@@ -1111,7 +1125,9 @@ mark {
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 
   /* NEW - make cards equal height */
   display: flex;
@@ -1248,7 +1264,9 @@ mark {
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(6, 46, 79, 0.1);
   background: transparent;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 /* Image Section */
@@ -1357,7 +1375,9 @@ mark {
   border-radius: 6px;
   padding: 8px 18px;
   font-size: 14px;
-  transition: background-color 0.3s, color 0.3s;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
 }
 .btn-secondary:hover {
   background-color: #f2f2f2;
@@ -1962,7 +1982,8 @@ body {
   width: 100%;
   height: 100%;
   /* Add gradient + background image */
-  background: linear-gradient(
+  background:
+    linear-gradient(
       rgba(6, 46, 79, 0.9),
       /* Top gradient color */ rgba(6, 46, 79, 0.9) /* Bottom gradient color */
     ),
@@ -2917,8 +2938,7 @@ header .nav .nav-link {
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  color: #000 !important; /* force black links */
-  font-size: 13px; /* smaller text */
+  color: #000 !important; /* force black links */ /* smaller text */
   text-decoration: none;
 }
 
@@ -3748,7 +3768,9 @@ ul li {
   height: 100%;
   overflow: hidden;
   transform-origin: center center;
-  transition: transform 0.3s ease-in-out, box-shadow 0.2s ease-in-out;
+  transition:
+    transform 0.3s ease-in-out,
+    box-shadow 0.2s ease-in-out;
   transform: scale(1);
   z-index: 1;
   margin: 20px;
@@ -4179,4 +4201,184 @@ ul li {
   .sgt-news-img img {
     height: 240px;
   }
+}
+
+/* Programme Hero */
+.sgt-programme-hero {
+  background: url("../img/sgt-programmes.png") center/cover no-repeat;
+  padding: 60px 0;
+  position: relative;
+  display: block;
+}
+
+/* Dark overlay */
+.sgt-programme-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(4, 36, 73, 0.95) 0%,
+    rgba(8, 42, 80, 0.85) 45%,
+    rgba(2, 44, 92, 0.3) 100%
+  );
+  z-index: 1;
+}
+
+.sgt-programme-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Right image styling */
+.programme-image-wrapper img {
+  max-height: 360px;
+  object-fit: cover;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .sgt-programme-hero {
+    padding: 60px 0;
+    text-align: center;
+  }
+
+  .sgt-programme-hero h1 {
+    font-size: 2rem;
+  }
+
+  .programme-image-wrapper img {
+    max-height: 260px;
+  }
+}
+
+.sgt-program-overview {
+  background-color: #ffffff;
+}
+
+.sgt-program-overview h2 {
+  font-size: 32px;
+  line-height: 1.3;
+  color: #000;
+}
+
+.program-desc {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333;
+  text-align: left;
+}
+
+.read-more-link {
+  color: #0d6efd; /* Bootstrap primary */
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 4px;
+}
+
+.read-more-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive tweaks */
+@media (max-width: 767px) {
+  .sgt-program-overview h2 {
+    font-size: 24px;
+  }
+
+  .program-desc {
+    font-size: 15px;
+  }
+}
+
+.admission-cta {
+  background-color: #ffffff;
+}
+
+.admission-cta h3 {
+  letter-spacing: 0.3px;
+}
+
+.admission-cta .btn {
+  border-radius: 8px;
+}
+
+.sgt-features {
+  background: #f9f9f9;
+}
+
+.feature-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 40px 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.icon-wrap {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  background: #f2f2f2;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-wrap img {
+  width: 40px;
+  height: auto;
+}
+
+.feature-card h5 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.feature-card p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.key-features-section {
+  position: relative;
+  min-height: 480px;
+  background: url("../img/main/ahs.jpg") center center / cover no-repeat;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.key-features-section .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.feature-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.feature-list li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 14px;
+  font-size: 15px;
+}
+
+.feature-list li::before {
+  content: "★";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #ffffff;
+  font-size: 14px;
 }

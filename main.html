@@ -121,6 +121,43 @@
         rel="stylesheet">
     <!-- Swiper CSS -->
 
+
+
+    <!-- VIDEO SWIPER SECTION START -->
+    <style>
+        .vidsec1-swiper {
+            padding: 20px 10px 50px;
+        }
+
+        .vidsec1-slide {
+            display: flex;
+            justify-content: center;
+        }
+
+        .vidsec1-card {
+            width: 100%;
+            max-width: 300px;
+            cursor: pointer;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .vidsec1-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .vidsec1-next,
+        .vidsec1-prev {
+            color: #000;
+        }
+
+        .vidsec1-pagination .swiper-pagination-bullet-active {
+            background: #000;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -1059,6 +1096,67 @@
 
         </div>
     </section>
+
+
+    <section class="container my-5 vidsec1-wrapper">
+
+        <div class="swiper vidsec1-swiper">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide vidsec1-slide">
+                    <div class="card vidsec1-card" data-video="https://www.youtube.com/embed/raroXR2uPXU?autoplay=1">
+                        <img src="https://img.youtube.com/vi/raroXR2uPXU/hqdefault.jpg">
+                        <div class="card-body text-center">
+                            <h6 class="mb-0">Video One</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide vidsec1-slide">
+                    <div class="card vidsec1-card" data-video="https://www.youtube.com/embed/3Rl9TCko8AA?autoplay=1">
+                        <img src="https://img.youtube.com/vi/3Rl9TCko8AA/hqdefault.jpg">
+                        <div class="card-body text-center">
+                            <h6 class="mb-0">Video Two</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide vidsec1-slide">
+                    <div class="card vidsec1-card" data-video="https://www.youtube.com/embed/8v0oPBUhFnY?autoplay=1">
+                        <img src="https://img.youtube.com/vi/8v0oPBUhFnY/hqdefault.jpg">
+                        <div class="card-body text-center">
+                            <h6 class="mb-0">Video Three</h6>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Arrows -->
+            <div class="swiper-button-next vidsec1-next"></div>
+            <div class="swiper-button-prev vidsec1-prev"></div>
+
+            <!-- Dots -->
+            <div class="swiper-pagination vidsec1-pagination"></div>
+        </div>
+
+    </section>
+
+    <!-- MODAL -->
+    <div class="modal fade" id="vidsec1-modal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body p-0">
+                    <iframe id="vidsec1-frame" width="100%" height="400" frameborder="0"
+                        allow="autoplay; encrypted-media" allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- VIDEO SWIPER SECTION END -->
 
     <!-- VIDEO POPUP MODAL -->
     <div class="modal fade" id="videoModal" tabindex="-1">
@@ -3712,6 +3810,38 @@
                 });
             });
         },
+    </script>
+
+    <script>
+        var vidsec1Swiper = new Swiper(".vidsec1-swiper", {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            navigation: {
+                nextEl: ".vidsec1-next",
+                prevEl: ".vidsec1-prev",
+            },
+            pagination: {
+                el: ".vidsec1-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                0: { slidesPerView: 1 },
+                768: { slidesPerView: 2 },
+                992: { slidesPerView: 3 },
+            }
+        });
+
+        document.querySelectorAll('.vidsec1-card').forEach(card => {
+            card.addEventListener('click', function () {
+                var videoUrl = this.getAttribute('data-video');
+                document.getElementById('vidsec1-frame').src = videoUrl + "?autoplay=1";
+                new bootstrap.Modal(document.getElementById('vidsec1-modal')).show();
+            });
+        });
+
+        document.getElementById('vidsec1-modal').addEventListener('hidden.bs.modal', function () {
+            document.getElementById('vidsec1-frame').src = "";
+        });
     </script>
 
 
