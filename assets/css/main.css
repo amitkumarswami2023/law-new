@@ -4206,7 +4206,6 @@ ul li {
 /* New Programmes page design */
 /* Programme Hero */
 .sgt-programme-hero {
-  background: url("../img/sgt-programmes.png") center/cover no-repeat;
   padding: 60px 0;
   position: relative;
   display: block;
@@ -4233,7 +4232,7 @@ ul li {
 
 /* Right image styling */
 .programme-image-wrapper img {
-  max-height: 360px;
+  max-height: 250px;
   object-fit: cover;
 }
 
