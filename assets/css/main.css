@@ -4219,7 +4219,6 @@ ul li {
   background: linear-gradient(
     90deg,
     rgba(4, 36, 73, 0.95) 0%,
-    rgba(8, 42, 80, 0.85) 45%,
     rgba(2, 44, 92, 0.3) 100%
   );
   z-index: 1;
