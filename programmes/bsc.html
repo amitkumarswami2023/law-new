@@ -21,88 +21,9 @@
 </head>
 
 <body>
-    <div class="container">
-        <header class="main-header py-3 px-2 rounded-bottom shadow-sm">
-            <div class="d-flex align-items-center justify-content-between px-4 py-3 position-relative">
-
-                <!-- Left empty on large screens -->
-                <div class="flex-fill d-none d-md-block"></div>
-
-                <!-- Centered logo (desktop) -->
-                <div
-                    class="header-logo text-center flex-grow-1 position-absolute start-50 translate-middle-x d-none d-md-block">
-                    <img src="/assets/img/main-logo.png" alt="University Logo" class="img-fluid"
-                        style="max-height:100px;">
-                </div>
-
-                <!-- Logo (mobile) -->
-                <div class="d-flex align-items-center d-md-none">
-                    <img src="/assets/img/main-logo.png" alt="University Logo" class="img-fluid"
-                        style="max-height:70px;">
-                </div>
-
-                <!-- Right side (buttons + hamburger for large screens) -->
-                <div class="d-none d-md-flex align-items-center gap-2">
-                    <!-- Dropdown -->
-                    <div class="dropdown">
-                        <button class="btn  dropdown-toggle btn-primary" type="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Law Courses
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="#">LLB (Hons.)</a></li>
-                            <li><a class="dropdown-item" href="#">BA LLB</a></li>
-                            <li><a class="dropdown-item" href="#">BBA LLB</a></li>
-                            <li><a class="dropdown-item" href="#">LLM</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- Apply Now -->
-                    <button class="btn btn-secondary">Apply Now</button>
-
-                    <!-- Hamburger -->
-                    <button
-                        class="hamburger-btn d-flex flex-column justify-content-center gap-1 p-0 border-0 bg-transparent"
-                        aria-label="Menu">
-                        <span class="hamburger-line rounded"></span>
-                        <span class="hamburger-line rounded"></span>
-                        <span class="hamburger-line rounded"></span>
-                    </button>
-                </div>
-
-                <!-- Hamburger only on mobile -->
-                <div class="d-flex d-md-none align-items-center">
-                    <button
-                        class="hamburger-btn d-flex flex-column justify-content-center gap-1 p-0 border-0 bg-transparent"
-                        aria-label="Menu">
-                        <span class="hamburger-line rounded"></span>
-                        <span class="hamburger-line rounded"></span>
-                        <span class="hamburger-line rounded"></span>
-                    </button>
-                </div>
-            </div>
-        </header>
-    </div>
-    <!-- Menu Below Header -->
-    <nav id="main-menu" class="main-menu my-2">
-        <ul class="menu-items">
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/programmes.html" class="active">Programmes</a></li>
-            <li><a href="/our-team.html">Our Team</a></li>
-            <li><a href="/legal-luminaries.html">Legal Luminaries</a></li>
-            <li><a href="/news-events.html">News & Events</a></li>
-            <li><a href="/blogs.html">Blogs</a></li>
-            <li><a href="/erp.html">ERP</a></li>
-        </ul>
-    </nav>
-
-
-
-
-
     <!-- Programme Hero Section -->
     <section class="sgt-programme-hero position-relative overflow-hidden"
-        style="background: url(../assets/img/sgt-programmes.png) right / cover no-repeat;">
+        style="background: url(../assets/img/back.png) right / cover no-repeat;">
         <div class="container">
             <div class="row align-items-center g-4">
 
@@ -259,9 +180,31 @@
     </section>
 
 
+    <section class="sgt-admission-banner">
+        <div class="container-fluid">
+            <div class="row align-items-center justify-content-between">
+
+                <!-- Left Content -->
+                <div class="col-md-8 text-center text-md-start">
+                    <h2 class="sgt-admission-title mb-0 text-white">
+                        Admission Open for Session 2026–2027
+                    </h2>
+                </div>
+
+                <!-- Right Button -->
+                <div class="col-md-4 text-center text-md-end mt-3 mt-md-0">
+                    <a href="#" class="btn sgt-admission-btn">
+                        Apply Now
+                        <i class="bi bi-arrow-right-circle ms-2"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
 
 
-    <section class="admission-cta py-3">
+    <!-- <section class="admission-cta py-3">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center">
@@ -276,7 +219,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <section class="sgt-features py-3">
         <div class="container">
