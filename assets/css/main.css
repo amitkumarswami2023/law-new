@@ -2250,15 +2250,21 @@ header .nav .nav-link {
 
 .mega-menu h4 {
   color: #134080;
+  font-size: 16px;
+}
+.nav p {
+  font-size: 14px;
 }
 
-.mega-menu .know {
+.know {
   color: #134080;
+  font-size: 16px;
 }
 .mega-links a {
   color: #000;
   font-weight: bold;
   text-decoration: none;
+  font-size: 16px;
 }
 .mega-links a:hover {
   color: #134080;
@@ -4206,7 +4212,7 @@ ul li {
 /* New Programmes page design */
 /* Programme Hero */
 .sgt-programme-hero {
-  padding: 40px 0;
+  padding: 10px 0;
   position: relative;
   display: block;
 }
@@ -4231,14 +4237,14 @@ ul li {
 
 /* Right image styling */
 .programme-image-wrapper img {
-  max-height: 250px;
+  max-height: 350px;
   object-fit: cover;
 }
 
 /* Responsive tweaks */
 @media (max-width: 768px) {
   .sgt-programme-hero {
-    padding: 60px 0;
+    padding: 200px 0;
     text-align: center;
   }
 
@@ -4256,7 +4262,7 @@ ul li {
 }
 
 .sgt-program-overview h2 {
-  font-size: 32px;
+  /* font-size: 32px; */
   line-height: 1.3;
   color: #000;
 }
@@ -4359,15 +4365,16 @@ ul li {
   background: url("../img/main/ahs.jpg") center center / cover no-repeat;
   border-radius: 20px;
   overflow: hidden;
+  padding: 20px 0 20px 50px;
 }
-.key-features-section h2 {
+/* .key-features-section h2 {
   font-size: 36px;
-}
+} */
 .key-features-section h5 {
   font-size: 24px;
 }
 .key-features-section p {
-  font-size: 18px;
+  font-size: 16px;
 }
 .key-features-section .overlay {
   position: absolute;
@@ -4384,7 +4391,7 @@ ul li {
   position: relative;
   padding-left: 28px;
   margin-bottom: 14px;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .feature-list li::before {
@@ -4676,7 +4683,7 @@ ul li {
   display: flex;
   flex-wrap: wrap;
   padding: 16px 12px;
-  background: linear-gradient(180deg, #ffffff 0%, #f3f7fb 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #d9e2ec 100%);
   border-bottom: 1px solid #d9e2ec;
 }
 
@@ -4684,7 +4691,7 @@ ul li {
   display: flex;
   flex-wrap: wrap;
   padding: 16px 12px;
-  background: linear-gradient(180deg, #ffffff 0%, #f3f7fb 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #d9e2ec 100%);
   border-bottom: 1px solid #d9e2ec;
 }
 
