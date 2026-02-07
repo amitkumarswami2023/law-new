@@ -4867,11 +4867,11 @@ ul li {
 }
 
 /* Title */
-.career-title {
+/* .career-title {
   font-size: 28px;
   font-weight: 600;
   margin-bottom: 25px;
-}
+} */
 
 /* List */
 .career-list {
@@ -4884,7 +4884,7 @@ ul li {
   position: relative;
   padding-left: 18px;
   margin-bottom: 10px;
-  font-size: 15px;
+  font-size: 18px;
 }
 
 .career-list li::before {
