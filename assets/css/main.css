@@ -4244,7 +4244,7 @@ ul li {
 /* Responsive tweaks */
 @media (max-width: 768px) {
   .sgt-programme-hero {
-    padding: 200px 0;
+    padding: 20px 0;
     text-align: center;
   }
 
@@ -4284,12 +4284,16 @@ ul li {
 .read-more-link:hover {
   text-decoration: underline;
 }
-
+@media (max-width: 767px) {
+  body h2 {
+    font-size: 32px;
+  }
+}
 /* Responsive tweaks */
 @media (max-width: 767px) {
-  .sgt-program-overview h2 {
+  /* .sgt-program-overview h2 {
     font-size: 24px;
-  }
+  } */
 
   .program-desc {
     font-size: 15px;
