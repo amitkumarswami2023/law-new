@@ -4929,3 +4929,24 @@ ul li {
     min-height: 300px;
   }
 }
+
+/* Hide sidebar filters on mobile */
+@media (max-width: 767px) {
+  .program-filter-sidebar {
+    display: none;
+  }
+}
+
+/* Mobile tabs styling */
+.program-mobile-tabs .nav-link {
+  border-radius: 0;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #333;
+  background: #f5f5f5;
+}
+
+.program-mobile-tabs .nav-link.active {
+  background: #06245f;
+  color: #fff;
+}
