@@ -768,6 +768,89 @@ mark {
   font-weight: bold;
 }
 
+/* ===== Programs Horizontal Section ===== */
+.sgt-programs-horizontal {
+  background-color: #062e4f;
+  padding: 4rem 2rem;
+  border-radius: 40px;
+}
+
+/* Card wrapper */
+.sgt-program-card {
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Left Image */
+.sgt-program-image {
+  min-height: 220px;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Right Content */
+.sgt-program-content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Category Title */
+.sgt-program-category {
+  font-size: 22px;
+  font-weight: 700;
+  color: #062e4f;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+/* Program List */
+.sgt-program-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sgt-program-list li {
+  margin-bottom: 10px;
+}
+
+.sgt-program-list a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #000;
+  position: relative;
+  padding-left: 22px;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.sgt-program-list a::before {
+  content: "»";
+  position: absolute;
+  left: 0;
+  color: #062e4f;
+  font-weight: bold;
+}
+
+.sgt-program-list a:hover {
+  color: #062e4f;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .sgt-program-image {
+    min-height: 180px;
+  }
+
+  .sgt-program-content {
+    padding: 1.5rem;
+  }
+}
+
 /* Academic Advisory Board Section */
 .academic-board-section {
   padding: 3rem 0;
