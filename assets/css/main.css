@@ -4950,3 +4950,29 @@ ul li {
   background: #06245f;
   color: #fff;
 }
+
+/* Mobile inline tabs wrapper */
+.program-mobile-inline-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Individual tab */
+.program-mobile-inline-tabs .tab-btn {
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 20px;
+  border: 1px solid #06245f;
+  background: transparent;
+  color: #06245f;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Active tab */
+.program-mobile-inline-tabs .tab-btn.active {
+  background: #06245f;
+  color: #fff;
+}

@@ -132,6 +132,17 @@
                 </div>
             </div>
 
+            <!-- Mobile Program Tabs -->
+            <div class="d-block d-md-none mb-4">
+                <div class="program-mobile-inline-tabs" id="programTabs">
+                    <button class="tab-btn active" data-category="all">All</button>
+                    <button class="tab-btn" data-category="undergraduate">UG</button>
+                    <button class="tab-btn" data-category="postgraduate">PG</button>
+                    <button class="tab-btn" data-category="phd">Dr.</button>
+                </div>
+            </div>
+
+
             <!-- Program Cards Section -->
             <div class="col-md-9">
                 <!-- Undergraduate -->
@@ -648,6 +659,29 @@
 
                 this.classList.add("active");
                 filterPrograms([this.dataset.category]);
+            });
+        });
+    </script>
+    <script>
+        const mobileTabs = document.querySelectorAll('.program-mobile-inline-tabs .tab-btn');
+        const programItems = document.querySelectorAll('.program-item');
+
+        mobileTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+
+                // Active state
+                mobileTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                const category = tab.dataset.category;
+
+                programItems.forEach(item => {
+                    if (category === 'all' || item.dataset.category === category) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
             });
         });
     </script>
